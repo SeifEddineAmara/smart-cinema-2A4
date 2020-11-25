@@ -4,7 +4,7 @@
 #include <QString>
 #include <QSqlQuery>
 #include <QSqlQueryModel>
-
+//filmmm
 
 class film
 {
