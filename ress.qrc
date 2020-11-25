@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/new/ress"/>
+    <qresource prefix="/">
+        <file>acc.png</file>
+        <file>add.png</file>
+        <file>add_tick.png</file>
+        <file>add_tick2.png</file>
+        <file>add2.png</file>
+        <file>back.png</file>
+        <file>back2.png</file>
+        <file>client.png</file>
+        <file>dele.png</file>
+        <file>delete_ticket.png</file>
+        <file>ret.png</file>
+        <file>tick.png</file>
+        <file>update.png</file>
+        <file>update_tick.png</file>
+        <file>show_user.png</file>
+        <file>show_userrr.png</file>
+    </qresource>
+</RCC>
