@@ -1,0 +1,12 @@
+INPUT(
+./release\cinema.o
+./release\connection.o
+./release\login.o
+./release\main.o
+./release\cinema_page.o
+./release\salle_page.o
+./release\qrc_Resource_omar.o
+./release\moc_cinema_page.o
+./release\moc_login.o
+./release\moc_salle_page.o
+);

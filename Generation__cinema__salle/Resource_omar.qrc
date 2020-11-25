@@ -1,0 +1,32 @@
+<RCC>
+    <qresource prefix="/photo">
+        <file>imageload/1.jpg</file>
+        <file>imageload/2.jpg</file>
+        <file>imageload/MOUVE.jpg</file>
+        <file>imageload/cinema.jpg</file>
+    </qresource>
+    <qresource prefix="/photo1">
+        <file>imageload/7.jpg</file>
+        <file>imageload/6.jpg</file>
+        <file>imageload/rose.jpg</file>
+    </qresource>
+    <qresource prefix="/photosalle">
+        <file>imageload/salle.jpg</file>
+        <file>imageload/rose1.jpg</file>
+        <file>imageload/bleu.jpg</file>
+    </qresource>
+    <qresource prefix="/photo2">
+        <file>imageload/marron.jpg</file>
+        <file>imageload/salle 2.jpg</file>
+        <file>imageload/camera.png</file>
+    </qresource>
+    <qresource prefix="/icon">
+        <file>imageload/Icon.jpg</file>
+        <file>imageload/giphy.gif</file>
+    </qresource>
+    <qresource prefix="/nameofcinema">
+        <file>imageload/colisse.jpg</file>
+        <file>imageload/pathe-130219-v.jpg</file>
+        <file>imageload/magestic.jpg</file>
+    </qresource>
+</RCC>

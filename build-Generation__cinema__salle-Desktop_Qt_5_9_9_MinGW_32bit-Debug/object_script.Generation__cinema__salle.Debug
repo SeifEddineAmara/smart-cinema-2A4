@@ -1,0 +1,12 @@
+INPUT(
+./debug\cinema.o
+./debug\connection.o
+./debug\login.o
+./debug\main.o
+./debug\cinema_page.o
+./debug\salle_page.o
+./debug\qrc_Resource_omar.o
+./debug\moc_cinema_page.o
+./debug\moc_login.o
+./debug\moc_salle_page.o
+);
