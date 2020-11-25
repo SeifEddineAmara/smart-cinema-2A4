@@ -3,6 +3,8 @@
 #include "connection.h"
 #include <QMessageBox>
 
+//test tutoriel Git
+
 Cinema::Cinema()
 {
     nom="";
