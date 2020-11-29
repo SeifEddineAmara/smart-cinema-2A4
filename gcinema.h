@@ -32,7 +32,8 @@ public:
     bool ajouter();
     bool supprimer(QString);
 
-    bool modifier(QString,QString,QString,QString,QString);
+    void modifier(QString,QString,QString,QString,QString);
+    QSqlQueryModel * trier(int test);
 
     QSqlQueryModel * afficher();
     QSqlQueryModel* rechercher(QString reff);

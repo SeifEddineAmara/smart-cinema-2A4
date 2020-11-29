@@ -15,7 +15,7 @@ private:
     QString numero;
     QString nombre_de_place;
     QString nombre_de_place_disponible;
-    QString nom_cinema;
+    QString ref_cinema;
 
 public:
 
@@ -25,7 +25,7 @@ public:
     QString get_numero();
     QString get_nombre_place();
     QString get_nombre_de_place_disponible();
-    QString get_nom_cinema();
+    QString get_ref_cinema();
 
 
     bool ajouter();
@@ -35,7 +35,7 @@ public:
 
     QSqlQueryModel * afficher();
     QSqlQueryModel* rechercher(QString reff);
-    QSqlQueryModel* rechercher_3(QString num,QString nb,QString nom_ci);
+    QSqlQueryModel* rechercher_3(QString num,QString nb,QString reff);
 
 
 

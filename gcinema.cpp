@@ -42,8 +42,6 @@ bool gcinema::ajouter()
 {
   QSqlQuery query;
 
- /* QString res=QString::number(reference);
-  QString res1=QString::number(nombre_salle);*/
 
   query.prepare("INSERT INTO pcinema(nom, reference, datec, destination, nombre_salle)""VALUES( :nom, :reference, :datec , :destination, :nombre_salle)");
 
@@ -60,8 +58,6 @@ bool gcinema::ajouter()
 bool gcinema::supprimer(QString reff)
 {
     QSqlQuery query;
-
-    /*QString res=QString::number(reff);*/
 
     query.prepare("Delete from pcinema where reference = :reference ");
 
@@ -87,20 +83,54 @@ model->setHeaderData(4, Qt::Horizontal, QObject::tr("nombre_salle"));
 
 
 
-bool gcinema::modifier(QString n,QString dt,QString dest,QString nb,QString ref)
+void gcinema::modifier(QString nom1,QString reference1,QString datec1,QString destination1,QString nb)
 {
    QSqlQuery query;
-   query.prepare("UPDATE pcinema set nom=?,datec=:?,destination=?,nombre_salle=? where (reference=:reference)");
-   query.addBindValue(ref);
-   query.addBindValue(n);
-   query.addBindValue(dt);
-   query.addBindValue(dest);
-   query.addBindValue(nb);
 
-    return query.exec();
+    query.prepare("UPDATE PCINEMA set NOM='"+nom1 +" ', REFERENCE='"+reference1+"', DATEC='"+datec1+"', DESTINATION='"+destination1+"' , NOMBRE_SALLE='"+nb+"' where REFERENCE='"+reference1+"' ");
+
+
+   if(query.exec())
+              {
+              QMessageBox msgBox;
+              msgBox.setText("Cinema modifié");
+              msgBox.exec();
+              }
 
 }
 
+
+QSqlQueryModel * gcinema::trier(int test)
+{
+             QSqlQueryModel *model=new QSqlQueryModel() ;
+             QSqlQuery query ;
+
+             model->setHeaderData(1, Qt::Horizontal, QObject::tr("REFERENCE"));
+             model->setHeaderData(3, Qt::Horizontal, QObject::tr("DESTINATION "));
+             model->setHeaderData(4, Qt::Horizontal, QObject::tr("nombre_salle"));
+
+             if(test==1)
+             {
+                 query.prepare("SELECT *  FROM pcinema ORDER BY REFERENCE ASC ") ;
+             }
+             else if(test==2)
+             {
+                 query.prepare("SELECT *  FROM pcinema ORDER BY DESTINATION ASC ") ;
+             }
+             else if(test==3)
+             {
+                  query.prepare("SELECT *  FROM pcinema ORDER BY NOMBRE_SALLE ASC ") ;
+             }
+
+             if (query.exec()&&query.next())
+             {
+                 model->setQuery(query) ;
+             }
+
+
+   return model;
+
+}
 
 QSqlQueryModel * gcinema::rechercher(QString reff)
 {
@@ -150,7 +180,8 @@ else if (count<1)
 
 }
 
-////3 criteres
+//3 criteres
+
 QSqlQueryModel * gcinema::rechercher_3(QString reff,QString nomm,QString dest)
 {
     QMessageBox msgBox;

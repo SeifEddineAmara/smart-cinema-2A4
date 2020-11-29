@@ -57,12 +57,17 @@ private slots:
 
     void print(QPrinter *printer);
 
+    void on_pushButton_load_reference_clicked();
 
+public slots:
+
+    void myfunction();
 private:
     Ui::MainWindow *ui;
     gcinema tmpc;
     gsalle tmps;
     QSqlTableModel *model;
+    QTimer *timer;
 
 };
 

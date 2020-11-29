@@ -7,6 +7,10 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     MainWindow w;
     Connection c;
+
+    w.setWindowIcon(QIcon(":/new/prefix3/movie-time.jpg"));
+
+
     bool test=c.createconnect();
     if(test)
     {w.show();

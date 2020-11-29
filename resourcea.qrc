@@ -6,5 +6,12 @@
     </qresource>
     <qresource prefix="/new/prefix2">
         <file>orange.png</file>
+        <file>giphy.gif</file>
+        <file>camera.png</file>
+    </qresource>
+    <qresource prefix="/new/prefix3">
+        <file>Logo.png</file>
+        <file>roll-film.jpg</file>
+        <file>movie-time.jpg</file>
     </qresource>
 </RCC>

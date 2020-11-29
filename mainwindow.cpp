@@ -13,6 +13,11 @@
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QSqlTableModel>
+#include <QMovie>
+#include <QTimer>
+
+#include <QSqlQuery>
+#include <QSqlQueryModel>
 
 class PrintBorder : public PagePrepare {
 public:
@@ -37,16 +42,34 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    ui->tableView->setModel(tmpc.afficher());
+    ui->tableView_affichage_list_salle_2->setModel(tmps.afficher());
+
+
+
     model = new QSqlTableModel;
     model->setTable("pcinema");
     model->select();
     ui->tableView->setModel(model);
 
- //combox
+//combox
 
  ui->comboBox_tri->addItem("REFERENCE");
- ui->comboBox_tri->addItem("NOM");
  ui->comboBox_tri->addItem("DESTINATION");
+ ui->comboBox_tri->addItem("NOMBRE_SALLE");
+
+//gif
+
+ QMovie *movie = new QMovie(":/new/prefix2/giphy.gif");
+movie->start();
+
+ui->label_26->setMovie(movie);
+
+//Time
+
+timer=new QTimer(this);
+connect(timer,SIGNAL(timeout()),this,SLOT(myfunction()));
+timer->start(1000);
 
 }
 
@@ -60,6 +83,12 @@ void MainWindow::on_pushButton_clicked()
      ui->tableView->setModel(tmpc.afficher());
 }
 
+void MainWindow::myfunction()
+{
+    QTime time=QTime::currentTime();
+    QString time_text=time.toString("hh: mm : ss");
+    ui->label_timer->setText(time_text);
+}
 
 
 
@@ -117,7 +146,7 @@ void MainWindow::on_pushButton_ajouter_clicked()
         msgBox.setText("Cinema existe deja");
             msgBox.exec();
 
- }
+    }
 
 
     ui->lineEdit_nom_ajout->clear();
@@ -127,13 +156,10 @@ void MainWindow::on_pushButton_ajouter_clicked()
 
 void MainWindow::on_pushButton_modifier_clicked()
 {
+
     QMessageBox msgBox;
     QMessageBox msgBox1;
-    QSqlQuery query;
-
-
-
-   QString nom1,reference1,datec1,destination1,nb;
+    QString nom1,reference1,datec1,destination1,nb;
 
    nom1=ui->lineEdit_nom_modifcation->text();
    reference1=ui->lineEdit_reference_modification->text();
@@ -141,26 +167,21 @@ void MainWindow::on_pushButton_modifier_clicked()
    destination1=ui->lineEdit_destination_modifcation->text();
    nb=ui->lineEdit_nombre_salle_modication->text();
 
-   query.prepare("UPDATE PCINEMA set NOM='"+nom1 +" ', REFERENCE='"+reference1+"', DATEC='"+datec1+"', DESTINATION='"+destination1+"' , NOMBRE_SALLE='"+nb+"' where REFERENCE='"+reference1+"' ");
 
 
-   if(query.exec())
+   tmpc.modifier(nom1,reference1,datec1,destination1,nb);
 
-   {
-   msgBox.setText("Cinema modifié");
-   msgBox.exec();
    ui->tableView_2->setModel(tmpc.afficher());
    ui->tableView_2->show();
-   }
 
 
 }
+
 
 void MainWindow::on_pushButton_charger_clicked()
 {
     ui->tableView_2->setModel(tmpc.afficher());
 }
-
 
 
 void MainWindow::on_tableView_2_activated(const QModelIndex &index)
@@ -251,28 +272,21 @@ QMessageBox msgBox;
 
 void MainWindow::on_pushButton_trier_clicked()
 {
-    QSqlQueryModel *model=new QSqlQueryModel() ;
 
-             model->setHeaderData(0, Qt::Horizontal, QObject::tr("NOM "));
-             model->setHeaderData(1, Qt::Horizontal, QObject::tr("REFERENCE"));
-             model->setHeaderData(3, Qt::Horizontal, QObject::tr("DESTINATION"));
+    int test=0;
 
-              ui->tableView_tri->setModel(model);
-             QSqlQuery query ;
-              if (ui->comboBox_tri->currentText()=="REFERENCE")
-              query.prepare("SELECT *  FROM pcinema ORDER BY REFERENCE ASC ") ;
-         else
-                  if (ui->comboBox_tri->currentText()=="NOM")
-                  query.prepare("SELECT *  FROM pcinema ORDER BY NOM ASC ") ;
-           else
-                      if (ui->comboBox_tri->currentText()=="DESTINATION")
-                      query.prepare("SELECT *  FROM pcinema ORDER BY DESTINATION ASC ") ;
+      if (ui->comboBox_tri->currentText()=="REFERENCE")
+                 { test=1;}
 
-             if (query.exec()&&query.next()) {
-                 model->setQuery(query) ;
+      else if (ui->comboBox_tri->currentText()=="DESTINATION")
+                  {test=2;}
 
-                 ui->tableView_tri->setModel(model) ;
-             }
+      else if (ui->comboBox_tri->currentText()=="NOMBRE_SALLE")
+                  {test=3;}
+
+
+      ui->tableView_tri->setModel(tmpc.trier(test)) ;
+
 }
 
 void MainWindow::on_pushButton_rechercher_cinema_clicked()
@@ -292,6 +306,16 @@ void MainWindow::on_pushButton_affichage_salle_clicked()
 
 }
 
+void MainWindow::on_pushButton_load_reference_clicked()
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+
+ model->setQuery("select reference from pcinema");
+
+    ui->comboBox_ref_cinema->setModel(model);
+}
+
+
 void MainWindow::on_pushButton_ajouter_salle_clicked()
 {
     QMessageBox msgBox;
@@ -299,16 +323,16 @@ void MainWindow::on_pushButton_ajouter_salle_clicked()
    QSqlQueryModel *model = new QSqlQueryModel;
 
 
-     QString numero=ui->lineEdit_numero_salle_ajout->text();
+    QString numero=ui->lineEdit_numero_salle_ajout->text();
 
     QString nombre_de_place=ui->spinBox_nb_place_salle_ajout->text();
 
     QString nombre_de_place_disponible=ui->spinBox_nb_place_dispo_salle_ajout->text();
 
-    QString nom_cinema=ui->lineEdit_nom_cinema_salle_ajout->text();
+    QString ref_cinema=ui->comboBox_ref_cinema->currentText();
 
 
-    gsalle s(numero,nombre_de_place,nombre_de_place_disponible,nom_cinema);
+    gsalle s(numero,nombre_de_place,nombre_de_place_disponible,ref_cinema);
 
 
     model=s.rechercher(numero);
@@ -336,10 +360,10 @@ void MainWindow::on_pushButton_ajouter_salle_clicked()
                                     "Click cancel to exit."), QMessageBox::Ok);
         }
 
+}
 
-   }
 
-    else
+  else
    {
 
         msgBox.setText("Salle existe deja");
@@ -348,8 +372,9 @@ void MainWindow::on_pushButton_ajouter_salle_clicked()
  }
 
 
+
     ui->lineEdit_numero_salle_ajout->clear();
-    ui->lineEdit_nom_cinema_salle_ajout->clear();
+    ui->comboBox_ref_cinema->clear();
 }
 
 
@@ -367,7 +392,7 @@ void MainWindow::on_pushButton_modifier_salle_clicked()
    nombre_de_place1=ui->lineEdit_nombre_salle_modification->text();
    nombre_de_place_disponible1=ui->lineEdit_nombre_salle_disponible_modifcation->text();
 
-   query.prepare("UPDATE sallee set numero='"+numero1 +" ', nombre_de_place='"+nombre_de_place1+"', nombre_de_place_disponible='"+nombre_de_place_disponible1+"', nom_cinema='"+nom_cinema1+"' where numero='"+numero1+"' ");
+   query.prepare("UPDATE sallee set numero='"+numero1 +" ', nombre_de_place='"+nombre_de_place1+"', nombre_de_place_disponible='"+nombre_de_place_disponible1+"' where numero='"+numero1+"' ");
 
 
    if(query.exec())
@@ -397,7 +422,7 @@ void MainWindow::on_tableView_affichage_list_salle_2_activated(const QModelIndex
 
 
 
-   query.prepare("SELECT * FROM sallee WHERE numero='"+value +"'or nom_cinema='"+value +"'");
+   query.prepare("SELECT * FROM sallee WHERE numero='"+value +"'or ref_cinema='"+value +"'");
 
    if(query.exec())
 
@@ -474,7 +499,7 @@ QMessageBox msgBox;
 
 void MainWindow::on_pushButton_rechercher_salle_clicked()
 {
-    ui->tableView_salle_rechercher->setModel(tmps.rechercher_3(ui->lineEdit_numero_rechercher->text(),ui->lineEdit_nombre_place_rechercher->text(),ui->lineEdit_nom_cinema_salle_rechercher->text()));
+    ui->tableView_salle_rechercher->setModel(tmps.rechercher_3(ui->lineEdit_numero_rechercher->text(),ui->lineEdit_nombre_place_rechercher->text(),ui->lineEdit_ref_cinema_salle_rechercher->text()));
 
               ui->tableView_rechercher_cinema->show();
 }
@@ -489,10 +514,12 @@ void MainWindow::on_pushButton_2_clicked()
 void MainWindow::print(QPrinter *printer)
 {
     QPainter painter;
-        if(!painter.begin(printer)) {
+        if(!painter.begin(printer))
+        {
             qWarning() << "can't start printer";
             return;
         }
+
         // print table
         TablePrinter tablePrinter(&painter, printer);
         QVector<int> columnStretch = QVector<int>() << 10 << 15 << 20 << 25 << 30;
@@ -501,3 +528,4 @@ void MainWindow::print(QPrinter *printer)
         }
         painter.end();
 }
+

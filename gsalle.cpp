@@ -13,24 +13,24 @@ gsalle::gsalle()
     numero="";
     nombre_de_place="";
     nombre_de_place_disponible="";
-    nom_cinema="";
+    ref_cinema="";
 
 }
 
 
-gsalle::gsalle(QString numero,QString nombre_de_place,QString nombre_de_place_disponible,QString nom_cinema)
+gsalle::gsalle(QString numero,QString nombre_de_place,QString nombre_de_place_disponible,QString ref_cinema)
 {
     this->numero=numero;
     this->nombre_de_place=nombre_de_place;
     this->nombre_de_place_disponible=nombre_de_place_disponible;
-    this->nom_cinema=nom_cinema;
+    this->ref_cinema=ref_cinema;
 
 }
 
 QString gsalle::get_numero(){return numero;}
 QString gsalle::get_nombre_place(){return nombre_de_place;}
 QString gsalle::get_nombre_de_place_disponible(){return nombre_de_place_disponible;}
-QString gsalle::get_nom_cinema(){return nom_cinema;}
+QString gsalle::get_ref_cinema(){return ref_cinema;}
 
 
 bool gsalle::ajouter()
@@ -38,15 +38,13 @@ bool gsalle::ajouter()
 {
   QSqlQuery query;
 
- /* QString res=QString::number(reference);
-  QString res1=QString::number(nombre_salle);*/
 
-  query.prepare("INSERT INTO sallee(numero, nombre_de_place, nombre_de_place_disponible, nom_cinema)""VALUES( :numero, :nombre_de_place, :nombre_de_place_disponible , :nom_cinema)");
+  query.prepare("INSERT INTO sallee(numero, nombre_de_place, nombre_de_place_disponible, ref_cinema)""VALUES( :numero, :nombre_de_place, :nombre_de_place_disponible , :ref_cinema)");
 
   query.bindValue(":numero",numero);
   query.bindValue(":nombre_de_place",nombre_de_place);
   query.bindValue(":nombre_de_place_disponible",nombre_de_place_disponible);
-  query.bindValue(":nom_cinema",nom_cinema);
+  query.bindValue(":ref_cinema",ref_cinema);
 
     return query.exec();
 }
@@ -56,7 +54,6 @@ bool gsalle::supprimer(QString num)
 {
     QSqlQuery query;
 
-    /*QString res=QString::number(reff);*/
 
     query.prepare("Delete from sallee where numero = :numero ");
 
@@ -74,7 +71,7 @@ model->setQuery("select * from sallee");
 model->setHeaderData(0, Qt::Horizontal, QObject::tr("numero"));
 model->setHeaderData(1, Qt::Horizontal, QObject::tr("nombre_de_place"));
 model->setHeaderData(2, Qt::Horizontal, QObject::tr("nombre_de_place_disponible "));
-model->setHeaderData(3, Qt::Horizontal, QObject::tr("nom_cinema"));
+model->setHeaderData(3, Qt::Horizontal, QObject::tr("ref_cinema"));
 
     return model;
 }
@@ -128,7 +125,7 @@ else if (count<1)
 }
 
 
-QSqlQueryModel * gsalle::rechercher_3(QString num,QString nb,QString nomm)
+QSqlQueryModel * gsalle::rechercher_3(QString num,QString nb,QString reff)
 {
     QMessageBox msgBox;
     QMessageBox msgBox1;
@@ -138,10 +135,10 @@ QSqlQueryModel * gsalle::rechercher_3(QString num,QString nb,QString nomm)
     int count=0;
 
 
-    query.prepare("SELECT * FROM sallee WHERE numero = ? and nombre_de_place= ? and nom_cinema= ?");
+    query.prepare("SELECT * FROM sallee WHERE numero = ? and nombre_de_place= ? and ref_cinema= ?");
     query.addBindValue(num);
     query.addBindValue(nb);
-    query.addBindValue(nomm);
+    query.addBindValue(reff);
 
 
 
