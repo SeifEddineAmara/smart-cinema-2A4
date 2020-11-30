@@ -4,9 +4,10 @@
 #
 #-------------------------------------------------
 
-QT       += core gui printsupport sql
+QT       += core gui  printsupport  sql
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets multimedia
 
 TARGET = Atelier_Connexion
 TEMPLATE = app

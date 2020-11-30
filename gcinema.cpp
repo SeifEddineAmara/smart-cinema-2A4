@@ -61,6 +61,7 @@ bool gcinema::supprimer(QString reff)
 
     query.prepare("Delete from pcinema where reference = :reference ");
 
+
     query.bindValue(":reference", reff);
 
     return query.exec();

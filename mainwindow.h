@@ -3,6 +3,8 @@
 #include "gcinema.h"
 #include "gsalle.h"
 #include <QMainWindow>
+#include <QSound>
+
 
 
 
@@ -59,6 +61,10 @@ private slots:
 
     void on_pushButton_load_reference_clicked();
 
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_4_clicked();
+
 public slots:
 
     void myfunction();
@@ -68,6 +74,9 @@ private:
     gsalle tmps;
     QSqlTableModel *model;
     QTimer *timer;
+    QSound *son;
+
+
 
 };
 

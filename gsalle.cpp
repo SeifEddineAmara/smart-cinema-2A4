@@ -77,6 +77,25 @@ model->setHeaderData(3, Qt::Horizontal, QObject::tr("ref_cinema"));
 }
 
 
+void gsalle::modifier(QString numero1,QString nombre_de_place1,QString nombre_de_place_disponible1)
+{
+   QSqlQuery query;
+
+   query.prepare("UPDATE sallee set numero='"+numero1 +" ', nombre_de_place='"+nombre_de_place1+"', nombre_de_place_disponible='"+nombre_de_place_disponible1+"' where numero='"+numero1+"' ");
+
+
+
+   if(query.exec())
+
+   {
+       QMessageBox msgBox;
+       msgBox.setText("Salle modifié");
+       msgBox.exec();
+   }
+
+}
+
+
 
 QSqlQueryModel * gsalle::rechercher(QString num)
 {

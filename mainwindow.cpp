@@ -2,6 +2,14 @@
 #include "ui_mainwindow.h"
 #include <QMessageBox>
 #include <QDateTime>
+#include<QDesktopServices>
+#include <QUrl>
+#include <QUrl>
+
+#include <QFileDialog>
+
+/*#include <QtWebKitWidgets/QWebView>*/
+
 
 #include "tableprinter.h"
 
@@ -36,6 +44,8 @@ void PrintBorder::preparePage(QPainter *painter) { // print a border on each pag
     pageNumber += 1;
 }
 
+
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -44,6 +54,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->tableView->setModel(tmpc.afficher());
     ui->tableView_affichage_list_salle_2->setModel(tmps.afficher());
+
+
+    son=new QSound(":/new/prefix4/Mousclik.wav");
 
 
 
@@ -80,7 +93,10 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-     ui->tableView->setModel(tmpc.afficher());
+   ui->tableView->setModel(tmpc.afficher());
+   son->play();
+
+
 }
 
 void MainWindow::myfunction()
@@ -94,6 +110,9 @@ void MainWindow::myfunction()
 
 void MainWindow::on_pushButton_ajouter_clicked()
 {
+    son->play();
+
+
     QMessageBox msgBox;
 
    QSqlQueryModel *model = new QSqlQueryModel;
@@ -157,6 +176,9 @@ void MainWindow::on_pushButton_ajouter_clicked()
 void MainWindow::on_pushButton_modifier_clicked()
 {
 
+    son->play();
+
+
     QMessageBox msgBox;
     QMessageBox msgBox1;
     QString nom1,reference1,datec1,destination1,nb;
@@ -180,12 +202,16 @@ void MainWindow::on_pushButton_modifier_clicked()
 
 void MainWindow::on_pushButton_charger_clicked()
 {
+    son->play();
+
     ui->tableView_2->setModel(tmpc.afficher());
 }
 
 
 void MainWindow::on_tableView_2_activated(const QModelIndex &index)
 {
+
+
     QMessageBox msgBox1;
     QSqlQuery query;
 
@@ -221,6 +247,10 @@ void MainWindow::on_tableView_2_activated(const QModelIndex &index)
 
 void MainWindow::on_pushButton_supprimer_clicked()
 {
+
+    son->play();
+
+    QSqlQuery query;
 
     QSqlQueryModel *model = new QSqlQueryModel;
 QMessageBox msgBox;
@@ -273,10 +303,13 @@ QMessageBox msgBox;
 void MainWindow::on_pushButton_trier_clicked()
 {
 
+    son->play();
+
+
     int test=0;
 
       if (ui->comboBox_tri->currentText()=="REFERENCE")
-                 { test=1;}
+                 {test=1;}
 
       else if (ui->comboBox_tri->currentText()=="DESTINATION")
                   {test=2;}
@@ -291,6 +324,9 @@ void MainWindow::on_pushButton_trier_clicked()
 
 void MainWindow::on_pushButton_rechercher_cinema_clicked()
 {
+    son->play();
+
+
     ui->tableView_rechercher_cinema->setModel(tmpc.rechercher_3(ui->lineEdit_reference_rechercher->text(),ui->lineEdit_nom_rechercher_2->text(),ui->lineEdit_destination_rechercher->text()));
 
               ui->tableView_rechercher_cinema->show();
@@ -302,12 +338,18 @@ void MainWindow::on_pushButton_rechercher_cinema_clicked()
 
 void MainWindow::on_pushButton_affichage_salle_clicked()
 {
+    son->play();
+
+
     ui->tableView_affichage_list_salle->setModel(tmps.afficher());
 
 }
 
 void MainWindow::on_pushButton_load_reference_clicked()
 {
+    son->play();
+
+
     QSqlQueryModel * model= new QSqlQueryModel();
 
  model->setQuery("select reference from pcinema");
@@ -318,6 +360,9 @@ void MainWindow::on_pushButton_load_reference_clicked()
 
 void MainWindow::on_pushButton_ajouter_salle_clicked()
 {
+    son->play();
+
+
     QMessageBox msgBox;
 
    QSqlQueryModel *model = new QSqlQueryModel;
@@ -380,35 +425,33 @@ void MainWindow::on_pushButton_ajouter_salle_clicked()
 
 void MainWindow::on_pushButton_modifier_salle_clicked()
 {
-    QMessageBox msgBox;
-    QMessageBox msgBox1;
-    QSqlQuery query;
+
+    son->play();
 
 
-
-   QString numero1,nombre_de_place1,nombre_de_place_disponible1,nom_cinema1;
+   QString numero1,nombre_de_place1,nombre_de_place_disponible1;
 
    numero1=ui->lineEdit_numero_salle_modifcation->text();
    nombre_de_place1=ui->lineEdit_nombre_salle_modification->text();
    nombre_de_place_disponible1=ui->lineEdit_nombre_salle_disponible_modifcation->text();
 
-   query.prepare("UPDATE sallee set numero='"+numero1 +" ', nombre_de_place='"+nombre_de_place1+"', nombre_de_place_disponible='"+nombre_de_place_disponible1+"' where numero='"+numero1+"' ");
 
 
-   if(query.exec())
+   tmps.modifier(numero1,nombre_de_place1,nombre_de_place_disponible1);
 
-   {
-   msgBox.setText("Salle modifié");
-   msgBox.exec();
+
    ui->tableView_affichage_list_salle_2->setModel(tmps.afficher());
    ui->tableView_affichage_list_salle_2->show();
-   }
+
 
 }
 
 
 void MainWindow::on_pushButton_charger_salle_clicked()
 {
+    son->play();
+
+
     ui->tableView_affichage_list_salle_2->setModel(tmps.afficher());
 
 }
@@ -422,7 +465,7 @@ void MainWindow::on_tableView_affichage_list_salle_2_activated(const QModelIndex
 
 
 
-   query.prepare("SELECT * FROM sallee WHERE numero='"+value +"'or ref_cinema='"+value +"'");
+   query.prepare("SELECT * FROM sallee WHERE numero='"+value +"'");
 
    if(query.exec())
 
@@ -448,6 +491,10 @@ void MainWindow::on_tableView_affichage_list_salle_2_activated(const QModelIndex
 
 void MainWindow::on_pushButton_supprimer_salle_clicked()
 {
+
+    son->play();
+
+
     QSqlQueryModel *model = new QSqlQueryModel;
 QMessageBox msgBox;
 
@@ -468,7 +515,8 @@ QMessageBox msgBox;
 }
 
        else
-       {     bool test=tmps.supprimer(numero);
+       {
+           bool test=tmps.supprimer(numero);
 
            if (test)
                     {
@@ -499,6 +547,10 @@ QMessageBox msgBox;
 
 void MainWindow::on_pushButton_rechercher_salle_clicked()
 {
+
+    son->play();
+
+
     ui->tableView_salle_rechercher->setModel(tmps.rechercher_3(ui->lineEdit_numero_rechercher->text(),ui->lineEdit_nombre_place_rechercher->text(),ui->lineEdit_ref_cinema_salle_rechercher->text()));
 
               ui->tableView_rechercher_cinema->show();
@@ -529,3 +581,28 @@ void MainWindow::print(QPrinter *printer)
         painter.end();
 }
 
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    son->play();
+
+
+    QString  link="http://www.google.com";
+    QDesktopServices::openUrl(QUrl(link));
+
+}
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    son->play();
+
+
+    QString filename=QFileDialog::getOpenFileName(
+                this,tr("Open File"),"C://",
+                "All files(*.*);;Text File (*.text);;Music file(*.mp3)"
+
+
+                );
+
+    QDesktopServices::openUrl(QUrl("file:///"+filename,QUrl::TolerantMode));
+}

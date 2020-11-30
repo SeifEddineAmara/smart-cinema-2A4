@@ -14,4 +14,8 @@
         <file>roll-film.jpg</file>
         <file>movie-time.jpg</file>
     </qresource>
+    <qresource prefix="/new/prefix4">
+        <file>Mouse-Click-00-c-FesliyanStudios.com.mp3</file>
+        <file>Mousclik.wav</file>
+    </qresource>
 </RCC>
