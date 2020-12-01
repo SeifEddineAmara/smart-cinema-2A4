@@ -15,7 +15,9 @@ add_consomation::~add_consomation()
 }
 
 QString add_consomation::id_cons() const {
+
     return ui->id_cons->text();
+
 }
 
 QString add_consomation::nom_cons() const {

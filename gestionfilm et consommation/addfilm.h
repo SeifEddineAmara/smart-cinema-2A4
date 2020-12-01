@@ -23,6 +23,7 @@ public:
        int duree_film() const ;
        void show_film( QString);
 
+
 private slots:
     void on_buttonBox_accepted();
 

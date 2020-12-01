@@ -21,7 +21,9 @@ MainWindow::MainWindow(QWidget *parent)
     //show database content
   show_tables();
 
-
+  //for email tab
+      connect(ui->sendBtn, SIGNAL(clicked()),this, SLOT(sendMail()));
+      connect(ui->browseBtn, SIGNAL(clicked()), this, SLOT(browse()));
 
 }
 
@@ -71,6 +73,14 @@ void MainWindow::on_actionadd_film_triggered() //ajout
     QString nom=af.nom_film();
     QString type=af.type_film();
     int duree=af.duree_film();
+
+    if (id.length() >5){
+
+    QMessageBox::warning(this, tr("error"),
+                             QString(tr("id too long!"))
+                             );
+    return;
+    }
 
     //ajout
     film f(id,nom,type, duree);
@@ -219,4 +229,69 @@ void MainWindow::on_recherche_cons_textChanged(const QString &arg1)
 
 }
 
+//mailing
+void  MainWindow::browse()
+{
+    files.clear();
 
+    QFileDialog dialog(this);
+    dialog.setDirectory(QDir::homePath());
+    dialog.setFileMode(QFileDialog::ExistingFiles);
+
+    if (dialog.exec())
+        files = dialog.selectedFiles();
+
+    QString fileListString;
+    foreach(QString file, files)
+        fileListString.append( "\"" + QFileInfo(file).fileName() + "\" " );
+
+    ui->file->setText( fileListString );
+
+}
+void   MainWindow::sendMail()
+{
+    Smtp* smtp = new Smtp("seifeddine.amara@esprit.tn",ui->mail_pass->text(), "smtp.gmail.com");
+    connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
+
+    if( !files.isEmpty() )
+        smtp->sendMail("seifeddine.amara@esprit.tn", ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText(), files );
+    else
+        smtp->sendMail("seifeddine.amara@esprit.tn", ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText());
+}
+void   MainWindow::mailSent(QString status)
+{
+
+    if(status == "Message sent")
+        QMessageBox::warning( nullptr, tr( "Qt Simple SMTP client" ), tr( "Message sent!\n\n" ) );
+    ui->rcpt->clear();
+    ui->subject->clear();
+    ui->file->clear();
+    ui->msg->clear();
+    ui->mail_pass->clear();
+}
+
+//export excel
+void MainWindow::on_pushButton_clicked()
+{
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Excel file"), qApp->applicationDirPath (),
+                                                    tr("Excel Files (*.xls)"));
+    if (fileName.isEmpty())
+        return;
+
+    ExportExcelObject obj(fileName, "mydata", ui->tab_film);
+
+    //colums to export
+    obj.addField(0, "id", "char(20)");
+    obj.addField(1, "nom", "char(20)");
+    obj.addField(2, "type", "char(20)");
+    obj.addField(3, "duree", "char(20)");
+
+
+    int retVal = obj.export2Excel();
+    if( retVal > 0)
+    {
+        QMessageBox::information(this, tr("Done"),
+                                 QString(tr("%1 records exported!")).arg(retVal)
+                                 );
+    }
+}

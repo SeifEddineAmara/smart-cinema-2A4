@@ -1,4 +1,4 @@
-QT       += core gui sql
+QT       += core gui sql network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -20,17 +20,21 @@ SOURCES += \
     addfilm.cpp \
     connexion.cpp \
     consomation.cpp \
+    exportexcelobject.cpp \
     film.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    smtp.cpp
 
 HEADERS += \
     add_consomation.h \
     addfilm.h \
     connexion.h \
     consomation.h \
+    exportexcelobject.h \
     film.h \
-    mainwindow.h
+    mainwindow.h \
+    smtp.h
 
 FORMS += \
     add_consomation.ui \

@@ -64,6 +64,12 @@
      <height>20</height>
     </rect>
    </property>
+   <property name="maxLength">
+    <number>4</number>
+   </property>
+   <property name="placeholderText">
+    <string>DONNER ID</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="nom_cons">
    <property name="geometry">

@@ -5,10 +5,14 @@
 #include <QSortFilterProxyModel>
 #include <QTextTableFormat>
 #include <QStandardItemModel>
+#include <QDialog>
+#include <QFileDialog>
 
 #include "connexion.h"
 #include "film.h"
 #include "consomation.h"
+#include "smtp.h"
+#include "exportexcelobject.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -51,8 +55,15 @@ private slots:
 
     void on_recherche_film_textChanged(const QString &arg1);
 
+    void sendMail();
+    void mailSent(QString);
+    void browse();
+
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
+    QStringList files;
 
 
 
