@@ -156,7 +156,7 @@ void MainWindow::on_actionremove_consomation_triggered() //suppression
 //recherche
 void MainWindow::on_recherche_film_textChanged(const QString &arg1)
 {
-    proxy_film->setFilterFixedString(arg1);
+    proxy_film->setFilterFixedString(arg1) ;
 
 }
 
