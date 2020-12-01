@@ -101,6 +101,19 @@ ui->lineEdit_numero_rechercher->setValidator(new QIntValidator(0,99999999,this))
 ui->lineEdit_nombre_place_rechercher->setValidator(new QIntValidator(0,99999999,this));
 
 
+//////
+
+ui->lineEdit_nom_ajout->setValidator(new QRegExpValidator( QRegExp("[A-Za-z0_]{0,255}"), this ));
+ui->lineEdit_destination_ajout->setValidator(new QRegExpValidator( QRegExp("[A-Za-z0_]{0,255}"), this ));
+
+ui->lineEdit_nom_modifcation->setValidator(new QRegExpValidator( QRegExp("[A-Za-z0_]{0,255}"), this ));
+ui->lineEdit_destination_modifcation->setValidator(new QRegExpValidator( QRegExp("[A-Za-z0_]{0,255}"), this ));
+
+ui->lineEdit_nom_rechercher_2->setValidator(new QRegExpValidator( QRegExp("[A-Za-z0_]{0,255}"), this ));
+ui->lineEdit_destination_rechercher->setValidator(new QRegExpValidator( QRegExp("[A-Za-z0_]{0,255}"), this ));
+
+
+
 }
 
 MainWindow::~MainWindow()
