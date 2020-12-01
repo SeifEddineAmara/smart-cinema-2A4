@@ -84,6 +84,23 @@ timer=new QTimer(this);
 connect(timer,SIGNAL(timeout()),this,SLOT(myfunction()));
 timer->start(1000);
 
+/////
+
+ui->lineEdit_reference_ajout->setValidator(new QIntValidator(0,99999999,this));
+ui->lineEdit_reference_modification->setValidator(new QIntValidator(0,99999999,this));
+ui->lineEdit_nombre_salle_modication->setValidator(new QIntValidator(0,99999999,this));
+ui->lineEdit_reference_suppression->setValidator(new QIntValidator(0,99999999,this));
+ui->lineEdit_reference_rechercher->setValidator(new QIntValidator(0,99999999,this));
+
+ui->lineEdit_numero_salle_ajout->setValidator(new QIntValidator(0,99999999,this));
+ui->lineEdit_numero_salle_modifcation->setValidator(new QIntValidator(0,99999999,this));
+ui->lineEdit_nombre_salle_modification->setValidator(new QIntValidator(0,99999999,this));
+ui->lineEdit_nombre_salle_disponible_modifcation->setValidator(new QIntValidator(0,99999999,this));
+ui->lineEdit_numero_salle_supprimer->setValidator(new QIntValidator(0,99999999,this));
+ui->lineEdit_numero_rechercher->setValidator(new QIntValidator(0,99999999,this));
+ui->lineEdit_nombre_place_rechercher->setValidator(new QIntValidator(0,99999999,this));
+
+
 }
 
 MainWindow::~MainWindow()

@@ -55,7 +55,7 @@
       <enum>QTabWidget::Triangular</enum>
      </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>7</number>
      </property>
      <widget class="QWidget" name="tab">
       <attribute name="title">
@@ -574,6 +574,9 @@ border-radius:25px;
        </property>
        <property name="maxLength">
         <number>8</number>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
        </property>
       </widget>
       <widget class="QLineEdit" name="lineEdit_date_modifcation">
@@ -1316,6 +1319,9 @@ border-radius:25px;
           </property>
           <property name="styleSheet">
            <string notr="true">border-image: white</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
           </property>
          </widget>
          <widget class="QLineEdit" name="lineEdit_nombre_salle_modification">
