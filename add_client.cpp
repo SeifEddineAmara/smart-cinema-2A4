@@ -33,7 +33,7 @@ void add_client::on_pushButton_confirm_clicked()
     bool test = c.add_client() ;
     if (test==true )
     {
-        QMessageBox::information(nullptr, QObject::tr("database is open"),
+        QMessageBox::information(nullptr, QObject::tr("client added"),
                     QObject::tr("Yes.\n"
                                 "Click Cancel to exit."), QMessageBox::Cancel);
 

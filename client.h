@@ -29,6 +29,10 @@ public:
     QString get_age() ;
     QString get_type() ;
     QString get_mail() ;
+    QSqlQueryModel * trier();
+    bool search_client_view(QString id ,QSqlQueryModel *model  ) ;
+
+
 
 
 };

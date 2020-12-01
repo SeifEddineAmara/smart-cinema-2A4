@@ -1,14 +1,17 @@
 #include "mainwindow.h"
-
+#include"gest_ticket.h"
 #include <QApplication>
 #include<QDebug>
 #include"connection.h"
 #include<QMessageBox>
+#include"add_client.h"
+#include"gest_client.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    MainWindow w;
+    gest_ticket w;
+
 
     connection c;
         bool test=c.create_connect();

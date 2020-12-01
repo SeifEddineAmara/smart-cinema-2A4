@@ -102,6 +102,8 @@ void client::edit_client(QString id)
 */
 
 
+
+
 bool client::search_client(QString id, client *c)
 {
     QSqlQuery query ;
@@ -113,6 +115,7 @@ bool client::search_client(QString id, client *c)
             if(query.value(0) == id )
             {
                 test = true ;
+
                 // query.value(0) ; //id
                 //query.value(1) ; //age
         //        qDebug() << query.value(2) ; //last name
@@ -149,6 +152,74 @@ void client::view_data()
 
 
 }
+
+
+QSqlQueryModel * client::trier()
+
+{
+
+     QSqlQueryModel *model=new QSqlQueryModel() ;
+
+     QSqlQuery query ;
+
+     model->setHeaderData(1, Qt::Horizontal, QObject::tr("age "));
+
+     query.prepare("SELECT *  FROM client ORDER BY NAME ASC ") ;
+
+     if (query.exec()&&query.next())
+
+     {
+
+         model->setQuery(query) ;
+
+     }
+     /*
+     model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID"));
+     model->setHeaderData(1, Qt::Horizontal, QObject::tr("age "));
+     model->setHeaderData(2, Qt::Horizontal, QObject::tr("last name"));
+     model->setHeaderData(3, Qt::Horizontal, QObject::tr("type"));
+     model->setHeaderData(4, Qt::Horizontal, QObject::tr("name"));
+     model->setHeaderData(5, Qt::Horizontal, QObject::tr("mail"));
+     model->setHeaderData(6, Qt::Horizontal, QObject::tr("numero"));
+        */
+     return model;
+}
+
+bool client::search_client_view(QString id ,QSqlQueryModel *model  )
+{
+    QSqlQuery query ;
+    bool test=false ;
+    query.prepare("SELECT * from client where ID = :id ");
+    query.bindValue(":id", id);
+
+    if( query.exec() )
+    {
+        while(query.next() && test==false )
+        {
+            if(query.value(0) == id )
+            {
+                test = true ;
+                model->setQuery(query) ;
+                query.value(1) = "testt" ;
+            }
+        }
+    }
+
+    return test;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

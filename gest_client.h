@@ -2,6 +2,7 @@
 #define GEST_CLIENT_H
 
 #include <QDialog>
+#include"client.h"
 
 namespace Ui {
 class gest_client;
@@ -15,6 +16,7 @@ public:
     explicit gest_client(QWidget *parent = nullptr);
     ~gest_client();
 
+
 private slots:
     void on_pushButton_show_client_clicked();
 
@@ -24,8 +26,14 @@ private slots:
 
     void on_pushButton_update_client_clicked();
 
+
+    void on_pushButton_clicked();
+
+    void on_pushButton_2_clicked();
+
 private:
     Ui::gest_client *ui;
+    client tempclient2 ;
 };
 
 #endif // GEST_CLIENT_H

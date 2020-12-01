@@ -15,9 +15,13 @@ SOURCES += \
     connection.cpp \
     delete_client.cpp \
     edit_client.cpp \
+    film.cpp \
     gest_client.cpp \
+    gest_ticket.cpp \
     main.cpp \
     mainwindow.cpp \
+    salle.cpp \
+    ticket.cpp \
     welcome_window.cpp
 
 HEADERS += \
@@ -27,8 +31,12 @@ HEADERS += \
     connection.h \
     delete_client.h \
     edit_client.h \
+    film.h \
     gest_client.h \
+    gest_ticket.h \
     mainwindow.h \
+    salle.h \
+    ticket.h \
     welcome_window.h
 
 FORMS += \
@@ -37,6 +45,7 @@ FORMS += \
     delete_client.ui \
     edit_client.ui \
     gest_client.ui \
+    gest_ticket.ui \
     mainwindow.ui \
     welcome_window.ui
 

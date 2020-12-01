@@ -12,3 +12,8 @@ welcome_window::~welcome_window()
 {
     delete ui;
 }
+
+void welcome_window::on_pushButton_2_clicked()
+{
+
+}
