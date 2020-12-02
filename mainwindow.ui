@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Gestion des Clients</string>
+   <string>Smart cinema</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QGroupBox" name="groupBox">
@@ -55,7 +55,7 @@
       <enum>QTabWidget::Triangular</enum>
      </property>
      <property name="currentIndex">
-      <number>7</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="tab">
       <attribute name="title">
@@ -160,7 +160,7 @@ border-radius:25px;
 font: 75 18pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
-        <string>Exporter</string>
+        <string>Imprimer</string>
        </property>
       </widget>
      </widget>
@@ -953,7 +953,7 @@ border-radius:25px;
          <enum>QTabWidget::Triangular</enum>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>1</number>
         </property>
         <widget class="QWidget" name="tab_9">
          <attribute name="title">
