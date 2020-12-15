@@ -1,0 +1,32 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>login.png</file>
+        <file>bleue.jpg</file>
+        <file>Cinema_2.jpg</file>
+    </qresource>
+    <qresource prefix="/new/prefix2">
+        <file>marronnn.jpg</file>
+        <file>marron.jpg</file>
+        <file>logine.jfif</file>
+    </qresource>
+    <qresource prefix="/new/prefix3">
+        <file>orange.png</file>
+        <file>camera.png</file>
+        <file>beige.jpg</file>
+    </qresource>
+    <qresource prefix="/new/prefix4">
+        <file>Mousclik.wav</file>
+        <file>giphy.gif</file>
+        <file>users-18-512.png</file>
+    </qresource>
+    <qresource prefix="/new/prefix5">
+        <file>chair.png</file>
+        <file>cine.png</file>
+        <file>client.png</file>
+        <file>consomm.png</file>
+        <file>film.jpg</file>
+        <file>producteur.png</file>
+        <file>salle.png</file>
+        <file>tick.png</file>
+    </qresource>
+</RCC>
