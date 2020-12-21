@@ -46,7 +46,8 @@ public:
         buttonBox = new QDialogButtonBox(add_consomation);
         buttonBox->setObjectName(QStringLiteral("buttonBox"));
         buttonBox->setGeometry(QRect(260, 230, 81, 61));
-        buttonBox->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix3/orange.png);"));
+        buttonBox->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
+""));
         buttonBox->setOrientation(Qt::Vertical);
         buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
         label_6 = new QLabel(add_consomation);
@@ -89,7 +90,7 @@ public:
 
     void retranslateUi(QDialog *add_consomation)
     {
-        add_consomation->setWindowTitle(QApplication::translate("add_consomation", "Dialog", Q_NULLPTR));
+        add_consomation->setWindowTitle(QApplication::translate("add_consomation", "Smart cinema", Q_NULLPTR));
         label_6->setText(QApplication::translate("add_consomation", "Quantite :", Q_NULLPTR));
         label_3->setText(QApplication::translate("add_consomation", "Prix :", Q_NULLPTR));
         id_cons->setPlaceholderText(QApplication::translate("add_consomation", "DONNER ID", Q_NULLPTR));

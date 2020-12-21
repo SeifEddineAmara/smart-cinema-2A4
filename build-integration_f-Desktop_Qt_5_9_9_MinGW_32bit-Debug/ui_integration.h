@@ -105,7 +105,7 @@ public:
         pushButton_login->setGeometry(QRect(140, 330, 171, 51));
         pushButton_login->setFont(font1);
         pushButton_login->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
-"border-radius:15px;\n"
+"border-radius:25px;\n"
 "\n"
 ""));
         pushButton_login->setCheckable(false);

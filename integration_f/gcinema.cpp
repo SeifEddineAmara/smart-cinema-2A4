@@ -88,7 +88,7 @@ void gcinema::modifier(QString nom1,QString reference1,QString datec1,QString de
 {
    QSqlQuery query;
 
-    query.prepare("UPDATE PCINEMA set NOM='"+nom1 +" ', REFERENCE='"+reference1+"', DATEC='"+datec1+"', DESTINATION='"+destination1+"' , NOMBRE_SALLE='"+nb+"' where REFERENCE='"+reference1+"' ");
+    query.prepare("UPDATE PCINEMA set NOM='"+nom1 +"',REFERENCE='"+reference1+"',DATEC='"+datec1+"',DESTINATION='"+destination1+"' ,NOMBRE_SALLE='"+nb+"' where REFERENCE='"+reference1+"'");
 
 
    if(query.exec())
@@ -97,6 +97,8 @@ void gcinema::modifier(QString nom1,QString reference1,QString datec1,QString de
               msgBox.setText("Cinema modifié");
               msgBox.exec();
               }
+
+
 
 }
 
@@ -183,7 +185,7 @@ else if (count<1)
 
 //3 criteres
 
-QSqlQueryModel * gcinema::rechercher_3(QString reff,QString nomm,QString dest)
+QSqlQueryModel * gcinema::rechercher_3(QString reference,QString nom,QString destination)
 {
     QMessageBox msgBox;
     QMessageBox msgBox1;
@@ -193,10 +195,10 @@ QSqlQueryModel * gcinema::rechercher_3(QString reff,QString nomm,QString dest)
     int count=0;
 
 
-    query.prepare("SELECT * FROM pcinema WHERE reference = ? and nom= ? and destination= ?");
-    query.addBindValue(reff);
-    query.addBindValue(nomm);
-    query.addBindValue(dest);
+    query.prepare("SELECT * FROM pcinema WHERE reference = :reference and nom= :nom and destination= :destination");
+    query.bindValue(":reference",reference);
+    query.bindValue(":nom",nom);
+    query.bindValue(":destination",destination);
 
 
 
@@ -214,7 +216,7 @@ if(count==1)
     model->setQuery(query);
 }
 
-else if (count<1)
+ if (count<1)
 {
     msgBox1.setText("Cinema n'existe pas");
         msgBox1.exec();

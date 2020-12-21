@@ -200,7 +200,7 @@
      </property>
      <property name="styleSheet">
       <string notr="true">border-image: url(:/new/prefix3/orange.png);
-border-radius:15px;
+border-radius:25px;
 
 </string>
      </property>

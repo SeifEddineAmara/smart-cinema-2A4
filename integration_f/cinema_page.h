@@ -42,12 +42,16 @@ public:
 
     void on_pushButton_rechercher_cinema_clicked();
 
-    void on_pushButton_2_clicked();
+    /*void on_pushButton_2_clicked();*/
 
     void print(QPrinter *printer);
 
 
 
+
+    void on_pushButton_refresh_clicked();
+
+    void on_pushButton_imprimer_clicked();
 
 private:
     Ui::cinema_page *ui;

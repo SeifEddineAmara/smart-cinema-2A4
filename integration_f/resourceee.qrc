@@ -29,4 +29,16 @@
         <file>salle.png</file>
         <file>tick.png</file>
     </qresource>
+    <qresource prefix="/new/prefix6">
+        <file>filmconso.jpg</file>
+        <file>filmconso.jpg.png</file>
+        <file>client.png</file>
+        <file>cine.png</file>
+        <file>salleee.jpg</file>
+        <file>tickett.png</file>
+    </qresource>
+    <qresource prefix="/new/prefix7">
+        <file>producteur_chaise.png</file>
+        <file>salleee.jpg.png</file>
+    </qresource>
 </RCC>

@@ -45,12 +45,9 @@ public:
     QComboBox *comboBox_cine;
     QLabel *label_7;
     QComboBox *comboBox_salle;
-    QLabel *label_8;
-    QComboBox *comboBox_horaire;
     QPushButton *pushButton_update_film_cine;
     QPushButton *pushButton_update_cine_salle;
     QPushButton *pushButton_update_salle_horaire;
-    QPushButton *pushButton_update_horaire;
     QPushButton *pushButton_confirm_type;
     QLineEdit *lineEdit_price;
     QPushButton *pushButton_confirm_ajout;
@@ -138,7 +135,7 @@ public:
         comboBox_consommation->setStyleSheet(QStringLiteral("border-image: whit"));
         comboBox_film = new QComboBox(tab);
         comboBox_film->setObjectName(QStringLiteral("comboBox_film"));
-        comboBox_film->setGeometry(QRect(520, 10, 101, 31));
+        comboBox_film->setGeometry(QRect(520, 10, 101, 51));
         comboBox_film->setStyleSheet(QStringLiteral("border-image: whit"));
         label_6 = new QLabel(tab);
         label_6->setObjectName(QStringLiteral("label_6"));
@@ -160,16 +157,6 @@ public:
         comboBox_salle->setObjectName(QStringLiteral("comboBox_salle"));
         comboBox_salle->setGeometry(QRect(520, 170, 101, 41));
         comboBox_salle->setStyleSheet(QStringLiteral("border-image: whit"));
-        label_8 = new QLabel(tab);
-        label_8->setObjectName(QStringLiteral("label_8"));
-        label_8->setGeometry(QRect(400, 250, 91, 51));
-        label_8->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
-"color: rgb(0, 0, 127);\n"
-"font: 14pt \"MS Shell Dlg 2\";"));
-        comboBox_horaire = new QComboBox(tab);
-        comboBox_horaire->setObjectName(QStringLiteral("comboBox_horaire"));
-        comboBox_horaire->setGeometry(QRect(520, 250, 101, 41));
-        comboBox_horaire->setStyleSheet(QStringLiteral("border-image: whit"));
         pushButton_update_film_cine = new QPushButton(tab);
         pushButton_update_film_cine->setObjectName(QStringLiteral("pushButton_update_film_cine"));
         pushButton_update_film_cine->setGeometry(QRect(640, 10, 80, 51));
@@ -188,13 +175,6 @@ public:
         pushButton_update_salle_horaire->setObjectName(QStringLiteral("pushButton_update_salle_horaire"));
         pushButton_update_salle_horaire->setGeometry(QRect(640, 170, 81, 51));
         pushButton_update_salle_horaire->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
-"color: rgb(0, 0, 127);\n"
-"font: 14pt \"MS Shell Dlg 2\";\n"
-"border-image: url(:/new/prefix3/orange.png);"));
-        pushButton_update_horaire = new QPushButton(tab);
-        pushButton_update_horaire->setObjectName(QStringLiteral("pushButton_update_horaire"));
-        pushButton_update_horaire->setGeometry(QRect(640, 240, 81, 51));
-        pushButton_update_horaire->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "color: rgb(0, 0, 127);\n"
 "font: 14pt \"MS Shell Dlg 2\";\n"
 "border-image: url(:/new/prefix3/orange.png);"));
@@ -328,7 +308,7 @@ public:
 
     void retranslateUi(QDialog *ticket_page)
     {
-        ticket_page->setWindowTitle(QApplication::translate("ticket_page", "Dialog", Q_NULLPTR));
+        ticket_page->setWindowTitle(QApplication::translate("ticket_page", "Smart cinema", Q_NULLPTR));
         groupBox->setTitle(QApplication::translate("ticket_page", "Gestion ticket", Q_NULLPTR));
         label->setText(QApplication::translate("ticket_page", "ID", Q_NULLPTR));
         label_2->setText(QApplication::translate("ticket_page", "Price", Q_NULLPTR));
@@ -337,11 +317,9 @@ public:
         label_5->setText(QApplication::translate("ticket_page", "Film", Q_NULLPTR));
         label_6->setText(QApplication::translate("ticket_page", "Cine", Q_NULLPTR));
         label_7->setText(QApplication::translate("ticket_page", "Salle", Q_NULLPTR));
-        label_8->setText(QApplication::translate("ticket_page", "Horaire", Q_NULLPTR));
         pushButton_update_film_cine->setText(QApplication::translate("ticket_page", "Search", Q_NULLPTR));
         pushButton_update_cine_salle->setText(QApplication::translate("ticket_page", "Search", Q_NULLPTR));
         pushButton_update_salle_horaire->setText(QApplication::translate("ticket_page", "Search", Q_NULLPTR));
-        pushButton_update_horaire->setText(QApplication::translate("ticket_page", "Search", Q_NULLPTR));
         pushButton_confirm_type->setText(QApplication::translate("ticket_page", "Confirm", Q_NULLPTR));
         pushButton_confirm_ajout->setText(QApplication::translate("ticket_page", "Confirm", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("ticket_page", "Ajout", Q_NULLPTR));

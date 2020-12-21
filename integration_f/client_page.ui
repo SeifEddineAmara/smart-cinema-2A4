@@ -16,7 +16,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Smart cinema</string>
   </property>
   <property name="styleSheet">
    <string notr="true">border-image: url(:/new/prefix3/beige.jpg);</string>
@@ -50,14 +50,19 @@
       <height>431</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">border-image: url(:/new/prefix2/marron.jpg);</string>
     </property>
     <property name="tabShape">
-     <enum>QTabWidget::Rounded</enum>
+     <enum>QTabWidget::Triangular</enum>
     </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -75,11 +80,11 @@
       <property name="styleSheet">
        <string notr="true">border-radius : 10px ;
 font: 14pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 127);
+
 </string>
       </property>
       <property name="text">
-       <string>Name</string>
+       <string>Name :</string>
       </property>
      </widget>
      <widget class="QLabel" name="lastname">
@@ -94,10 +99,10 @@ color: rgb(0, 0, 127);
       <property name="styleSheet">
        <string notr="true">border-radius : 10px ;
 font: 14pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 127);</string>
+</string>
       </property>
       <property name="text">
-       <string>Last name</string>
+       <string>Last name :</string>
       </property>
      </widget>
      <widget class="QLabel" name="id">
@@ -112,10 +117,10 @@ color: rgb(0, 0, 127);</string>
       <property name="styleSheet">
        <string notr="true">border-radius : 10px ;
 font: 14pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 127);</string>
+</string>
       </property>
       <property name="text">
-       <string>ID</string>
+       <string>ID :</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit_name">
@@ -175,11 +180,10 @@ border-image: whit</string>
       <property name="styleSheet">
        <string notr="true">border-radius : 10px ;
 font: 14pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 127);
 </string>
       </property>
       <property name="text">
-       <string>Number</string>
+       <string>Nombre</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_5">
@@ -194,7 +198,7 @@ color: rgb(0, 0, 127);
       <property name="styleSheet">
        <string notr="true">border-radius : 10px ;
 font: 14pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 127);</string>
+</string>
       </property>
       <property name="text">
        <string>Age</string>
@@ -212,7 +216,7 @@ color: rgb(0, 0, 127);</string>
       <property name="styleSheet">
        <string notr="true">border-radius : 10px ;
 font: 14pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 127);</string>
+</string>
       </property>
       <property name="text">
        <string>Email</string>
@@ -275,7 +279,7 @@ border-image: whit</string>
       <property name="styleSheet">
        <string notr="true">border-radius : 10px ;
 font: 14pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 127);</string>
+</string>
       </property>
       <property name="text">
        <string>Type :</string>
@@ -297,10 +301,10 @@ color: rgb(0, 0, 127);</string>
      <widget class="QPushButton" name="pushButton">
       <property name="geometry">
        <rect>
-        <x>310</x>
+        <x>400</x>
         <y>350</y>
         <width>161</width>
-        <height>51</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -309,7 +313,7 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
 border-image: url(:/new/prefix3/orange.png);</string>
       </property>
       <property name="text">
-       <string>Confirm</string>
+       <string>Confirmer</string>
       </property>
      </widget>
     </widget>
@@ -320,10 +324,10 @@ border-image: url(:/new/prefix3/orange.png);</string>
      <widget class="QTableView" name="tableView">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>30</y>
-        <width>821</width>
-        <height>261</height>
+        <x>20</x>
+        <y>20</y>
+        <width>801</width>
+        <height>281</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -335,8 +339,8 @@ border-image: url(:/new/prefix3/orange.png);</string>
        <rect>
         <x>320</x>
         <y>330</y>
-        <width>201</width>
-        <height>51</height>
+        <width>191</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -345,7 +349,7 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
 border-image: url(:/new/prefix3/orange.png);</string>
       </property>
       <property name="text">
-       <string>Show</string>
+       <string>Afficher</string>
       </property>
      </widget>
     </widget>
@@ -357,7 +361,7 @@ border-image: url(:/new/prefix3/orange.png);</string>
       <property name="geometry">
        <rect>
         <x>200</x>
-        <y>120</y>
+        <y>80</y>
         <width>381</width>
         <height>41</height>
        </rect>
@@ -372,9 +376,9 @@ border-image: whit</string>
       <property name="geometry">
        <rect>
         <x>280</x>
-        <y>230</y>
-        <width>231</width>
-        <height>51</height>
+        <y>180</y>
+        <width>211</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -383,7 +387,25 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
 border-image: url(:/new/prefix3/orange.png);</string>
       </property>
       <property name="text">
-       <string>Search</string>
+       <string>Rechercher</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="id_2">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>70</y>
+        <width>51</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius : 10px ;
+font: 14pt &quot;MS Shell Dlg 2&quot;;
+</string>
+      </property>
+      <property name="text">
+       <string>ID :</string>
       </property>
      </widget>
     </widget>
@@ -394,8 +416,8 @@ border-image: url(:/new/prefix3/orange.png);</string>
      <widget class="QLineEdit" name="lineEdit_id_delete">
       <property name="geometry">
        <rect>
-        <x>220</x>
-        <y>110</y>
+        <x>240</x>
+        <y>40</y>
         <width>381</width>
         <height>51</height>
        </rect>
@@ -412,10 +434,10 @@ border-image: whit</string>
      <widget class="QPushButton" name="pushButton_conif_delete">
       <property name="geometry">
        <rect>
-        <x>290</x>
-        <y>240</y>
-        <width>211</width>
-        <height>51</height>
+        <x>320</x>
+        <y>150</y>
+        <width>201</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -424,7 +446,25 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
 border-image: url(:/new/prefix3/orange.png);</string>
       </property>
       <property name="text">
-       <string>Delete</string>
+       <string>Supprimer</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="id_3">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>40</y>
+        <width>51</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius : 10px ;
+font: 14pt &quot;MS Shell Dlg 2&quot;;
+</string>
+      </property>
+      <property name="text">
+       <string>ID :</string>
       </property>
      </widget>
     </widget>
@@ -486,9 +526,9 @@ border-image: whit</string>
      <widget class="QPushButton" name="pushButton_search">
       <property name="geometry">
        <rect>
-        <x>610</x>
+        <x>600</x>
         <y>60</y>
-        <width>121</width>
+        <width>131</width>
         <height>51</height>
        </rect>
       </property>
@@ -498,13 +538,13 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
 border-image: url(:/new/prefix3/orange.png);</string>
       </property>
       <property name="text">
-       <string>Search</string>
+       <string>Rechercher</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit_search_id">
       <property name="geometry">
        <rect>
-        <x>60</x>
+        <x>190</x>
         <y>30</y>
         <width>281</width>
         <height>41</height>
@@ -513,16 +553,17 @@ border-image: url(:/new/prefix3/orange.png);</string>
       <property name="styleSheet">
        <string notr="true">border-radius : 10px ;
 font: 14pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 127);</string>
+color: rgb(0, 0, 127);
+border-image: whit</string>
       </property>
       <property name="text">
-       <string>Type ID here :</string>
+       <string/>
       </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit_search_name">
       <property name="geometry">
        <rect>
-        <x>60</x>
+        <x>190</x>
         <y>110</y>
         <width>281</width>
         <height>41</height>
@@ -531,10 +572,11 @@ color: rgb(0, 0, 127);</string>
       <property name="styleSheet">
        <string notr="true">border-radius : 10px ;
 font: 14pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 127);</string>
+color: rgb(0, 0, 127);
+border-image: whit</string>
       </property>
       <property name="text">
-       <string>Type name here :</string>
+       <string/>
       </property>
      </widget>
      <widget class="QTableView" name="tableView_search">
@@ -548,6 +590,48 @@ color: rgb(0, 0, 127);</string>
       </property>
       <property name="styleSheet">
        <string notr="true">border-image: whit</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>30</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Cliquer ID ici :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>120</y>
+        <width>161</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Cliquer name ici :</string>
       </property>
      </widget>
     </widget>

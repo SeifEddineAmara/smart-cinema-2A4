@@ -315,7 +315,7 @@ public:
 
         retranslateUi(salle_page);
 
-        tabWidget_3->setCurrentIndex(4);
+        tabWidget_3->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(salle_page);
@@ -323,7 +323,7 @@ public:
 
     void retranslateUi(QDialog *salle_page)
     {
-        salle_page->setWindowTitle(QApplication::translate("salle_page", "Dialog", Q_NULLPTR));
+        salle_page->setWindowTitle(QApplication::translate("salle_page", "Smart cinema", Q_NULLPTR));
         groupBox_2->setTitle(QApplication::translate("salle_page", "Gestion salle", Q_NULLPTR));
         label_15->setText(QApplication::translate("salle_page", "Numero :", Q_NULLPTR));
         label_16->setText(QApplication::translate("salle_page", "Nombre de place :", Q_NULLPTR));

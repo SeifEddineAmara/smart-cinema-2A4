@@ -41,7 +41,7 @@ public:
     {
         if (addfilm->objectName().isEmpty())
             addfilm->setObjectName(QStringLiteral("addfilm"));
-        addfilm->resize(570, 365);
+        addfilm->resize(505, 330);
         addfilm->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix3/beige.jpg);"));
         label_6 = new QLabel(addfilm);
         label_6->setObjectName(QStringLiteral("label_6"));
@@ -88,7 +88,7 @@ public:
 
     void retranslateUi(QDialog *addfilm)
     {
-        addfilm->setWindowTitle(QApplication::translate("addfilm", "Dialog", Q_NULLPTR));
+        addfilm->setWindowTitle(QApplication::translate("addfilm", "Smart cinema", Q_NULLPTR));
         label_6->setText(QApplication::translate("addfilm", "Duree(min) :", Q_NULLPTR));
         label_5->setText(QApplication::translate("addfilm", "Nom :", Q_NULLPTR));
         label_3->setText(QApplication::translate("addfilm", "Type :", Q_NULLPTR));

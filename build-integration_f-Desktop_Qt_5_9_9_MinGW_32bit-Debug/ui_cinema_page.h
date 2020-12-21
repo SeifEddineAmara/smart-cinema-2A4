@@ -48,6 +48,7 @@ public:
     QWidget *tab_6;
     QPushButton *pushButton;
     QTableView *tableView;
+    QPushButton *pushButton_imprimer;
     QWidget *tab_8;
     QLabel *label_6;
     QLabel *label_8;
@@ -79,6 +80,7 @@ public:
     QLineEdit *lineEdit_destination_rechercher;
     QPushButton *pushButton_rechercher_cinema;
     QTableView *tableView_rechercher_cinema;
+    QPushButton *pushButton_refresh;
 
     void setupUi(QDialog *cinema_page)
     {
@@ -170,7 +172,7 @@ public:
         tab_6->setObjectName(QStringLiteral("tab_6"));
         pushButton = new QPushButton(tab_6);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(20, 20, 391, 311));
+        pushButton->setGeometry(QRect(20, 40, 391, 311));
         QFont font3;
         font3.setFamily(QStringLiteral("MS Shell Dlg 2"));
         font3.setPointSize(20);
@@ -185,8 +187,13 @@ public:
 ""));
         tableView = new QTableView(tab_6);
         tableView->setObjectName(QStringLiteral("tableView"));
-        tableView->setGeometry(QRect(410, 20, 411, 311));
+        tableView->setGeometry(QRect(410, 40, 411, 311));
         tableView->setStyleSheet(QStringLiteral("border-image: white"));
+        pushButton_imprimer = new QPushButton(tab_6);
+        pushButton_imprimer->setObjectName(QStringLiteral("pushButton_imprimer"));
+        pushButton_imprimer->setGeometry(QRect(670, 12, 151, 31));
+        pushButton_imprimer->setFont(font);
+        pushButton_imprimer->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix3/orange.png);"));
         tabWidget_2->addTab(tab_6, QString());
         tab_8 = new QWidget();
         tab_8->setObjectName(QStringLiteral("tab_8"));
@@ -286,7 +293,7 @@ public:
         comboBox_tri->setStyleSheet(QStringLiteral("border-image: white"));
         pushButton_trier = new QPushButton(tab_10);
         pushButton_trier->setObjectName(QStringLiteral("pushButton_trier"));
-        pushButton_trier->setGeometry(QRect(110, 200, 151, 51));
+        pushButton_trier->setGeometry(QRect(30, 200, 151, 51));
         pushButton_trier->setFont(font2);
         pushButton_trier->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
 "border-radius:25px;\n"
@@ -341,11 +348,18 @@ public:
         tableView_rechercher_cinema->setObjectName(QStringLiteral("tableView_rechercher_cinema"));
         tableView_rechercher_cinema->setGeometry(QRect(400, 20, 421, 351));
         tableView_rechercher_cinema->setStyleSheet(QStringLiteral("border-image: white"));
+        pushButton_refresh = new QPushButton(tab_11);
+        pushButton_refresh->setObjectName(QStringLiteral("pushButton_refresh"));
+        pushButton_refresh->setGeometry(QRect(240, 310, 151, 51));
+        pushButton_refresh->setFont(font2);
+        pushButton_refresh->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
+"border-radius:25px;\n"
+""));
         tabWidget_2->addTab(tab_11, QString());
 
         retranslateUi(cinema_page);
 
-        tabWidget_2->setCurrentIndex(5);
+        tabWidget_2->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(cinema_page);
@@ -353,7 +367,7 @@ public:
 
     void retranslateUi(QDialog *cinema_page)
     {
-        cinema_page->setWindowTitle(QApplication::translate("cinema_page", "Dialog", Q_NULLPTR));
+        cinema_page->setWindowTitle(QApplication::translate("cinema_page", "Smart cinema", Q_NULLPTR));
         groupBox->setTitle(QApplication::translate("cinema_page", "Gestion cinema", Q_NULLPTR));
         label_2->setText(QApplication::translate("cinema_page", "Nom :", Q_NULLPTR));
         label->setText(QApplication::translate("cinema_page", "Reference :", Q_NULLPTR));
@@ -363,6 +377,7 @@ public:
         pushButton_ajouter->setText(QApplication::translate("cinema_page", "Ajouter", Q_NULLPTR));
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_7), QApplication::translate("cinema_page", "Ajout", Q_NULLPTR));
         pushButton->setText(QApplication::translate("cinema_page", "Affichage", Q_NULLPTR));
+        pushButton_imprimer->setText(QApplication::translate("cinema_page", "Imprimer", Q_NULLPTR));
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_6), QApplication::translate("cinema_page", "Affichage liste", Q_NULLPTR));
         label_6->setText(QApplication::translate("cinema_page", "Nom :", Q_NULLPTR));
         label_8->setText(QApplication::translate("cinema_page", "Date de cr\303\251ation :", Q_NULLPTR));
@@ -384,6 +399,7 @@ public:
         label_14->setText(QApplication::translate("cinema_page", "Destination :", Q_NULLPTR));
         lineEdit_destination_rechercher->setPlaceholderText(QApplication::translate("cinema_page", "Chercher", Q_NULLPTR));
         pushButton_rechercher_cinema->setText(QApplication::translate("cinema_page", "Rechercher", Q_NULLPTR));
+        pushButton_refresh->setText(QApplication::translate("cinema_page", "Refrech", Q_NULLPTR));
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_11), QApplication::translate("cinema_page", "Rechercher", Q_NULLPTR));
     } // retranslateUi
 

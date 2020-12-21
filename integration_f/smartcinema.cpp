@@ -1,5 +1,6 @@
 #include "smartcinema.h"
 #include "ui_smartcinema.h"
+#include <QMovie>
 
 Smartcinema::Smartcinema(QWidget *parent) :
     QDialog(parent),
@@ -7,11 +8,25 @@ Smartcinema::Smartcinema(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    son=new QSound(":/new/prefix4/Mousclik.wav");
+
+
     //Time
 
     timer=new QTimer(this);
     connect(timer,SIGNAL(timeout()),this,SLOT(myfunction()));
     timer->start(1000);
+
+
+    QMovie *movie = new QMovie(":/new/prefix4/giphy.gif");
+   movie->start();
+   //gif
+
+    /*QMovie *movie = new QMovie(":/new/prefix2/giphy.gif");
+   movie->start();*/
+
+   /*ui->label_26->setMovie(movie);*/
+   ui->label_26->setMovie(movie);
 
 
 }
@@ -37,17 +52,17 @@ void Smartcinema::myfunction()
 
 void Smartcinema::on_pushButton_3_clicked()
 {
-   /* son->play();*/
+    son->play();
 
 
     QString  link="http://www.google.com";
-    /*QDesktopServices::openUrl(QUrl(link));*/
+    QDesktopServices::openUrl(QUrl(link));
 
 }
 
 void Smartcinema::on_pushButton_4_clicked()
 {
-   /* son->play();
+    son->play();
 
 
     QString filename=QFileDialog::getOpenFileName(
@@ -57,12 +72,13 @@ void Smartcinema::on_pushButton_4_clicked()
 
                 );
 
-    QDesktopServices::openUrl(QUrl("file:///"+filename,QUrl::TolerantMode));*/
+    QDesktopServices::openUrl(QUrl("file:///"+filename,QUrl::TolerantMode));
 }
 
 
 void Smartcinema::on_pushButton_gest_cinema_clicked()
 {
+    son->play();
 
 
     pagecinema=new cinema_page(this);
@@ -72,6 +88,7 @@ void Smartcinema::on_pushButton_gest_cinema_clicked()
 void Smartcinema::on_pushButton_gest_salle_clicked()
 {
 
+    son->play();
 
             pagesalle=new salle_page(this);
             pagesalle->show();
@@ -79,9 +96,50 @@ void Smartcinema::on_pushButton_gest_salle_clicked()
 
 void Smartcinema::on_pushButton_gest_film_clicked()
 {
+    son->play();
 
             fc=new MainWindow_film_consommation(this);
             fc->show();
 }
 
 
+
+void Smartcinema::on_pushButton_gest_ticket_clicked()
+{
+    son->play();
+
+
+    t=new ticket_page(this);
+    t->show();
+}
+
+
+
+void Smartcinema::on_pushButton_gest_client_clicked()
+{
+    son->play();
+
+
+    c=new client_page(this);
+    c->show();
+}
+
+void Smartcinema::on_pushButton_gest_producteur_clicked()
+{
+    son->play();
+
+      vad=new verification_administrateur(this);
+      vad->show();
+
+
+}
+
+void Smartcinema::on_pushButton_gest_chaise_producteur_clicked()
+{
+    son->play();
+
+
+    cp=new chaise_producteur_page(this);
+    cp->show();
+
+}

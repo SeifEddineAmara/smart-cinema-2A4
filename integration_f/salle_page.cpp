@@ -162,6 +162,7 @@ void salle_page::on_tableView_affichage_list_salle_2_activated(const QModelIndex
     QMessageBox msgBox1;
     QSqlQuery query;
 
+
    QString value=ui->tableView_affichage_list_salle_2->model()->data(index).toString();
 
 
@@ -177,7 +178,7 @@ void salle_page::on_tableView_affichage_list_salle_2_activated(const QModelIndex
            ui->lineEdit_numero_salle_modifcation->setText(query.value(0).toString());
            ui->lineEdit_nombre_salle_modification->setText(query.value(1).toString());
            ui->lineEdit_nombre_salle_disponible_modifcation->setText(query.value(2).toString());
-       }
+         }
 
    }
 

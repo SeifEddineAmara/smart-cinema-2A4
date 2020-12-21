@@ -73,7 +73,7 @@ cinema_page::cinema_page(QWidget *parent) :
 
     /////
 
-    ui->lineEdit_reference_ajout->setValidator(new QIntValidator(0,99999999,this));
+   ui->lineEdit_reference_ajout->setValidator(new QIntValidator(0,99999999,this));
     ui->lineEdit_reference_modification->setValidator(new QIntValidator(0,99999999,this));
     ui->lineEdit_nombre_salle_modication->setValidator(new QIntValidator(0,99999999,this));
     ui->lineEdit_reference_suppression->setValidator(new QIntValidator(0,99999999,this));
@@ -192,11 +192,16 @@ void cinema_page::on_pushButton_modifier_clicked()
 
 
 
+
    tmpc.modifier(nom1,reference1,datec1,destination1,nb);
+
+
+
 
    ui->tableView_2->setModel(tmpc.afficher());
    ui->tableView_2->show();
 
+ui->tableView->setModel(tmpc.afficher());
 
 }
 
@@ -220,7 +225,7 @@ void cinema_page::on_tableView_2_activated(const QModelIndex &index)
 
 
 
-   query.prepare("SELECT * FROM pcinema WHERE reference='"+value +"'or nom='"+value +"'");
+   query.prepare("SELECT * from pcinema WHERE reference='"+value +"'");
 
    if(query.exec())
 
@@ -331,15 +336,20 @@ void cinema_page::on_pushButton_rechercher_cinema_clicked()
     ui->tableView_rechercher_cinema->setModel(tmpc.rechercher_3(ui->lineEdit_reference_rechercher->text(),ui->lineEdit_nom_rechercher_2->text(),ui->lineEdit_destination_rechercher->text()));
 
               ui->tableView_rechercher_cinema->show();
+
+              ui->lineEdit_reference_rechercher->clear();
+              ui->lineEdit_nom_rechercher_2->clear();
+              ui->lineEdit_destination_rechercher->clear();
 }
 
-
+/*
 void cinema_page::on_pushButton_2_clicked()
 {
     QPrintPreviewDialog dialog;
         connect(&dialog, SIGNAL(paintRequested(QPrinter*)), this, SLOT(print(QPrinter*)));
         dialog.exec();
 }
+*/
 
 void cinema_page::print(QPrinter *printer)
 {
@@ -357,4 +367,16 @@ void cinema_page::print(QPrinter *printer)
             qDebug() << tablePrinter.lastError();
         }
         painter.end();
+}
+
+void cinema_page::on_pushButton_refresh_clicked()
+{
+    ui->tableView_rechercher_cinema->setModel(tmpc.afficher());
+}
+
+void cinema_page::on_pushButton_imprimer_clicked()
+{
+    QPrintPreviewDialog dialog;
+        connect(&dialog, SIGNAL(paintRequested(QPrinter*)), this, SLOT(print(QPrinter*)));
+        dialog.exec();
 }

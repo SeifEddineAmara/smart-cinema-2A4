@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Smart cinema</string>
   </property>
   <property name="styleSheet">
    <string notr="true">border-image: url(:/new/prefix3/beige.jpg);</string>
@@ -193,7 +193,7 @@ border-image: whit</string>
         <x>520</x>
         <y>10</y>
         <width>101</width>
-        <height>31</height>
+        <height>51</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -262,37 +262,6 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
        <string notr="true">border-image: whit</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_8">
-      <property name="geometry">
-       <rect>
-        <x>400</x>
-        <y>250</y>
-        <width>91</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius : 10px ;
-color: rgb(0, 0, 127);
-font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
-      </property>
-      <property name="text">
-       <string>Horaire</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="comboBox_horaire">
-      <property name="geometry">
-       <rect>
-        <x>520</x>
-        <y>250</y>
-        <width>101</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-image: whit</string>
-      </property>
-     </widget>
      <widget class="QPushButton" name="pushButton_update_film_cine">
       <property name="geometry">
        <rect>
@@ -336,25 +305,6 @@ border-image: url(:/new/prefix3/orange.png);</string>
        <rect>
         <x>640</x>
         <y>170</y>
-        <width>81</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius : 10px ;
-color: rgb(0, 0, 127);
-font: 14pt &quot;MS Shell Dlg 2&quot;;
-border-image: url(:/new/prefix3/orange.png);</string>
-      </property>
-      <property name="text">
-       <string>Search</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_update_horaire">
-      <property name="geometry">
-       <rect>
-        <x>640</x>
-        <y>240</y>
         <width>81</width>
         <height>51</height>
        </rect>

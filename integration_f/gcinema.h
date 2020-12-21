@@ -38,7 +38,7 @@ public:
 
     QSqlQueryModel * afficher();
     QSqlQueryModel* rechercher(QString reff);
-    QSqlQueryModel* rechercher_3(QString reff,QString nomm,QString dest);
+    QSqlQueryModel* rechercher_3(QString reference,QString nom,QString destination);
 
 
 

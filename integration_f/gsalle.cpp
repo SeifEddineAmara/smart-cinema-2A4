@@ -79,7 +79,7 @@ void gsalle::modifier(QString numero1,QString nombre_de_place1,QString nombre_de
 {
    QSqlQuery query;
 
-   query.prepare("UPDATE sallee set numero='"+numero1 +" ', nombre_de_place='"+nombre_de_place1+"', nombre_de_place_disponible='"+nombre_de_place_disponible1+"' where numero='"+numero1+"' ");
+   query.prepare("UPDATE sallee set numero='"+numero1 +"',nombre_de_place='"+nombre_de_place1+"',nombre_de_place_disponible='"+nombre_de_place_disponible1+"' where numero='"+numero1+"'");
 
 
 
@@ -88,6 +88,13 @@ void gsalle::modifier(QString numero1,QString nombre_de_place1,QString nombre_de
    {
        QMessageBox msgBox;
        msgBox.setText("Salle modifié");
+       msgBox.exec();
+   }
+
+   else
+   {
+       QMessageBox msgBox;
+       msgBox.setText("Salle non modifié");
        msgBox.exec();
    }
 

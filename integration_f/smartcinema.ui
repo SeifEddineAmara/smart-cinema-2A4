@@ -97,13 +97,94 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;
      <string>Ouvrir fichier</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_gest_client">
+   <widget class="QPushButton" name="pushButton_gest_ticket">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>100</y>
-      <width>131</width>
+      <x>450</x>
+      <y>60</y>
+      <width>151</width>
       <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/new/prefix6/tickett.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_gest_cinema">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>60</y>
+      <width>131</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/new/prefix6/cine.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_gest_film">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>60</y>
+      <width>131</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/*image: url(:/new/prefix5/film.jpg);*/
+border-image: url(:/new/prefix6/filmconso.jpg.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_gest_salle">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>350</y>
+      <width>211</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/new/prefix7/salleee.jpg.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_gest_chaise_producteur">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>360</y>
+      <width>141</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/new/prefix7/producteur_chaise.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_gest_producteur">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>360</y>
+      <width>141</width>
+      <height>111</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -113,116 +194,34 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_gest_ticket">
+   <widget class="QLabel" name="label_26">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>100</y>
-      <width>130</width>
-      <height>101</height>
+      <x>20</x>
+      <y>40</y>
+      <width>391</width>
+      <height>451</height>
      </rect>
     </property>
-    <property name="styleSheet">
-     <string notr="true">border-image: url(:/new/prefix5/tick.png);</string>
-    </property>
     <property name="text">
-     <string/>
+     <string>TextLabel</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_gest_cinema">
+   <widget class="QTextEdit" name="textEdit">
     <property name="geometry">
      <rect>
-      <x>480</x>
-      <y>100</y>
-      <width>131</width>
-      <height>101</height>
+      <x>550</x>
+      <y>220</y>
+      <width>291</width>
+      <height>71</height>
      </rect>
     </property>
-    <property name="styleSheet">
-     <string notr="true">image: url(:/new/prefix5/cine.png);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_gest_film">
-    <property name="geometry">
-     <rect>
-      <x>640</x>
-      <y>100</y>
-      <width>130</width>
-      <height>101</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">image: url(:/new/prefix5/film.jpg);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_gest_salle">
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>280</y>
-      <width>130</width>
-      <height>100</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border-image: url(:/new/prefix5/salle.png);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_gest_chaise">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
-      <y>290</y>
-      <width>131</width>
-      <height>101</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border-image: url(:/new/prefix5/chair.png);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_gest_consom">
-    <property name="geometry">
-     <rect>
-      <x>460</x>
-      <y>270</y>
-      <width>130</width>
-      <height>101</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">image: url(:/new/prefix5/consomm.png);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_gest_producteur">
-    <property name="geometry">
-     <rect>
-      <x>680</x>
-      <y>280</y>
-      <width>130</width>
-      <height>101</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">image: url(:/new/prefix5/producteur.png);</string>
-    </property>
-    <property name="text">
-     <string/>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:36pt; font-weight:600; text-decoration: underline; color:#ff0000;&quot;&gt;Bienvenue&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>

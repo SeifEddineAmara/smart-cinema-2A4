@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>570</width>
-    <height>365</height>
+    <width>505</width>
+    <height>330</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Smart cinema</string>
   </property>
   <property name="styleSheet">
    <string notr="true">border-image: url(:/new/prefix3/beige.jpg);</string>

@@ -101,7 +101,8 @@ public:
         pushButton = new QPushButton(tab);
         pushButton->setObjectName(QStringLiteral("pushButton"));
         pushButton->setGeometry(QRect(400, 40, 75, 23));
-        pushButton->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix3/orange.png);"));
+        pushButton->setStyleSheet(QLatin1String("\n"
+"border-image: url(:/new/prefix3/orange.png);"));
         tabWidget->addTab(tab, QString());
         tab_2 = new QWidget();
         tab_2->setObjectName(QStringLiteral("tab_2"));
@@ -179,7 +180,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow_film_consommation)
     {
-        MainWindow_film_consommation->setWindowTitle(QApplication::translate("MainWindow_film_consommation", "MainWindow", Q_NULLPTR));
+        MainWindow_film_consommation->setWindowTitle(QApplication::translate("MainWindow_film_consommation", "Smart cinema", Q_NULLPTR));
         actionadd_film->setText(QApplication::translate("MainWindow_film_consommation", "Ajouter Un Film", Q_NULLPTR));
         actionremove_film->setText(QApplication::translate("MainWindow_film_consommation", "Supprimer Un Film", Q_NULLPTR));
         actionadd_consomation->setText(QApplication::translate("MainWindow_film_consommation", "Ajouter Une Consommation", Q_NULLPTR));
