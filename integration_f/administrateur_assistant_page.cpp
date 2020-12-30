@@ -312,7 +312,7 @@ void administrateur_assistant_page::sendMail()
 
 
 
-    smtp->sendMail("abdelkader.daghrour@esprit.tn", ui->emailenvoie->text(), ui->sujetenvoie->text(),ui->messagenvoyer->text());
+    smtp->sendMail("abdelkader.daghrour@esprit.tn", ui->emailenvoie->text(),"alert" /*ui->sujetenvoie->text()*/,ui->messagenvoyer->text());
 
 }
 void administrateur_assistant_page::mailSent(QString status)
