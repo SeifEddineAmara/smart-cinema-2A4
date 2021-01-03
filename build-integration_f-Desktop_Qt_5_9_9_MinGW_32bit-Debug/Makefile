@@ -241,6 +241,7 @@ Makefile: ../integration_f/integration_f.pro C:/Qt/5.9.9/mingw53_32/mkspecs/win3
 		C:/Qt/5.9.9/mingw53_32/lib/Qt5Gui.prl \
 		C:/Qt/5.9.9/mingw53_32/lib/Qt5Sql.prl \
 		C:/Qt/5.9.9/mingw53_32/lib/Qt5Network.prl \
+		C:/Qt/5.9.9/mingw53_32/lib/Qt5SerialPort.prl \
 		C:/Qt/5.9.9/mingw53_32/lib/Qt5Core.prl
 	$(QMAKE) -o Makefile ..\integration_f\integration_f.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 C:/Qt/5.9.9/mingw53_32/mkspecs/features/spec_pre.prf:
@@ -423,6 +424,7 @@ C:/Qt/5.9.9/mingw53_32/lib/Qt5Multimedia.prl:
 C:/Qt/5.9.9/mingw53_32/lib/Qt5Gui.prl:
 C:/Qt/5.9.9/mingw53_32/lib/Qt5Sql.prl:
 C:/Qt/5.9.9/mingw53_32/lib/Qt5Network.prl:
+C:/Qt/5.9.9/mingw53_32/lib/Qt5SerialPort.prl:
 C:/Qt/5.9.9/mingw53_32/lib/Qt5Core.prl:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\integration_f\integration_f.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"

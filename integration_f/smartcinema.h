@@ -14,6 +14,7 @@
 #include "ticket_page.h"
 #include "administrateur_assistant_page.h"
 #include "verification_administrateur.h"
+#include "projection_page.h"
 
 #include <QTimer>
 #include<QDesktopServices>
@@ -21,6 +22,7 @@
 #include <QUrl>
 #include <QFileDialog>
 #include <QDateTime>
+#include "arduino1.h"
 
 
 
@@ -37,9 +39,15 @@ public:
     ~Smartcinema();
 
 
+    int led,alert,messageboxactive;
+
+
 
 private slots:
 
+
+    void update_label();
+    void update_label1();
 
     void on_pushButton_3_clicked();
 
@@ -59,6 +67,8 @@ private slots:
 
     void on_pushButton_gest_chaise_producteur_clicked();
 
+    void on_pushButton_projection_clicked();
+
 private:
     Ui::Smartcinema *ui;
 
@@ -72,9 +82,16 @@ private:
     administrateur_assistant_page *adminassis;
     verification_administrateur   *vad;
     chaise_producteur_page *cp;
+    projection_page  *pp;
 
     QTimer *timer;
     QSound *son;
+    arduino1 A;
+    QByteArray data_temperature;
+    QByteArray data;
+;
+
+
 
 
 public slots:

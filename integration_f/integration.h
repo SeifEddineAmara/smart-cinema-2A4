@@ -2,6 +2,7 @@
 #define INTEGRATION_H
 #include <QSqlQuery>
 #include <QMainWindow>
+#include "smtp.h"
 
 #include "smartcinema.h"
 
@@ -16,9 +17,14 @@ class Integration : public QMainWindow
 public:
     Integration(QWidget *parent = nullptr);
     ~Integration();
+    int verif=0;
+
+
 
 private slots:
     void on_pushButton_login_clicked();
+
+  /*  void on_pushButton_verifier_clicked();*/
 
 private:
     Ui::Integration *ui;

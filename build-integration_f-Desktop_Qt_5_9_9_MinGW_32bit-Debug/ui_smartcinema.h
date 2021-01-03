@@ -37,6 +37,10 @@ public:
     QPushButton *pushButton_gest_producteur;
     QLabel *label_26;
     QTextEdit *textEdit;
+    QLabel *label_2;
+    QPushButton *pushButton_gest_client;
+    QPushButton *pushButton_projection;
+    QLabel *label_gaz;
 
     void setupUi(QDialog *Smartcinema)
     {
@@ -76,35 +80,56 @@ public:
 ""));
         pushButton_gest_ticket = new QPushButton(groupBox);
         pushButton_gest_ticket->setObjectName(QStringLiteral("pushButton_gest_ticket"));
-        pushButton_gest_ticket->setGeometry(QRect(450, 60, 151, 101));
+        pushButton_gest_ticket->setGeometry(QRect(440, 130, 151, 111));
         pushButton_gest_ticket->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix6/tickett.png);"));
         pushButton_gest_cinema = new QPushButton(groupBox);
         pushButton_gest_cinema->setObjectName(QStringLiteral("pushButton_gest_cinema"));
-        pushButton_gest_cinema->setGeometry(QRect(620, 60, 131, 111));
+        pushButton_gest_cinema->setGeometry(QRect(610, 130, 131, 111));
         pushButton_gest_cinema->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix6/cine.png);"));
         pushButton_gest_film = new QPushButton(groupBox);
         pushButton_gest_film->setObjectName(QStringLiteral("pushButton_gest_film"));
-        pushButton_gest_film->setGeometry(QRect(760, 60, 131, 111));
+        pushButton_gest_film->setGeometry(QRect(760, 130, 131, 111));
         pushButton_gest_film->setStyleSheet(QLatin1String("/*image: url(:/new/prefix5/film.jpg);*/\n"
 "border-image: url(:/new/prefix6/filmconso.jpg.png);"));
         pushButton_gest_salle = new QPushButton(groupBox);
         pushButton_gest_salle->setObjectName(QStringLiteral("pushButton_gest_salle"));
-        pushButton_gest_salle->setGeometry(QRect(410, 350, 211, 131));
+        pushButton_gest_salle->setGeometry(QRect(400, 260, 211, 141));
         pushButton_gest_salle->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix7/salleee.jpg.png);"));
         pushButton_gest_chaise_producteur = new QPushButton(groupBox);
         pushButton_gest_chaise_producteur->setObjectName(QStringLiteral("pushButton_gest_chaise_producteur"));
-        pushButton_gest_chaise_producteur->setGeometry(QRect(610, 360, 141, 111));
+        pushButton_gest_chaise_producteur->setGeometry(QRect(610, 270, 141, 121));
         pushButton_gest_chaise_producteur->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix7/producteur_chaise.png);"));
         pushButton_gest_producteur = new QPushButton(groupBox);
         pushButton_gest_producteur->setObjectName(QStringLiteral("pushButton_gest_producteur"));
-        pushButton_gest_producteur->setGeometry(QRect(760, 360, 141, 111));
+        pushButton_gest_producteur->setGeometry(QRect(760, 260, 141, 131));
         pushButton_gest_producteur->setStyleSheet(QStringLiteral("image: url(:/new/prefix5/client.png);"));
         label_26 = new QLabel(groupBox);
         label_26->setObjectName(QStringLiteral("label_26"));
         label_26->setGeometry(QRect(20, 40, 391, 451));
         textEdit = new QTextEdit(groupBox);
         textEdit->setObjectName(QStringLiteral("textEdit"));
-        textEdit->setGeometry(QRect(550, 220, 291, 71));
+        textEdit->setGeometry(QRect(550, 50, 291, 71));
+        QFont font2;
+        font2.setPointSize(8);
+        font2.setBold(true);
+        font2.setWeight(75);
+        textEdit->setFont(font2);
+        label_2 = new QLabel(groupBox);
+        label_2->setObjectName(QStringLiteral("label_2"));
+        label_2->setGeometry(QRect(360, 10, 47, 13));
+        label_2->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix3/beige.jpg);"));
+        pushButton_gest_client = new QPushButton(groupBox);
+        pushButton_gest_client->setObjectName(QStringLiteral("pushButton_gest_client"));
+        pushButton_gest_client->setGeometry(QRect(510, 400, 151, 101));
+        pushButton_gest_client->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix7/cliente.png);"));
+        pushButton_projection = new QPushButton(groupBox);
+        pushButton_projection->setObjectName(QStringLiteral("pushButton_projection"));
+        pushButton_projection->setGeometry(QRect(700, 400, 151, 101));
+        pushButton_projection->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix7/proj.png);"));
+        label_gaz = new QLabel(groupBox);
+        label_gaz->setObjectName(QStringLiteral("label_gaz"));
+        label_gaz->setGeometry(QRect(280, 10, 47, 13));
+        label_gaz->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix3/beige.jpg);"));
 
         retranslateUi(Smartcinema);
 
@@ -128,8 +153,12 @@ public:
         textEdit->setHtml(QApplication::translate("Smartcinema", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:36pt; font-weight:600; text-decoration: underline; color:#ff0000;\">Bienvenue</span></p></body></html>", Q_NULLPTR));
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:600; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:36pt; text-decoration: underline; color:#ff0000;\">Bienvenue</span></p></body></html>", Q_NULLPTR));
+        label_2->setText(QApplication::translate("Smartcinema", "TextLabel", Q_NULLPTR));
+        pushButton_gest_client->setText(QString());
+        pushButton_projection->setText(QString());
+        label_gaz->setText(QApplication::translate("Smartcinema", "TextLabel", Q_NULLPTR));
     } // retranslateUi
 
 };

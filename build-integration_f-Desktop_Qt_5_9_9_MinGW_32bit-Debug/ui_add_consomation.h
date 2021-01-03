@@ -95,7 +95,7 @@ public:
         label_3->setText(QApplication::translate("add_consomation", "Prix :", Q_NULLPTR));
         id_cons->setPlaceholderText(QApplication::translate("add_consomation", "DONNER ID", Q_NULLPTR));
         label_5->setText(QApplication::translate("add_consomation", "Nom :", Q_NULLPTR));
-        label_4->setText(QApplication::translate("add_consomation", "<html><head/><body><p align=\"center\"><span style=\" font-size:22pt; font-weight:600; color:#00007f;\">Consomation</span></p></body></html>", Q_NULLPTR));
+        label_4->setText(QApplication::translate("add_consomation", "<html><head/><body><p align=\"center\"><span style=\" font-size:22pt; font-weight:600; color:#00007f;\">Consommation</span></p></body></html>", Q_NULLPTR));
         label_7->setText(QApplication::translate("add_consomation", "ID :", Q_NULLPTR));
     } // retranslateUi
 

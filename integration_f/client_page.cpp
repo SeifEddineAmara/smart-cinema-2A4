@@ -13,7 +13,9 @@ client_page::client_page(QWidget *parent) :
 
      ui->tableView->setModel(temp_client.afficher()) ;
 
-    ui->comboBox->addItem("Etudiant");
+
+    ui->comboBox_tri_client_nom->addItem("name");
+    ui->comboBox_tri_client_nom->addItem("prenom");
 
 }
 
@@ -30,9 +32,8 @@ void client_page::on_pushButton_clicked()
     QString id = ui->lineEdit_id->text() ;
     QString age = ui->lineEdit_age->text() ;
     QString mail = ui->lineEdit_email->text() ;
-    QString type = ui->comboBox->currentText();
 
-    client c(id ,age ,numero ,nom ,last_name ,mail , type) ;
+    client c(id ,age ,numero ,nom ,last_name ,mail ) ;
 
     bool test = c.add_client() ;
     if (test==true )
@@ -76,7 +77,6 @@ void client_page::on_pushButton_confi_edit_clicked()
         ui->lineEdit_last_name->setText( c.get_lastname() ) ;
         ui->lineEdit_name->setText( c.get_name()) ;
         ui->lineEdit_number->setText(  c.get_number() );
-        ui->comboBox->setCurrentText( c.get_type() ) ;
 
         c.delete_client(ui->lineEdit_id->text() );
 
@@ -110,7 +110,7 @@ void client_page::on_pushButton_conif_delete_clicked()
 void client_page::on_pushButton_confirm_tri_clicked()
 {
     client tempclient2 ;
-    ui->tableView_trie_client->setModel(tempclient2.trier(ui->lineEdit_id_tri->text())) ;
+    ui->tableView_trie_client->setModel(tempclient2.trier(ui->comboBox_tri_client_nom->currentText())) ;
 }
 
 void client_page::on_pushButton_search_clicked()

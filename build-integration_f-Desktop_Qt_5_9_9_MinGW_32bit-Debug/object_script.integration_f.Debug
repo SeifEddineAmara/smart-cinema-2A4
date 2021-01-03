@@ -3,6 +3,7 @@ INPUT(
 ./debug\addfilm.o
 ./debug\administrateur.o
 ./debug\administrateur_assistant_page.o
+./debug\arduino1.o
 ./debug\assistant.o
 ./debug\chaise.o
 ./debug\chaise_producteur_page.o
@@ -19,10 +20,13 @@ INPUT(
 ./debug\integration.o
 ./debug\mainwindow_film_consommation.o
 ./debug\producteur.o
+./debug\projection.o
+./debug\projection_page.o
 ./debug\salle_page.o
 ./debug\smartcinema.o
 ./debug\smtp.o
 ./debug\tableprinter.o
+./debug\ticket.o
 ./debug\ticket_page.o
 ./debug\verification_administrateur.o
 ./debug\qrc_resourceee.o
@@ -35,6 +39,7 @@ INPUT(
 ./debug\moc_exportexcelobject.o
 ./debug\moc_integration.o
 ./debug\moc_mainwindow_film_consommation.o
+./debug\moc_projection_page.o
 ./debug\moc_salle_page.o
 ./debug\moc_smartcinema.o
 ./debug\moc_smtp.o

@@ -11,7 +11,6 @@ client::client()
     name = "" ;
     las_name = "" ;
     mail = "" ;
-    type  = "" ;
 
 }
 
@@ -20,11 +19,10 @@ QString client::get_lastname(){return las_name; } ;
 QString client::get_number(){return numero; } ;
 QString client::get_id(){return ID; } ;
 QString client::get_age(){return age; } ;
-QString client::get_type(){return type; } ;
 QString client::get_mail(){return mail; } ;
 
 
-client::client(QString ID , QString age ,QString numero , QString name , QString las_name , QString mail , QString type   )
+client::client(QString ID , QString age ,QString numero , QString name , QString las_name , QString mail    )
 {
     this->ID = ID ;
     this->age = age ;
@@ -32,19 +30,17 @@ client::client(QString ID , QString age ,QString numero , QString name , QString
     this->name = name ;
     this->las_name = las_name ;
     this->mail = mail ;
-    this->type = type ;
 
 }
 
 bool client::add_client()
 {
     QSqlQuery query ;
-    query.prepare("INSERT INTO client (ID , AGE, LAS_NAME, TYPE, NAME, MAIL ,NUMERO ) " "VALUES (:id,:age,:las_name,:type,:name,:mail,:numero )" );
+    query.prepare("INSERT INTO client (ID , AGE, LAS_NAME, NAME, MAIL ,NUMERO ) " "VALUES (:id,:age,:las_name,:name,:mail,:numero )" );
     query.bindValue(":id", ID ) ;
     query.bindValue(":name" ,name ) ;
     query.bindValue(":las_name" ,las_name ) ;
     query.bindValue(":age" ,age ) ;
-    query.bindValue(":type" ,type ) ;
     query.bindValue(":mail" ,mail ) ;
     query.bindValue(":numero" ,numero ) ;
 
@@ -127,11 +123,11 @@ bool client::search_client(QString id, client *c )
                // client c(id ,age ,numero ,nom ,last_name ,mail , type) ;
                 client x(query.value(0).toString(),
                          query.value(1).toString() ,
-                         query.value(6).toString() ,
-                         query.value(4).toString(),
+                         query.value(5).toString() ,
+                         query.value(3).toString(),
                          query.value(2).toString(),
-                         query.value(5).toString(),
-                         query.value(3).toString() );
+                         query.value(4).toString() );
+//  (QString ID , QString age ,QString numero , QString name , QString las_name , QString mail
                 (*c) = x ;
             }
         }
@@ -147,7 +143,6 @@ void client::view_data()
     qDebug() << " name : "<< name ;
     qDebug() << " last name : "<< las_name ;
     qDebug() << " numero : "<< numero ;
-    qDebug() << " type : "<< type ;
     qDebug() << " mail : "<< mail ;
     qDebug() << " age : "<< age ;
 
@@ -166,8 +161,8 @@ QSqlQueryModel * client::trier(QString xtype )
      if (xtype.compare("name")==0 )
      {
      query.prepare("SELECT *  FROM client ORDER BY NAME ASC ") ;
-        }
-     else if (xtype.compare("last name")==0)
+     }
+     else if (xtype.compare("prenom")==0)
      {
 
          query.prepare("SELECT *  FROM client ORDER BY LAS_NAME ASC ") ;

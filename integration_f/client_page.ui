@@ -62,7 +62,7 @@
      <enum>QTabWidget::Triangular</enum>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -84,7 +84,7 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
 </string>
       </property>
       <property name="text">
-       <string>Name :</string>
+       <string>Prenom:</string>
       </property>
      </widget>
      <widget class="QLabel" name="lastname">
@@ -102,7 +102,7 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
 </string>
       </property>
       <property name="text">
-       <string>Last name :</string>
+       <string>Nom :</string>
       </property>
      </widget>
      <widget class="QLabel" name="id">
@@ -267,41 +267,10 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
 border-image: whit</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>280</y>
-        <width>81</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius : 10px ;
-font: 14pt &quot;MS Shell Dlg 2&quot;;
-</string>
-      </property>
-      <property name="text">
-       <string>Type :</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="comboBox">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>280</y>
-        <width>171</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-image: whit</string>
-      </property>
-     </widget>
      <widget class="QPushButton" name="pushButton">
       <property name="geometry">
        <rect>
-        <x>400</x>
+        <x>310</x>
         <y>350</y>
         <width>161</width>
         <height>41</height>
@@ -475,7 +444,7 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
      <widget class="QPushButton" name="pushButton_confirm_tri">
       <property name="geometry">
        <rect>
-        <x>570</x>
+        <x>30</x>
         <y>40</y>
         <width>131</width>
         <height>51</height>
@@ -487,22 +456,7 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
 border-image: url(:/new/prefix3/orange.png);</string>
       </property>
       <property name="text">
-       <string>Trier</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_id_tri">
-      <property name="geometry">
-       <rect>
-        <x>100</x>
-        <y>40</y>
-        <width>401</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius : 10px ;
-font: 14pt &quot;MS Shell Dlg 2&quot;;
-border-image: whit</string>
+       <string>Trier selon : </string>
       </property>
      </widget>
      <widget class="QTableView" name="tableView_trie_client">
@@ -512,6 +466,19 @@ border-image: whit</string>
         <y>110</y>
         <width>781</width>
         <height>281</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image: whit</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_tri_client_nom">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>40</y>
+        <width>351</width>
+        <height>51</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -631,7 +598,7 @@ border-image: whit</string>
        <string notr="true"/>
       </property>
       <property name="text">
-       <string>Cliquer name ici :</string>
+       <string>Cliquer prenom ici :</string>
       </property>
      </widget>
     </widget>

@@ -9,16 +9,22 @@
 class ADMINISTRATEUR
 {
 private:
-    QString nom,prenom,mail,id;
+    QString nom,prenom,mail,id,username,password;
+
+
 
 public:
     ADMINISTRATEUR();
-    ADMINISTRATEUR(QString nom,QString prenom,QString mail,QString id){
+    ADMINISTRATEUR(QString nom,QString prenom,QString mail,QString id,QString username,QString password){
         this->nom=nom;
         this->prenom=prenom;
         this->mail=mail;
         this->id=id;
+        this->username=username;
+        this->password=password;
+
     }
+    int verif=0;
     void setnom(QString nom){this->nom=nom;}
     QString getnom(){return this->nom;}
     void setprenom(QString prenom){this->prenom=prenom;}

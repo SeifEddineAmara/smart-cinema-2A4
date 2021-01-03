@@ -59,7 +59,11 @@ void administrateur_assistant_page::on_ajouter_administrateur_clicked()
     QString prenom=ui->prenomadmin->text();
     QString mail=ui->emailadmin->text();
     QString id=ui->idadmin->text();
-    ADMINISTRATEUR ad(nom,prenom,mail,id);
+    QString username=ui->usernameadmin->text();
+    QString password=ui->passwordadmin->text();
+
+
+    ADMINISTRATEUR ad(nom,prenom,mail,id,username,password);
     bool ex=ad.existance(id);
     if(ex)
     {
@@ -93,7 +97,10 @@ void administrateur_assistant_page::on_modifieradmin_clicked()
     QString prenom=ui->prenomadmin->text();
     QString mail=ui->emailadmin->text();
     QString id=ui->idadmin->text();
-    ADMINISTRATEUR ad(nom,prenom,mail,id);
+    QString username=ui->usernameadmin->text();
+    QString password=ui->passwordadmin->text();
+    ADMINISTRATEUR ad(nom,prenom,mail,id,username,password);
+
     bool test=ad.modifier();
     if(test)
     {
@@ -143,7 +150,12 @@ void administrateur_assistant_page::on_ajouterassis_clicked()
     QString mail=ui->emailassis->text();
     QString id=ui->idassis->text();
     int    nbrh=ui->NOMBREHASSIS->text().toInt();
-    ASSISTANT ass(nom,prenom,mail,id,nbrh);
+    QString username=ui->usernamassis->text();
+    QString password=ui->passwordassis->text();
+
+
+
+    ASSISTANT ass(nom,prenom,mail,id,nbrh,username,password);
      bool ex=ass.existance(id);
     if(ex)
     {
@@ -177,7 +189,10 @@ void administrateur_assistant_page::on_modifierasis_clicked()
     QString mail=ui->emailassis->text();
     QString id=ui->idassis->text();
     int     nbrh=ui->nbrh->text().toInt();
-    ASSISTANT ass(nom,prenom,mail,id,nbrh);
+    QString username=ui->usernamassis->text();
+    QString password=ui->passwordassis->text();
+
+    ASSISTANT ass(nom,prenom,mail,id,nbrh,username,password);
     bool test=ass.modifier();
     if(test)
     {
@@ -312,7 +327,7 @@ void administrateur_assistant_page::sendMail()
 
 
 
-    smtp->sendMail("abdelkader.daghrour@esprit.tn", ui->emailenvoie->text(),"alert" /*ui->sujetenvoie->text()*/,ui->messagenvoyer->text());
+    smtp->sendMail("abdelkader.daghrour@esprit.tn", ui->emailenvoie->text(),ui->sujetenvoie->text(),ui->messagenvoyer->text());
 
 }
 void administrateur_assistant_page::mailSent(QString status)
@@ -326,3 +341,9 @@ void administrateur_assistant_page::on_envoyer_clicked()
 {
      sendMail();
 }
+
+/*
+void administrateur_assistant_page::on_rechercherassistant_clicked()
+{
+
+}*/

@@ -33,7 +33,7 @@ public:
     {
         if (verification_administrateur->objectName().isEmpty())
             verification_administrateur->setObjectName(QStringLiteral("verification_administrateur"));
-        verification_administrateur->resize(717, 408);
+        verification_administrateur->resize(863, 408);
         verification_administrateur->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix3/beige.jpg);"));
         label = new QLabel(verification_administrateur);
         label->setObjectName(QStringLiteral("label"));

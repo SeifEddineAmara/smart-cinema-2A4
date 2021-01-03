@@ -6,6 +6,8 @@ verification_administrateur::verification_administrateur(QWidget *parent) :
     ui(new Ui::verification_administrateur)
 {
     ui->setupUi(this);
+
+    ui->label_login->setText("Connect....");
 }
 
 verification_administrateur::~verification_administrateur()

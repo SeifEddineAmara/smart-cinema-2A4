@@ -3,17 +3,22 @@
 #include <QMessageBox>
 ADMINISTRATEUR::ADMINISTRATEUR()
 {
+    this->verif=0;
 }
 
 bool ADMINISTRATEUR::ajouter()
 {
   QSqlQuery query;
 
-        query.prepare("INSERT INTO ADMINISTRATEUR (NOM,PRENOM,MAIL,ID) " "VALUES (:nom, :prenom, :mail, :id)");
+        query.prepare("INSERT INTO ADMINISTRATEUR (NOM,PRENOM,MAIL,ID,USERNAME,PASSWORD) " "VALUES (:nom, :prenom,:mail, :id,:username,:password)");
         query.bindValue(":nom", nom);
         query.bindValue(":prenom", prenom);
         query.bindValue(":mail", mail);
         query.bindValue(":id", id);
+        query.bindValue(":username",username);
+        query.bindValue(":password",password);
+
+
         return query.exec();
 }
 QSqlQueryModel * ADMINISTRATEUR::afficher()
@@ -25,7 +30,9 @@ QSqlQueryModel * ADMINISTRATEUR::afficher()
         model->setHeaderData(1, Qt::Horizontal, QObject::tr("PRENOM"));
         model->setHeaderData(2, Qt::Horizontal, QObject::tr("ID"));
         model->setHeaderData(3, Qt::Horizontal, QObject::tr("MAIL"));
-         model->setQuery("SELECT NOM,PRENOM,ID,MAIL FROM ADMINISTRATEUR ORDER BY NOM  ");
+        model->setHeaderData(4, Qt::Horizontal, QObject::tr("USERNAME"));
+        model->setHeaderData(5, Qt::Horizontal, QObject::tr("PASSWORD"));
+        model->setQuery("SELECT NOM,PRENOM,ID,MAIL,USERNAME,PASSWORD  FROM ADMINISTRATEUR ORDER BY NOM  ");
         return model;
 }
 bool ADMINISTRATEUR::supprimer(QString id)
@@ -41,11 +48,16 @@ bool ADMINISTRATEUR::modifier()
         QSqlQuery query;
 
 
-        query.prepare("UPDATE ADMINISTRATEUR SET  NOM = :nom , PRENOM = :prenom , MAIL = :mail, ID = :id   WHERE ID = :id " );
+        query.prepare("UPDATE ADMINISTRATEUR SET  NOM = :nom , PRENOM = :prenom , MAIL = :mail, USERNAME = :username, PASSWORD = :password, ID = :id   WHERE ID = :id " );
         query.bindValue(":nom", nom);
         query.bindValue(":prenom", prenom);
         query.bindValue(":mail", mail);
-         query.bindValue(":id", id);
+        query.bindValue(":username",username);
+        query.bindValue(":password",password);
+        query.bindValue(":id", id);
+
+
+
 
         return query.exec();
 
@@ -61,6 +73,9 @@ QSqlQueryModel * ADMINISTRATEUR::recherche(QString id)
         model->setHeaderData(1, Qt::Horizontal, QObject::tr("PRENOM"));
         model->setHeaderData(2, Qt::Horizontal, QObject::tr("ID"));
         model->setHeaderData(3, Qt::Horizontal, QObject::tr("MAIL"));
+        model->setHeaderData(4, Qt::Horizontal, QObject::tr("USERNAME"));
+        model->setHeaderData(5, Qt::Horizontal, QObject::tr("PASSWORD"));
+
         return model;
 
 }

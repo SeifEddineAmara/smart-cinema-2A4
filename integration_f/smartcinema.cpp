@@ -20,16 +20,112 @@ Smartcinema::Smartcinema(QWidget *parent) :
 
     QMovie *movie = new QMovie(":/new/prefix4/giphy.gif");
    movie->start();
+
    //gif
 
-    /*QMovie *movie = new QMovie(":/new/prefix2/giphy.gif");
-   movie->start();*/
-
-   /*ui->label_26->setMovie(movie);*/
    ui->label_26->setMovie(movie);
 
 
+   int ret=A.connect_arduino();
+
+   alert=0;
+   messageboxactive=0;
+
+   switch(ret)
+   {
+
+     case (0):
+
+       qDebug() << "arduino is available and connect to : " << A.getarduino_port_name();
+       break;
+
+     case(1):qDebug() << "arduino is available but not  connect to : " << A.getarduino_port_name();
+       break;
+
+       case(-1):qDebug()<< "arduino is not available  : " ;
+       break;
+
+   }
+
+   QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label()));
+
+
+
+
+
 }
+
+
+void Smartcinema::update_label()
+{
+    data_temperature=A.read_from_arduino();
+    QString DataAsString = QString(data_temperature);
+    qDebug()<< data_temperature;
+
+     ui->label_2->setText("temp : "+data_temperature);
+
+    if (data_temperature=="21"||data_temperature=="22"||data_temperature=="23"||data_temperature=="24"){
+        if (messageboxactive==0){
+            alert=1;
+        }
+
+
+    }
+    if (alert==1){
+         alert=0;
+         messageboxactive=1;
+        int reponse = QMessageBox::question(this, "led", "allumer led", QMessageBox::Yes |  QMessageBox::No);
+                                   if (reponse == QMessageBox::Yes)
+                                   {
+                                     led=1;
+                                   }
+                                   if (reponse == QMessageBox::No)
+                                   {
+                                      led=0;
+                                   }
+
+    }
+    if (led==1){
+        A.write_to_arduino("1");
+    }
+    if (data=="20"||data=="19"||data=="18"||data=="17"||data=="16"){
+        A.write_to_arduino("0");
+        led=0;
+    }
+
+}
+
+
+
+void Smartcinema::update_label1()
+{
+    data=A.read_from_arduino();
+    QString DataAsString = QString(data);
+    qDebug()<< data;
+
+     ui->label_gaz->setText("data : "+data);
+
+    if (data=="3")
+    {
+        int reponse = QMessageBox::question(this, "led", "allumer led", QMessageBox::Yes |  QMessageBox::No);
+
+        if (reponse == QMessageBox::Yes)
+        {
+         A.write_to_arduino("1");
+        }
+        if (reponse == QMessageBox::No)
+        {
+         A.write_to_arduino("0");
+        }
+
+    }
+
+
+
+}
+
+
+
 
 Smartcinema::~Smartcinema()
 {
@@ -142,4 +238,13 @@ void Smartcinema::on_pushButton_gest_chaise_producteur_clicked()
     cp=new chaise_producteur_page(this);
     cp->show();
 
+}
+
+void Smartcinema::on_pushButton_projection_clicked()
+{
+    son->play();
+
+
+    pp=new projection_page(this);
+    pp->show();
 }

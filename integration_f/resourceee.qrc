@@ -40,5 +40,10 @@
     <qresource prefix="/new/prefix7">
         <file>producteur_chaise.png</file>
         <file>salleee.jpg.png</file>
+        <file>cliente.png</file>
+        <file>proj.png</file>
+    </qresource>
+    <qresource prefix="/new/prefix8">
+        <file>proj.png</file>
     </qresource>
 </RCC>

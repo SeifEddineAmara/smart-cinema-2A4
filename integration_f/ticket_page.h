@@ -15,6 +15,40 @@ public:
     explicit ticket_page(QWidget *parent = nullptr);
     ~ticket_page();
 
+private slots:
+
+
+
+    void on_pushButton_confirm_type_clicked();
+
+
+    void on_pushButton_confirm_ajout_clicked();
+
+    void on_pushButton_confirm_aff_ticket_clicked();
+
+    void on_pushButton_confirm_clicked();
+
+   /* void on_pushButton_verif_id_update_clicked();*/
+
+    /*void on_pushButton_update_confi_type_clicked();*/
+
+    void on_pushButton_confi_update_clicked();
+
+  /*  void on_pushButton_clicked();*/
+
+    void on_pushButton_update_projection_clicked();
+
+    void on_pushButton_update_chaise_id_clicked();
+
+
+    void on_pushButton_update_client_clicked();
+
+    void on_pushButton_verif_id_update_clicked();
+
+
+
+    void on_pushButton_confirm_consomm_clicked();
+
 private:
     Ui::ticket_page *ui;
 };

@@ -265,7 +265,7 @@ public:
         tab_6->setObjectName(QStringLiteral("tab_6"));
         tableView_3 = new QTableView(tab_6);
         tableView_3->setObjectName(QStringLiteral("tableView_3"));
-        tableView_3->setGeometry(QRect(40, 110, 471, 131));
+        tableView_3->setGeometry(QRect(40, 110, 661, 201));
         tableView_3->setStyleSheet(QLatin1String("border-image: whit\n"
 ""));
         label_15 = new QLabel(tab_6);
@@ -371,7 +371,7 @@ public:
         pushButton_6->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix3/orange.png);"));
         tableView_6 = new QTableView(tab_10);
         tableView_6->setObjectName(QStringLiteral("tableView_6"));
-        tableView_6->setGeometry(QRect(120, 130, 256, 192));
+        tableView_6->setGeometry(QRect(120, 130, 311, 221));
         tableView_6->setStyleSheet(QLatin1String("border-image: whit\n"
 ""));
         tabWidget_3->addTab(tab_10, QString());

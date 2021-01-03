@@ -9,17 +9,19 @@
 class ASSISTANT
 {
 private:
-    QString nom,prenom,mail,id;
+    QString nom,prenom,mail,id,username,password;;
     int nbrh;
 
 public:
     ASSISTANT();
-    ASSISTANT(QString nom,QString prenom,QString mail,QString id,int nbrh){
+    ASSISTANT(QString nom,QString prenom,QString mail,QString id,int nbrh,QString username,QString password){
         this->nom=nom;
         this->prenom=prenom;
         this->mail=mail;
         this->id=id;
         this->nbrh=nbrh;
+        this->username=username;
+        this->password=password;
     }
     void setnom(QString nom){this->nom=nom;}
     QString getnom(){return this->nom;}

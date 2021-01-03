@@ -1,4 +1,4 @@
-QT       += core printsupport  gui sql network
+QT       += core printsupport  gui sql network serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets multimedia
 
@@ -13,6 +13,7 @@ SOURCES += \
     addfilm.cpp \
     administrateur.cpp \
     administrateur_assistant_page.cpp \
+    arduino1.cpp \
     assistant.cpp \
     chaise.cpp \
     chaise_producteur_page.cpp \
@@ -29,10 +30,13 @@ SOURCES += \
     integration.cpp \
     mainwindow_film_consommation.cpp \
     producteur.cpp \
+    projection.cpp \
+    projection_page.cpp \
     salle_page.cpp \
     smartcinema.cpp \
     smtp.cpp \
     tableprinter.cpp \
+    ticket.cpp \
     ticket_page.cpp \
     verification_administrateur.cpp
 
@@ -41,6 +45,7 @@ HEADERS += \
     addfilm.h \
     administrateur.h \
     administrateur_assistant_page.h \
+    arduino1.h \
     assistant.h \
     chaise.h \
     chaise_producteur_page.h \
@@ -56,10 +61,13 @@ HEADERS += \
     integration.h \
     mainwindow_film_consommation.h \
     producteur.h \
+    projection.h \
+    projection_page.h \
     salle_page.h \
     smartcinema.h \
     smtp.h \
     tableprinter.h \
+    ticket.h \
     ticket_page.h \
     verification_administrateur.h
 
@@ -72,6 +80,7 @@ FORMS += \
     client_page.ui \
     integration.ui \
     mainwindow_film_consommation.ui \
+    projection_page.ui \
     salle_page.ui \
     smartcinema.ui \
     ticket_page.ui \

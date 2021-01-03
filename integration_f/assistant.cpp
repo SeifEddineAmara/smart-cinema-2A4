@@ -9,12 +9,15 @@ ASSISTANT::ASSISTANT()
     {
       QSqlQuery query;
 
-            query.prepare("INSERT INTO ASSISTANT (NOM,PRENOM,MAIL,ID,NBRH) " "VALUES (:nom, :prenom, :mail, :id, :nbrh)");
+            query.prepare("INSERT INTO ASSISTANT (NOM,PRENOM,MAIL,ID,NBRH,USERNAME,PASSWORD) " "VALUES (:nom, :prenom, :mail, :id, :nbrh, :username, :password)");
             query.bindValue(":nom", nom);
             query.bindValue(":prenom", prenom);
             query.bindValue(":id", id);
             query.bindValue(":mail", mail);
-             query.bindValue(":nbrh", nbrh);
+            query.bindValue(":nbrh", nbrh);
+            query.bindValue(":username",username);
+            query.bindValue(":password",password);
+
             return query.exec();
     }
     QSqlQueryModel * ASSISTANT::afficher()
@@ -26,8 +29,11 @@ ASSISTANT::ASSISTANT()
             model->setHeaderData(1, Qt::Horizontal, QObject::tr("PRENOM"));
             model->setHeaderData(2, Qt::Horizontal, QObject::tr("ID"));
             model->setHeaderData(3, Qt::Horizontal, QObject::tr("MAIL"));
-             model->setHeaderData(4, Qt::Horizontal, QObject::tr("NBRH"));
-             model->setQuery("SELECT NOM,PRENOM,ID,MAIL,NBRH FROM ASSISTANT ORDER BY NBRH ");
+            model->setHeaderData(4, Qt::Horizontal, QObject::tr("NBRH"));
+            model->setHeaderData(5, Qt::Horizontal, QObject::tr("USERNAME"));
+            model->setHeaderData(6, Qt::Horizontal, QObject::tr("PASSWORD"));
+
+            model->setQuery("SELECT NOM,PRENOM,ID,MAIL,NBRH,USERNAME,PASSWORD FROM ASSISTANT ORDER BY NBRH ");
             return model;
     }
     bool ASSISTANT::supprimer(QString id)
@@ -43,12 +49,15 @@ ASSISTANT::ASSISTANT()
             QSqlQuery query;
 
 
-            query.prepare("UPDATE ASSISTANT SET  NOM = :nom , PRENOM = :prenom ,  ID = :id , MAIL = :mail ,NBRH = :nbrh  WHERE ID = :id " );
+            query.prepare("UPDATE ASSISTANT SET  NOM = :nom , PRENOM = :prenom ,  ID = :id , MAIL = :mail ,NBRH = :nbrh, USERNAME = :username, PASSWORD = :password  WHERE ID = :id " );
             query.bindValue(":nom", nom);
             query.bindValue(":prenom", prenom);
             query.bindValue(":mail", mail);
-             query.bindValue(":id", id);
-             query.bindValue(":nbrh", nbrh);
+            query.bindValue(":id", id);
+            query.bindValue(":nbrh", nbrh);
+            query.bindValue(":username",username);
+            query.bindValue(":password",password);
+
             return query.exec();
 
 
@@ -63,7 +72,10 @@ ASSISTANT::ASSISTANT()
             model->setHeaderData(1, Qt::Horizontal, QObject::tr("PRENOM"));
             model->setHeaderData(2, Qt::Horizontal, QObject::tr("ID"));
             model->setHeaderData(3, Qt::Horizontal, QObject::tr("MAIL"));
-             model->setHeaderData(4, Qt::Horizontal, QObject::tr("NBRH"));
+            model->setHeaderData(4, Qt::Horizontal, QObject::tr("NBRH"));
+            model->setHeaderData(5, Qt::Horizontal, QObject::tr("USERNAME"));
+            model->setHeaderData(6, Qt::Horizontal, QObject::tr("PASSWORD"));
+
             return model;
 
     }

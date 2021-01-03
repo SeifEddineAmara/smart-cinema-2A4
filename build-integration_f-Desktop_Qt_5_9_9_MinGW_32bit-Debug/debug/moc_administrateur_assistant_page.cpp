@@ -146,9 +146,9 @@ void administrateur_assistant_page::qt_static_metacall(QObject *_o, QMetaObject:
         case 11: _t->on_PDF_clicked(); break;
         case 12: _t->mailSent((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 13: _t->sendMail(); break;
-     /*   case 14: _t->on_email_clicked(); break;*/
+       /* case 14: _t->on_email_clicked(); break;*/
         case 15: _t->on_envoyer_clicked(); break;
-       /* case 16: _t->on_pushButton_clicked(); break;*/
+      /*  case 16: _t->on_pushButton_clicked(); break;*/
         default: ;
         }
     }

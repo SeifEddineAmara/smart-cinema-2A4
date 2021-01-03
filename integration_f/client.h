@@ -12,12 +12,12 @@ class client
 {
 private:
     QString ID , age , numero  ;
-    QString name , las_name , mail ,type  ;
+    QString name , las_name , mail   ;
 
 
 public:
     client();
-    client(QString ID , QString age ,QString numero , QString name , QString las_name , QString mail , QString type   ) ;
+    client(QString ID , QString age ,QString numero , QString name , QString las_name , QString mail   ) ;
     bool add_client() ;
     void view_data() ;
     QSqlQueryModel *afficher() ;
@@ -29,7 +29,6 @@ public:
     QString get_number() ;
     QString get_id() ;
     QString get_age() ;
-    QString get_type() ;
     QString get_mail() ;
     QSqlQueryModel * trier(QString xtype);
     bool search_client_view(QString id ,QSqlQueryModel *model , QString xname  ) ;

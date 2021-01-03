@@ -100,10 +100,10 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;
    <widget class="QPushButton" name="pushButton_gest_ticket">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>60</y>
+      <x>440</x>
+      <y>130</y>
       <width>151</width>
-      <height>101</height>
+      <height>111</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -116,8 +116,8 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;
    <widget class="QPushButton" name="pushButton_gest_cinema">
     <property name="geometry">
      <rect>
-      <x>620</x>
-      <y>60</y>
+      <x>610</x>
+      <y>130</y>
       <width>131</width>
       <height>111</height>
      </rect>
@@ -133,7 +133,7 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;
     <property name="geometry">
      <rect>
       <x>760</x>
-      <y>60</y>
+      <y>130</y>
       <width>131</width>
       <height>111</height>
      </rect>
@@ -149,10 +149,10 @@ border-image: url(:/new/prefix6/filmconso.jpg.png);</string>
    <widget class="QPushButton" name="pushButton_gest_salle">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>350</y>
+      <x>400</x>
+      <y>260</y>
       <width>211</width>
-      <height>131</height>
+      <height>141</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -166,9 +166,9 @@ border-image: url(:/new/prefix6/filmconso.jpg.png);</string>
     <property name="geometry">
      <rect>
       <x>610</x>
-      <y>360</y>
+      <y>270</y>
       <width>141</width>
-      <height>111</height>
+      <height>121</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -182,9 +182,9 @@ border-image: url(:/new/prefix6/filmconso.jpg.png);</string>
     <property name="geometry">
      <rect>
       <x>760</x>
-      <y>360</y>
+      <y>260</y>
       <width>141</width>
-      <height>111</height>
+      <height>131</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -211,17 +211,88 @@ border-image: url(:/new/prefix6/filmconso.jpg.png);</string>
     <property name="geometry">
      <rect>
       <x>550</x>
-      <y>220</y>
+      <y>50</y>
       <width>291</width>
       <height>71</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="html">
      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:36pt; font-weight:600; text-decoration: underline; color:#ff0000;&quot;&gt;Bienvenue&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:600; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:36pt; text-decoration: underline; color:#ff0000;&quot;&gt;Bienvenue&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>10</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/new/prefix3/beige.jpg);</string>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_gest_client">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>400</y>
+      <width>151</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/new/prefix7/cliente.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_projection">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>400</y>
+      <width>151</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/new/prefix7/proj.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_gaz">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>10</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/new/prefix3/beige.jpg);</string>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
     </property>
    </widget>
   </widget>

@@ -36,21 +36,22 @@ public:
     QLabel *label_2;
     QLabel *label_3;
     QLabel *label_4;
-    QLabel *label_5;
     QLineEdit *lineEdit_id;
     QComboBox *comboBox_type;
     QComboBox *comboBox_consommation;
-    QComboBox *comboBox_film;
-    QLabel *label_6;
-    QComboBox *comboBox_cine;
-    QLabel *label_7;
-    QComboBox *comboBox_salle;
-    QPushButton *pushButton_update_film_cine;
-    QPushButton *pushButton_update_cine_salle;
-    QPushButton *pushButton_update_salle_horaire;
     QPushButton *pushButton_confirm_type;
     QLineEdit *lineEdit_price;
     QPushButton *pushButton_confirm_ajout;
+    QPushButton *pushButton_update_chaise_id;
+    QLabel *label_5;
+    QLabel *label_7;
+    QComboBox *comboBox_projection;
+    QComboBox *comboBox_client;
+    QLabel *label_6;
+    QPushButton *pushButton_update_client;
+    QComboBox *comboBox_chaise;
+    QPushButton *pushButton_update_projection;
+    QPushButton *pushButton_confirm_consomm;
     QWidget *tab_2;
     QPushButton *pushButton_confirm_aff_ticket;
     QTableView *tableView_aff_ticket;
@@ -58,16 +59,13 @@ public:
     QLineEdit *lineEdit_id_delete;
     QPushButton *pushButton_confirm;
     QWidget *tab_4;
-    QLineEdit *lineEdit_id_update;
+    QLineEdit *lineEdit_id_update_tickett;
     QPushButton *pushButton_verif_id_update;
     QLineEdit *lineEdit;
-    QLineEdit *lineEdit_2;
-    QLineEdit *lineEdit_3;
     QComboBox *comboBox_update_type;
-    QComboBox *comboBox_update_cons;
-    QLineEdit *lineEdit_price_update;
-    QPushButton *pushButton_update_confi_type;
     QPushButton *pushButton_confi_update;
+    QLineEdit *lineEdit_2;
+    QComboBox *comboBox_update_cons;
 
     void setupUi(QDialog *ticket_page)
     {
@@ -92,35 +90,25 @@ public:
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(20, 20, 111, 31));
         label->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
-"color: rgb(0, 0, 127);\n"
 "font: 14pt \"MS Shell Dlg 2\";"));
         label_2 = new QLabel(tab);
         label_2->setObjectName(QStringLiteral("label_2"));
         label_2->setGeometry(QRect(10, 160, 111, 41));
         label_2->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
-"color: rgb(0, 0, 127);\n"
 "font: 14pt \"MS Shell Dlg 2\";"));
         label_3 = new QLabel(tab);
         label_3->setObjectName(QStringLiteral("label_3"));
         label_3->setGeometry(QRect(10, 90, 111, 21));
         label_3->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
-"color: rgb(0, 0, 127);\n"
 "font: 14pt \"MS Shell Dlg 2\";"));
         label_4 = new QLabel(tab);
         label_4->setObjectName(QStringLiteral("label_4"));
-        label_4->setGeometry(QRect(10, 240, 151, 51));
+        label_4->setGeometry(QRect(10, 240, 131, 51));
         label_4->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
-"color: rgb(0, 0, 127);\n"
-"font: 14pt \"MS Shell Dlg 2\";"));
-        label_5 = new QLabel(tab);
-        label_5->setObjectName(QStringLiteral("label_5"));
-        label_5->setGeometry(QRect(400, 10, 91, 51));
-        label_5->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
-"color: rgb(0, 0, 127);\n"
 "font: 14pt \"MS Shell Dlg 2\";"));
         lineEdit_id = new QLineEdit(tab);
         lineEdit_id->setObjectName(QStringLiteral("lineEdit_id"));
-        lineEdit_id->setGeometry(QRect(160, 20, 121, 31));
+        lineEdit_id->setGeometry(QRect(110, 20, 121, 31));
         lineEdit_id->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "color: rgb(0, 0, 127);\n"
 "font: 14pt \"MS Shell Dlg 2\";\n"
@@ -131,58 +119,12 @@ public:
         comboBox_type->setStyleSheet(QStringLiteral("border-image: whit"));
         comboBox_consommation = new QComboBox(tab);
         comboBox_consommation->setObjectName(QStringLiteral("comboBox_consommation"));
-        comboBox_consommation->setGeometry(QRect(170, 240, 191, 41));
+        comboBox_consommation->setGeometry(QRect(150, 240, 111, 41));
         comboBox_consommation->setStyleSheet(QStringLiteral("border-image: whit"));
-        comboBox_film = new QComboBox(tab);
-        comboBox_film->setObjectName(QStringLiteral("comboBox_film"));
-        comboBox_film->setGeometry(QRect(520, 10, 101, 51));
-        comboBox_film->setStyleSheet(QStringLiteral("border-image: whit"));
-        label_6 = new QLabel(tab);
-        label_6->setObjectName(QStringLiteral("label_6"));
-        label_6->setGeometry(QRect(400, 90, 91, 41));
-        label_6->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
-"color: rgb(0, 0, 127);\n"
-"font: 14pt \"MS Shell Dlg 2\";"));
-        comboBox_cine = new QComboBox(tab);
-        comboBox_cine->setObjectName(QStringLiteral("comboBox_cine"));
-        comboBox_cine->setGeometry(QRect(520, 90, 101, 41));
-        comboBox_cine->setStyleSheet(QStringLiteral("border-image: whit"));
-        label_7 = new QLabel(tab);
-        label_7->setObjectName(QStringLiteral("label_7"));
-        label_7->setGeometry(QRect(400, 170, 91, 51));
-        label_7->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
-"color: rgb(0, 0, 127);\n"
-"font: 14pt \"MS Shell Dlg 2\";"));
-        comboBox_salle = new QComboBox(tab);
-        comboBox_salle->setObjectName(QStringLiteral("comboBox_salle"));
-        comboBox_salle->setGeometry(QRect(520, 170, 101, 41));
-        comboBox_salle->setStyleSheet(QStringLiteral("border-image: whit"));
-        pushButton_update_film_cine = new QPushButton(tab);
-        pushButton_update_film_cine->setObjectName(QStringLiteral("pushButton_update_film_cine"));
-        pushButton_update_film_cine->setGeometry(QRect(640, 10, 80, 51));
-        pushButton_update_film_cine->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
-"color: rgb(0, 0, 127);\n"
-"font: 14pt \"MS Shell Dlg 2\";\n"
-"border-image: url(:/new/prefix3/orange.png);"));
-        pushButton_update_cine_salle = new QPushButton(tab);
-        pushButton_update_cine_salle->setObjectName(QStringLiteral("pushButton_update_cine_salle"));
-        pushButton_update_cine_salle->setGeometry(QRect(640, 90, 81, 51));
-        pushButton_update_cine_salle->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
-"color: rgb(0, 0, 127);\n"
-"font: 14pt \"MS Shell Dlg 2\";\n"
-"border-image: url(:/new/prefix3/orange.png);"));
-        pushButton_update_salle_horaire = new QPushButton(tab);
-        pushButton_update_salle_horaire->setObjectName(QStringLiteral("pushButton_update_salle_horaire"));
-        pushButton_update_salle_horaire->setGeometry(QRect(640, 170, 81, 51));
-        pushButton_update_salle_horaire->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
-"color: rgb(0, 0, 127);\n"
-"font: 14pt \"MS Shell Dlg 2\";\n"
-"border-image: url(:/new/prefix3/orange.png);"));
         pushButton_confirm_type = new QPushButton(tab);
         pushButton_confirm_type->setObjectName(QStringLiteral("pushButton_confirm_type"));
         pushButton_confirm_type->setGeometry(QRect(250, 80, 101, 51));
         pushButton_confirm_type->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
-"color: rgb(0, 0, 127);\n"
 "font: 14pt \"MS Shell Dlg 2\";\n"
 "border-image: url(:/new/prefix3/orange.png);"));
         lineEdit_price = new QLineEdit(tab);
@@ -195,9 +137,59 @@ public:
         lineEdit_price->setReadOnly(true);
         pushButton_confirm_ajout = new QPushButton(tab);
         pushButton_confirm_ajout->setObjectName(QStringLiteral("pushButton_confirm_ajout"));
-        pushButton_confirm_ajout->setGeometry(QRect(280, 310, 171, 51));
+        pushButton_confirm_ajout->setGeometry(QRect(330, 310, 171, 51));
         pushButton_confirm_ajout->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
-"color: rgb(0, 0, 127);\n"
+"border-image: url(:/new/prefix3/orange.png);"));
+        pushButton_update_chaise_id = new QPushButton(tab);
+        pushButton_update_chaise_id->setObjectName(QStringLiteral("pushButton_update_chaise_id"));
+        pushButton_update_chaise_id->setGeometry(QRect(670, 140, 81, 51));
+        pushButton_update_chaise_id->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
+"border-radius : 10px ;\n"
+"font: 14pt \"MS Shell Dlg 2\";"));
+        label_5 = new QLabel(tab);
+        label_5->setObjectName(QStringLiteral("label_5"));
+        label_5->setGeometry(QRect(380, 40, 111, 51));
+        label_5->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
+"font: 14pt \"MS Shell Dlg 2\";"));
+        label_7 = new QLabel(tab);
+        label_7->setObjectName(QStringLiteral("label_7"));
+        label_7->setGeometry(QRect(380, 220, 81, 51));
+        label_7->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
+"font: 14pt \"MS Shell Dlg 2\";"));
+        comboBox_projection = new QComboBox(tab);
+        comboBox_projection->setObjectName(QStringLiteral("comboBox_projection"));
+        comboBox_projection->setGeometry(QRect(500, 40, 151, 51));
+        comboBox_projection->setStyleSheet(QStringLiteral("border-image: whit"));
+        comboBox_client = new QComboBox(tab);
+        comboBox_client->setObjectName(QStringLiteral("comboBox_client"));
+        comboBox_client->setGeometry(QRect(500, 220, 151, 51));
+        comboBox_client->setStyleSheet(QStringLiteral("border-image: whit"));
+        label_6 = new QLabel(tab);
+        label_6->setObjectName(QStringLiteral("label_6"));
+        label_6->setGeometry(QRect(380, 140, 91, 51));
+        label_6->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
+"font: 14pt \"MS Shell Dlg 2\";"));
+        pushButton_update_client = new QPushButton(tab);
+        pushButton_update_client->setObjectName(QStringLiteral("pushButton_update_client"));
+        pushButton_update_client->setGeometry(QRect(670, 220, 81, 51));
+        pushButton_update_client->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
+"border-radius : 10px ;\n"
+"font: 14pt \"MS Shell Dlg 2\";"));
+        comboBox_chaise = new QComboBox(tab);
+        comboBox_chaise->setObjectName(QStringLiteral("comboBox_chaise"));
+        comboBox_chaise->setGeometry(QRect(500, 140, 151, 51));
+        comboBox_chaise->setStyleSheet(QStringLiteral("border-image: whit"));
+        pushButton_update_projection = new QPushButton(tab);
+        pushButton_update_projection->setObjectName(QStringLiteral("pushButton_update_projection"));
+        pushButton_update_projection->setGeometry(QRect(670, 40, 80, 51));
+        pushButton_update_projection->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
+"border-radius : 10px ;\n"
+"font: 14pt \"MS Shell Dlg 2\";\n"
+""));
+        pushButton_confirm_consomm = new QPushButton(tab);
+        pushButton_confirm_consomm->setObjectName(QStringLiteral("pushButton_confirm_consomm"));
+        pushButton_confirm_consomm->setGeometry(QRect(270, 240, 101, 41));
+        pushButton_confirm_consomm->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";\n"
 "border-image: url(:/new/prefix3/orange.png);"));
         tabWidget->addTab(tab, QString());
@@ -207,7 +199,6 @@ public:
         pushButton_confirm_aff_ticket->setObjectName(QStringLiteral("pushButton_confirm_aff_ticket"));
         pushButton_confirm_aff_ticket->setGeometry(QRect(310, 320, 121, 41));
         pushButton_confirm_aff_ticket->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
-"color: rgb(0, 0, 127);\n"
 "font: 14pt \"MS Shell Dlg 2\";\n"
 "border-image: url(:/new/prefix3/orange.png);"));
         tableView_aff_ticket = new QTableView(tab_2);
@@ -221,86 +212,58 @@ public:
         lineEdit_id_delete->setObjectName(QStringLiteral("lineEdit_id_delete"));
         lineEdit_id_delete->setGeometry(QRect(200, 60, 371, 41));
         lineEdit_id_delete->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
-"color: rgb(0, 0, 127);\n"
 "font: 14pt \"MS Shell Dlg 2\";\n"
 "border-image: whit"));
         pushButton_confirm = new QPushButton(tab_3);
         pushButton_confirm->setObjectName(QStringLiteral("pushButton_confirm"));
         pushButton_confirm->setGeometry(QRect(300, 160, 121, 41));
         pushButton_confirm->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
-"color: rgb(0, 0, 127);\n"
 "font: 14pt \"MS Shell Dlg 2\";\n"
 "border-image: url(:/new/prefix3/orange.png);"));
         tabWidget->addTab(tab_3, QString());
         tab_4 = new QWidget();
         tab_4->setObjectName(QStringLiteral("tab_4"));
-        lineEdit_id_update = new QLineEdit(tab_4);
-        lineEdit_id_update->setObjectName(QStringLiteral("lineEdit_id_update"));
-        lineEdit_id_update->setGeometry(QRect(70, 50, 291, 41));
-        lineEdit_id_update->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
-"color: rgb(0, 0, 127);\n"
+        lineEdit_id_update_tickett = new QLineEdit(tab_4);
+        lineEdit_id_update_tickett->setObjectName(QStringLiteral("lineEdit_id_update_tickett"));
+        lineEdit_id_update_tickett->setGeometry(QRect(70, 50, 291, 41));
+        lineEdit_id_update_tickett->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";\n"
 "border-image: whit"));
         pushButton_verif_id_update = new QPushButton(tab_4);
         pushButton_verif_id_update->setObjectName(QStringLiteral("pushButton_verif_id_update"));
-        pushButton_verif_id_update->setGeometry(QRect(460, 50, 91, 41));
+        pushButton_verif_id_update->setGeometry(QRect(460, 50, 111, 41));
         pushButton_verif_id_update->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
-"color: rgb(0, 0, 127);\n"
 "font: 14pt \"MS Shell Dlg 2\";\n"
 "border-image: url(:/new/prefix3/orange.png);"));
         lineEdit = new QLineEdit(tab_4);
         lineEdit->setObjectName(QStringLiteral("lineEdit"));
-        lineEdit->setGeometry(QRect(70, 150, 191, 41));
+        lineEdit->setGeometry(QRect(70, 150, 131, 41));
         lineEdit->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
-"color: rgb(0, 0, 127);\n"
-"font: 14pt \"MS Shell Dlg 2\";"));
-        lineEdit_2 = new QLineEdit(tab_4);
-        lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
-        lineEdit_2->setGeometry(QRect(70, 230, 191, 41));
-        lineEdit_2->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
-"color: rgb(0, 0, 127);\n"
-"font: 14pt \"MS Shell Dlg 2\";"));
-        lineEdit_3 = new QLineEdit(tab_4);
-        lineEdit_3->setObjectName(QStringLiteral("lineEdit_3"));
-        lineEdit_3->setGeometry(QRect(70, 310, 191, 41));
-        lineEdit_3->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
-"color: rgb(0, 0, 127);\n"
 "font: 14pt \"MS Shell Dlg 2\";"));
         comboBox_update_type = new QComboBox(tab_4);
         comboBox_update_type->setObjectName(QStringLiteral("comboBox_update_type"));
-        comboBox_update_type->setGeometry(QRect(300, 153, 131, 41));
+        comboBox_update_type->setGeometry(QRect(240, 153, 131, 41));
         comboBox_update_type->setStyleSheet(QStringLiteral("border-image: whit"));
-        comboBox_update_cons = new QComboBox(tab_4);
-        comboBox_update_cons->setObjectName(QStringLiteral("comboBox_update_cons"));
-        comboBox_update_cons->setGeometry(QRect(300, 310, 131, 41));
-        comboBox_update_cons->setStyleSheet(QStringLiteral("border-image: whit"));
-        lineEdit_price_update = new QLineEdit(tab_4);
-        lineEdit_price_update->setObjectName(QStringLiteral("lineEdit_price_update"));
-        lineEdit_price_update->setGeometry(QRect(300, 230, 131, 41));
-        lineEdit_price_update->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
-"color: rgb(0, 0, 127);\n"
-"font: 14pt \"MS Shell Dlg 2\";\n"
-"border-image: whit"));
-        lineEdit_price_update->setReadOnly(true);
-        pushButton_update_confi_type = new QPushButton(tab_4);
-        pushButton_update_confi_type->setObjectName(QStringLiteral("pushButton_update_confi_type"));
-        pushButton_update_confi_type->setGeometry(QRect(460, 150, 91, 41));
-        pushButton_update_confi_type->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
-"color: rgb(0, 0, 127);\n"
-"font: 14pt \"MS Shell Dlg 2\";\n"
-"border-image: url(:/new/prefix3/orange.png);"));
         pushButton_confi_update = new QPushButton(tab_4);
         pushButton_confi_update->setObjectName(QStringLiteral("pushButton_confi_update"));
-        pushButton_confi_update->setGeometry(QRect(480, 310, 161, 41));
+        pushButton_confi_update->setGeometry(QRect(460, 280, 201, 51));
         pushButton_confi_update->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
-"color: rgb(0, 0, 127);\n"
 "font: 14pt \"MS Shell Dlg 2\";\n"
 "border-image: url(:/new/prefix3/orange.png);"));
+        lineEdit_2 = new QLineEdit(tab_4);
+        lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
+        lineEdit_2->setGeometry(QRect(60, 240, 151, 41));
+        lineEdit_2->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
+"font: 14pt \"MS Shell Dlg 2\";"));
+        comboBox_update_cons = new QComboBox(tab_4);
+        comboBox_update_cons->setObjectName(QStringLiteral("comboBox_update_cons"));
+        comboBox_update_cons->setGeometry(QRect(240, 240, 131, 41));
+        comboBox_update_cons->setStyleSheet(QStringLiteral("border-image: whit"));
         tabWidget->addTab(tab_4, QString());
 
         retranslateUi(ticket_page);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(ticket_page);
@@ -311,30 +274,29 @@ public:
         ticket_page->setWindowTitle(QApplication::translate("ticket_page", "Smart cinema", Q_NULLPTR));
         groupBox->setTitle(QApplication::translate("ticket_page", "Gestion ticket", Q_NULLPTR));
         label->setText(QApplication::translate("ticket_page", "ID", Q_NULLPTR));
-        label_2->setText(QApplication::translate("ticket_page", "Price", Q_NULLPTR));
+        label_2->setText(QApplication::translate("ticket_page", "Prix", Q_NULLPTR));
         label_3->setText(QApplication::translate("ticket_page", "Type", Q_NULLPTR));
         label_4->setText(QApplication::translate("ticket_page", "Consommation", Q_NULLPTR));
-        label_5->setText(QApplication::translate("ticket_page", "Film", Q_NULLPTR));
-        label_6->setText(QApplication::translate("ticket_page", "Cine", Q_NULLPTR));
-        label_7->setText(QApplication::translate("ticket_page", "Salle", Q_NULLPTR));
-        pushButton_update_film_cine->setText(QApplication::translate("ticket_page", "Search", Q_NULLPTR));
-        pushButton_update_cine_salle->setText(QApplication::translate("ticket_page", "Search", Q_NULLPTR));
-        pushButton_update_salle_horaire->setText(QApplication::translate("ticket_page", "Search", Q_NULLPTR));
-        pushButton_confirm_type->setText(QApplication::translate("ticket_page", "Confirm", Q_NULLPTR));
+        pushButton_confirm_type->setText(QApplication::translate("ticket_page", "Confirmer", Q_NULLPTR));
         pushButton_confirm_ajout->setText(QApplication::translate("ticket_page", "Confirm", Q_NULLPTR));
+        pushButton_update_chaise_id->setText(QApplication::translate("ticket_page", "Search", Q_NULLPTR));
+        label_5->setText(QApplication::translate("ticket_page", "Projection", Q_NULLPTR));
+        label_7->setText(QApplication::translate("ticket_page", "Client", Q_NULLPTR));
+        label_6->setText(QApplication::translate("ticket_page", "Chaise", Q_NULLPTR));
+        pushButton_update_client->setText(QApplication::translate("ticket_page", "Search", Q_NULLPTR));
+        pushButton_update_projection->setText(QApplication::translate("ticket_page", "Search", Q_NULLPTR));
+        pushButton_confirm_consomm->setText(QApplication::translate("ticket_page", "Confirmer", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("ticket_page", "Ajout", Q_NULLPTR));
         pushButton_confirm_aff_ticket->setText(QApplication::translate("ticket_page", "Afficher", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("ticket_page", "Affichage", Q_NULLPTR));
         lineEdit_id_delete->setText(QApplication::translate("ticket_page", "Enter ID", Q_NULLPTR));
-        pushButton_confirm->setText(QApplication::translate("ticket_page", "Confirm", Q_NULLPTR));
+        pushButton_confirm->setText(QApplication::translate("ticket_page", "Confirmer", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("ticket_page", "Suppression", Q_NULLPTR));
-        lineEdit_id_update->setText(QApplication::translate("ticket_page", "Insert ID", Q_NULLPTR));
-        pushButton_verif_id_update->setText(QApplication::translate("ticket_page", "Search", Q_NULLPTR));
-        lineEdit->setText(QApplication::translate("ticket_page", "Type", Q_NULLPTR));
-        lineEdit_2->setText(QApplication::translate("ticket_page", "Price", Q_NULLPTR));
-        lineEdit_3->setText(QApplication::translate("ticket_page", "Consommation", Q_NULLPTR));
-        pushButton_update_confi_type->setText(QApplication::translate("ticket_page", "Confirm", Q_NULLPTR));
-        pushButton_confi_update->setText(QApplication::translate("ticket_page", "Confirm update", Q_NULLPTR));
+        lineEdit_id_update_tickett->setText(QString());
+        pushButton_verif_id_update->setText(QApplication::translate("ticket_page", "Rechercher", Q_NULLPTR));
+        lineEdit->setText(QApplication::translate("ticket_page", "Type :", Q_NULLPTR));
+        pushButton_confi_update->setText(QApplication::translate("ticket_page", "Confirmer modification", Q_NULLPTR));
+        lineEdit_2->setText(QApplication::translate("ticket_page", "Consommation : ", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_4), QApplication::translate("ticket_page", "Modificaton", Q_NULLPTR));
     } // retranslateUi
 
