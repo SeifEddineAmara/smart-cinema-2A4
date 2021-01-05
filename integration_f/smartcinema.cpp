@@ -47,7 +47,8 @@ Smartcinema::Smartcinema(QWidget *parent) :
 
    }
 
-   QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label()));
+   /* QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label()));*/
+    QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label1()));
 
 
 
@@ -55,23 +56,25 @@ Smartcinema::Smartcinema(QWidget *parent) :
 
 }
 
-
+/*
 void Smartcinema::update_label()
 {
+
     data_temperature=A.read_from_arduino();
     QString DataAsString = QString(data_temperature);
     qDebug()<< data_temperature;
 
      ui->label_2->setText("temp : "+data_temperature);
 
-    if (data_temperature=="21"||data_temperature=="22"||data_temperature=="23"||data_temperature=="24"){
+    if (data_temperature=="21"||data_temperature=="22"||data_temperature=="23"||data_temperature=="24"||data_temperature=="25"||data_temperature=="26"||data_temperature=="27"){
         if (messageboxactive==0){
             alert=1;
         }
 
 
     }
-    if (alert==1){
+    if (alert==1)
+    {
          alert=0;
          messageboxactive=1;
         int reponse = QMessageBox::question(this, "led", "allumer led", QMessageBox::Yes |  QMessageBox::No);
@@ -88,26 +91,37 @@ void Smartcinema::update_label()
     if (led==1){
         A.write_to_arduino("1");
     }
-    if (data=="20"||data=="19"||data=="18"||data=="17"||data=="16"){
+    if (data_temperature=="20"||data_temperature=="19"||data_temperature=="18"||data_temperature=="17"||data_temperature=="16"||data_temperature=="15"||data_temperature=="14"){
         A.write_to_arduino("0");
         led=0;
     }
 
-}
 
+
+
+
+
+
+
+
+
+
+
+
+}
+*/
 
 
 void Smartcinema::update_label1()
 {
     data=A.read_from_arduino();
-    QString DataAsString = QString(data);
     qDebug()<< data;
 
-     ui->label_gaz->setText("data : "+data);
+    /*ui->label_gaz->setText("data : "+data);*/
 
     if (data=="3")
     {
-        int reponse = QMessageBox::question(this, "led", "allumer led", QMessageBox::Yes |  QMessageBox::No);
+        int reponse = QMessageBox::question(this, "Alert gaz", "Faites vos protocoles", QMessageBox::Yes |  QMessageBox::No);
 
         if (reponse == QMessageBox::Yes)
         {

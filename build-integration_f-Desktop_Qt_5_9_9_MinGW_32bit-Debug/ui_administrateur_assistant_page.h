@@ -113,15 +113,22 @@ public:
         tab->setObjectName(QStringLiteral("tab"));
         groupBox = new QGroupBox(tab);
         groupBox->setObjectName(QStringLiteral("groupBox"));
-        groupBox->setGeometry(QRect(20, 10, 331, 171));
+        groupBox->setGeometry(QRect(20, 10, 331, 181));
         ajouter_administrateur = new QPushButton(groupBox);
         ajouter_administrateur->setObjectName(QStringLiteral("ajouter_administrateur"));
-        ajouter_administrateur->setGeometry(QRect(20, 140, 75, 23));
-        ajouter_administrateur->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix3/orange.png);"));
+        ajouter_administrateur->setGeometry(QRect(10, 140, 75, 31));
+        QFont font1;
+        font1.setBold(true);
+        font1.setWeight(75);
+        ajouter_administrateur->setFont(font1);
+        ajouter_administrateur->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
+"border-radius:10px;"));
         modifieradmin = new QPushButton(groupBox);
         modifieradmin->setObjectName(QStringLiteral("modifieradmin"));
-        modifieradmin->setGeometry(QRect(110, 140, 75, 23));
-        modifieradmin->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix3/orange.png);"));
+        modifieradmin->setGeometry(QRect(110, 140, 75, 31));
+        modifieradmin->setFont(font1);
+        modifieradmin->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
+"border-radius:10px;"));
         nomadmin = new QLineEdit(groupBox);
         nomadmin->setObjectName(QStringLiteral("nomadmin"));
         nomadmin->setGeometry(QRect(60, 20, 113, 20));
@@ -152,17 +159,17 @@ public:
         label_5->setGeometry(QRect(10, 110, 47, 14));
         label_15 = new QLabel(groupBox);
         label_15->setObjectName(QStringLiteral("label_15"));
-        label_15->setGeometry(QRect(180, 20, 91, 16));
+        label_15->setGeometry(QRect(190, 20, 91, 16));
         usernameadmin = new QLineEdit(groupBox);
         usernameadmin->setObjectName(QStringLiteral("usernameadmin"));
-        usernameadmin->setGeometry(QRect(180, 40, 113, 20));
+        usernameadmin->setGeometry(QRect(190, 40, 113, 20));
         usernameadmin->setStyleSheet(QStringLiteral("border-image: whit"));
         label_16 = new QLabel(groupBox);
         label_16->setObjectName(QStringLiteral("label_16"));
-        label_16->setGeometry(QRect(180, 70, 81, 16));
+        label_16->setGeometry(QRect(190, 80, 81, 16));
         passwordadmin = new QLineEdit(groupBox);
         passwordadmin->setObjectName(QStringLiteral("passwordadmin"));
-        passwordadmin->setGeometry(QRect(180, 90, 113, 20));
+        passwordadmin->setGeometry(QRect(190, 100, 113, 20));
         passwordadmin->setStyleSheet(QStringLiteral("border-image: whit"));
         groupBox_2 = new QGroupBox(tab);
         groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
@@ -173,16 +180,22 @@ public:
         tableViewadmin->setStyleSheet(QStringLiteral("border-image: whit"));
         afficheradmin = new QPushButton(groupBox_2);
         afficheradmin->setObjectName(QStringLiteral("afficheradmin"));
-        afficheradmin->setGeometry(QRect(20, 200, 75, 23));
-        afficheradmin->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix3/orange.png);"));
+        afficheradmin->setGeometry(QRect(20, 192, 75, 31));
+        afficheradmin->setFont(font1);
+        afficheradmin->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
+"border-radius:10px;"));
         imprimeradmin = new QPushButton(groupBox_2);
         imprimeradmin->setObjectName(QStringLiteral("imprimeradmin"));
-        imprimeradmin->setGeometry(QRect(200, 200, 75, 23));
-        imprimeradmin->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix3/orange.png);"));
+        imprimeradmin->setGeometry(QRect(200, 192, 75, 31));
+        imprimeradmin->setFont(font1);
+        imprimeradmin->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
+"border-radius:10px;"));
         PDF = new QPushButton(groupBox_2);
         PDF->setObjectName(QStringLiteral("PDF"));
-        PDF->setGeometry(QRect(110, 200, 80, 22));
-        PDF->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix3/orange.png);"));
+        PDF->setGeometry(QRect(110, 191, 80, 31));
+        PDF->setFont(font1);
+        PDF->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
+"border-radius:10px;"));
         groupBox_3 = new QGroupBox(tab);
         groupBox_3->setObjectName(QStringLiteral("groupBox_3"));
         groupBox_3->setGeometry(QRect(30, 200, 191, 131));
@@ -195,8 +208,11 @@ public:
         idsuppadmin->setStyleSheet(QStringLiteral("border-image: whit"));
         supprimeradmin = new QPushButton(groupBox_3);
         supprimeradmin->setObjectName(QStringLiteral("supprimeradmin"));
-        supprimeradmin->setGeometry(QRect(60, 100, 75, 23));
-        supprimeradmin->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix3/orange.png);"));
+        supprimeradmin->setGeometry(QRect(60, 92, 75, 31));
+        supprimeradmin->setFont(font1);
+        supprimeradmin->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
+"border-radius:10px;\n"
+""));
         cinema = new QFrame(tab);
         cinema->setObjectName(QStringLiteral("cinema"));
         cinema->setGeometry(QRect(-10, 0, 120, 80));
@@ -225,11 +241,13 @@ public:
         label_14->setGeometry(QRect(240, 20, 47, 14));
         envoyer = new QPushButton(groupBox_8);
         envoyer->setObjectName(QStringLiteral("envoyer"));
-        envoyer->setGeometry(QRect(320, 90, 80, 22));
-        envoyer->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix3/orange.png);"));
+        envoyer->setGeometry(QRect(340, 81, 80, 31));
+        envoyer->setFont(font1);
+        envoyer->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
+"border-radius:10px;"));
         messagenvoyer = new QLineEdit(tab);
         messagenvoyer->setObjectName(QStringLiteral("messagenvoyer"));
-        messagenvoyer->setGeometry(QRect(320, 350, 141, 61));
+        messagenvoyer->setGeometry(QRect(340, 350, 141, 61));
         messagenvoyer->setStyleSheet(QStringLiteral("border-image: whit"));
         tabWidget->addTab(tab, QString());
         cinema->raise();
@@ -249,22 +267,27 @@ public:
         tableViewassis->setStyleSheet(QStringLiteral("border-image: whit"));
         afficherassis = new QPushButton(groupBox_4);
         afficherassis->setObjectName(QStringLiteral("afficherassis"));
-        afficherassis->setGeometry(QRect(100, 200, 75, 23));
+        afficherassis->setGeometry(QRect(70, 190, 111, 31));
+        afficherassis->setFont(font1);
         afficherassis->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
+"border-radius:10px;\n"
 ""));
         groupBox_5 = new QGroupBox(tab_2);
         groupBox_5->setObjectName(QStringLiteral("groupBox_5"));
         groupBox_5->setGeometry(QRect(20, 10, 311, 261));
         ajouterassis = new QPushButton(groupBox_5);
         ajouterassis->setObjectName(QStringLiteral("ajouterassis"));
-        ajouterassis->setGeometry(QRect(20, 220, 75, 23));
+        ajouterassis->setGeometry(QRect(10, 200, 101, 31));
+        ajouterassis->setFont(font1);
         ajouterassis->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
 "border-radius:1px;\n"
-""));
+"border-radius:10px;"));
         modifierasis = new QPushButton(groupBox_5);
         modifierasis->setObjectName(QStringLiteral("modifierasis"));
-        modifierasis->setGeometry(QRect(110, 220, 75, 23));
-        modifierasis->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix3/orange.png);"));
+        modifierasis->setGeometry(QRect(160, 200, 111, 31));
+        modifierasis->setFont(font1);
+        modifierasis->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
+"border-radius:10px;"));
         nomassis = new QLineEdit(groupBox_5);
         nomassis->setObjectName(QStringLiteral("nomassis"));
         nomassis->setGeometry(QRect(70, 20, 113, 20));
@@ -295,14 +318,14 @@ public:
         label_9->setGeometry(QRect(20, 110, 47, 14));
         NOMBREHASSIS = new QLineEdit(groupBox_5);
         NOMBREHASSIS->setObjectName(QStringLiteral("NOMBREHASSIS"));
-        NOMBREHASSIS->setGeometry(QRect(70, 140, 113, 21));
+        NOMBREHASSIS->setGeometry(QRect(130, 140, 113, 21));
         NOMBREHASSIS->setStyleSheet(QStringLiteral("border-image: whit"));
         nbrh = new QLabel(groupBox_5);
         nbrh->setObjectName(QStringLiteral("nbrh"));
-        nbrh->setGeometry(QRect(10, 140, 47, 14));
+        nbrh->setGeometry(QRect(10, 140, 101, 16));
         passwordassis = new QLineEdit(groupBox_5);
         passwordassis->setObjectName(QStringLiteral("passwordassis"));
-        passwordassis->setGeometry(QRect(200, 110, 111, 20));
+        passwordassis->setGeometry(QRect(200, 100, 111, 20));
         passwordassis->setStyleSheet(QStringLiteral("border-image: whit"));
         label_17 = new QLabel(groupBox_5);
         label_17->setObjectName(QStringLiteral("label_17"));
@@ -312,11 +335,11 @@ public:
         label_18->setGeometry(QRect(200, 20, 91, 16));
         usernamassis = new QLineEdit(groupBox_5);
         usernamassis->setObjectName(QStringLiteral("usernamassis"));
-        usernamassis->setGeometry(QRect(200, 50, 111, 20));
+        usernamassis->setGeometry(QRect(200, 40, 111, 20));
         usernamassis->setStyleSheet(QStringLiteral("border-image: whit"));
         groupBox_6 = new QGroupBox(tab_2);
         groupBox_6->setObjectName(QStringLiteral("groupBox_6"));
-        groupBox_6->setGeometry(QRect(20, 280, 191, 131));
+        groupBox_6->setGeometry(QRect(20, 280, 201, 161));
         label_10 = new QLabel(groupBox_6);
         label_10->setObjectName(QStringLiteral("label_10"));
         label_10->setGeometry(QRect(10, 50, 47, 14));
@@ -326,14 +349,16 @@ public:
         suppassisid->setStyleSheet(QStringLiteral("border-image: whit"));
         supprimerassis = new QPushButton(groupBox_6);
         supprimerassis->setObjectName(QStringLiteral("supprimerassis"));
-        supprimerassis->setGeometry(QRect(60, 90, 75, 23));
-        supprimerassis->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix3/orange.png);"));
+        supprimerassis->setGeometry(QRect(40, 100, 101, 31));
+        supprimerassis->setFont(font1);
+        supprimerassis->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
+"border-radius:10px;"));
         groupBox_7 = new QGroupBox(tab_2);
         groupBox_7->setObjectName(QStringLiteral("groupBox_7"));
         groupBox_7->setGeometry(QRect(250, 280, 271, 151));
         rechercherassistant = new QPushButton(groupBox_7);
         rechercherassistant->setObjectName(QStringLiteral("rechercherassistant"));
-        rechercherassistant->setGeometry(QRect(160, 30, 80, 22));
+        rechercherassistant->setGeometry(QRect(150, 30, 80, 22));
         rechercherassistant->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix3/orange.png);"));
         idrecherche = new QLineEdit(groupBox_7);
         idrecherche->setObjectName(QStringLiteral("idrecherche"));
@@ -350,7 +375,7 @@ public:
 
         retranslateUi(administrateur_assistant_page);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(administrateur_assistant_page);
@@ -359,47 +384,47 @@ public:
     void retranslateUi(QDialog *administrateur_assistant_page)
     {
         administrateur_assistant_page->setWindowTitle(QApplication::translate("administrateur_assistant_page", "Smart cinema", Q_NULLPTR));
-        groupBox->setTitle(QApplication::translate("administrateur_assistant_page", "ajout", Q_NULLPTR));
-        ajouter_administrateur->setText(QApplication::translate("administrateur_assistant_page", "ajouter", Q_NULLPTR));
-        modifieradmin->setText(QApplication::translate("administrateur_assistant_page", "modifier", Q_NULLPTR));
+        groupBox->setTitle(QApplication::translate("administrateur_assistant_page", "Ajout", Q_NULLPTR));
+        ajouter_administrateur->setText(QApplication::translate("administrateur_assistant_page", "Ajouter", Q_NULLPTR));
+        modifieradmin->setText(QApplication::translate("administrateur_assistant_page", "Modifier", Q_NULLPTR));
         label_2->setText(QApplication::translate("administrateur_assistant_page", "Nom", Q_NULLPTR));
         label_3->setText(QApplication::translate("administrateur_assistant_page", "Prenom", Q_NULLPTR));
         label_4->setText(QApplication::translate("administrateur_assistant_page", "Email", Q_NULLPTR));
         label_5->setText(QApplication::translate("administrateur_assistant_page", "ID", Q_NULLPTR));
         label_15->setText(QApplication::translate("administrateur_assistant_page", "Nom d'utilisateur :", Q_NULLPTR));
         label_16->setText(QApplication::translate("administrateur_assistant_page", "Mot de passe :", Q_NULLPTR));
-        groupBox_2->setTitle(QApplication::translate("administrateur_assistant_page", "affichage", Q_NULLPTR));
-        afficheradmin->setText(QApplication::translate("administrateur_assistant_page", "afficher", Q_NULLPTR));
-        imprimeradmin->setText(QApplication::translate("administrateur_assistant_page", "imprimer", Q_NULLPTR));
+        groupBox_2->setTitle(QApplication::translate("administrateur_assistant_page", "Affichage", Q_NULLPTR));
+        afficheradmin->setText(QApplication::translate("administrateur_assistant_page", "Afficher", Q_NULLPTR));
+        imprimeradmin->setText(QApplication::translate("administrateur_assistant_page", "Imprimer", Q_NULLPTR));
         PDF->setText(QApplication::translate("administrateur_assistant_page", "PDF", Q_NULLPTR));
         groupBox_3->setTitle(QApplication::translate("administrateur_assistant_page", "suppression", Q_NULLPTR));
         label->setText(QApplication::translate("administrateur_assistant_page", "Id", Q_NULLPTR));
         supprimeradmin->setText(QApplication::translate("administrateur_assistant_page", "supprimer", Q_NULLPTR));
-        groupBox_8->setTitle(QApplication::translate("administrateur_assistant_page", "email", Q_NULLPTR));
-        label_12->setText(QApplication::translate("administrateur_assistant_page", "email", Q_NULLPTR));
-        label_13->setText(QApplication::translate("administrateur_assistant_page", "sujet", Q_NULLPTR));
-        label_14->setText(QApplication::translate("administrateur_assistant_page", "message", Q_NULLPTR));
-        envoyer->setText(QApplication::translate("administrateur_assistant_page", "envoyer", Q_NULLPTR));
+        groupBox_8->setTitle(QApplication::translate("administrateur_assistant_page", "Email", Q_NULLPTR));
+        label_12->setText(QApplication::translate("administrateur_assistant_page", "Email", Q_NULLPTR));
+        label_13->setText(QApplication::translate("administrateur_assistant_page", "Sujet", Q_NULLPTR));
+        label_14->setText(QApplication::translate("administrateur_assistant_page", "Message :", Q_NULLPTR));
+        envoyer->setText(QApplication::translate("administrateur_assistant_page", "Envoyer", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("administrateur_assistant_page", "Administrateur", Q_NULLPTR));
-        groupBox_4->setTitle(QApplication::translate("administrateur_assistant_page", "affichage", Q_NULLPTR));
-        afficherassis->setText(QApplication::translate("administrateur_assistant_page", "afficher", Q_NULLPTR));
-        groupBox_5->setTitle(QApplication::translate("administrateur_assistant_page", "ajout", Q_NULLPTR));
-        ajouterassis->setText(QApplication::translate("administrateur_assistant_page", "ajouter", Q_NULLPTR));
-        modifierasis->setText(QApplication::translate("administrateur_assistant_page", "modifier", Q_NULLPTR));
+        groupBox_4->setTitle(QApplication::translate("administrateur_assistant_page", "Affichage", Q_NULLPTR));
+        afficherassis->setText(QApplication::translate("administrateur_assistant_page", "Afficher", Q_NULLPTR));
+        groupBox_5->setTitle(QApplication::translate("administrateur_assistant_page", "Ajout", Q_NULLPTR));
+        ajouterassis->setText(QApplication::translate("administrateur_assistant_page", "Ajouter", Q_NULLPTR));
+        modifierasis->setText(QApplication::translate("administrateur_assistant_page", "Modifier", Q_NULLPTR));
         label_6->setText(QApplication::translate("administrateur_assistant_page", "Nom", Q_NULLPTR));
         label_7->setText(QApplication::translate("administrateur_assistant_page", "Prenom", Q_NULLPTR));
         label_8->setText(QApplication::translate("administrateur_assistant_page", "Email", Q_NULLPTR));
         label_9->setText(QApplication::translate("administrateur_assistant_page", "ID", Q_NULLPTR));
-        nbrh->setText(QApplication::translate("administrateur_assistant_page", "nbrh", Q_NULLPTR));
+        nbrh->setText(QApplication::translate("administrateur_assistant_page", "Nombre de travai :", Q_NULLPTR));
         label_17->setText(QApplication::translate("administrateur_assistant_page", "Mot de passe :", Q_NULLPTR));
         label_18->setText(QApplication::translate("administrateur_assistant_page", "Nom d'utilisateur :", Q_NULLPTR));
-        groupBox_6->setTitle(QApplication::translate("administrateur_assistant_page", "suppression", Q_NULLPTR));
-        label_10->setText(QApplication::translate("administrateur_assistant_page", "Id", Q_NULLPTR));
-        supprimerassis->setText(QApplication::translate("administrateur_assistant_page", "supprimer", Q_NULLPTR));
-        groupBox_7->setTitle(QApplication::translate("administrateur_assistant_page", "recherche", Q_NULLPTR));
-        rechercherassistant->setText(QApplication::translate("administrateur_assistant_page", "rechercher", Q_NULLPTR));
-        label_11->setText(QApplication::translate("administrateur_assistant_page", "ID", Q_NULLPTR));
-        tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("administrateur_assistant_page", "assistant", Q_NULLPTR));
+        groupBox_6->setTitle(QApplication::translate("administrateur_assistant_page", "Suppression", Q_NULLPTR));
+        label_10->setText(QApplication::translate("administrateur_assistant_page", "ID :", Q_NULLPTR));
+        supprimerassis->setText(QApplication::translate("administrateur_assistant_page", "Supprimer", Q_NULLPTR));
+        groupBox_7->setTitle(QApplication::translate("administrateur_assistant_page", "Recherche", Q_NULLPTR));
+        rechercherassistant->setText(QApplication::translate("administrateur_assistant_page", "Rechercher", Q_NULLPTR));
+        label_11->setText(QApplication::translate("administrateur_assistant_page", "ID :", Q_NULLPTR));
+        tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("administrateur_assistant_page", "Assistant", Q_NULLPTR));
     } // retranslateUi
 
 };

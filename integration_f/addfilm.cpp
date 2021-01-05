@@ -6,6 +6,9 @@ addfilm::addfilm(QWidget *parent) :
     ui(new Ui::addfilm)
 {
     ui->setupUi(this);
+
+    ui->nom_film->setValidator(new QRegExpValidator( QRegExp("[A-Za-z0_]{0,255}"), this ));
+
 }
 
 addfilm::~addfilm()

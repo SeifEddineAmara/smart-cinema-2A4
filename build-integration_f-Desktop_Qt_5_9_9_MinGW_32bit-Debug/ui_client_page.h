@@ -107,7 +107,7 @@ public:
 ""));
         id = new QLabel(tab);
         id->setObjectName(QStringLiteral("id"));
-        id->setGeometry(QRect(40, 200, 121, 51));
+        id->setGeometry(QRect(40, 190, 121, 51));
         id->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";\n"
 ""));
@@ -125,49 +125,49 @@ public:
 "border-image: whit"));
         lineEdit_id = new QLineEdit(tab);
         lineEdit_id->setObjectName(QStringLiteral("lineEdit_id"));
-        lineEdit_id->setGeometry(QRect(200, 200, 113, 51));
+        lineEdit_id->setGeometry(QRect(200, 190, 113, 51));
         lineEdit_id->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";\n"
 "border-image: whit"));
         label_4 = new QLabel(tab);
         label_4->setObjectName(QStringLiteral("label_4"));
-        label_4->setGeometry(QRect(390, 20, 121, 51));
+        label_4->setGeometry(QRect(370, 20, 161, 51));
         label_4->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";\n"
 ""));
         label_5 = new QLabel(tab);
         label_5->setObjectName(QStringLiteral("label_5"));
-        label_5->setGeometry(QRect(390, 200, 121, 51));
+        label_5->setGeometry(QRect(400, 190, 121, 51));
         label_5->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";\n"
 ""));
         label_6 = new QLabel(tab);
         label_6->setObjectName(QStringLiteral("label_6"));
-        label_6->setGeometry(QRect(390, 110, 121, 51));
+        label_6->setGeometry(QRect(400, 100, 121, 51));
         label_6->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";\n"
 ""));
         lineEdit_number = new QLineEdit(tab);
         lineEdit_number->setObjectName(QStringLiteral("lineEdit_number"));
-        lineEdit_number->setGeometry(QRect(560, 30, 113, 51));
+        lineEdit_number->setGeometry(QRect(570, 20, 113, 51));
         lineEdit_number->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";\n"
 "border-image: whit"));
         lineEdit_email = new QLineEdit(tab);
         lineEdit_email->setObjectName(QStringLiteral("lineEdit_email"));
-        lineEdit_email->setGeometry(QRect(560, 110, 113, 51));
+        lineEdit_email->setGeometry(QRect(570, 100, 113, 51));
         lineEdit_email->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";\n"
 "border-image: whit"));
         lineEdit_age = new QLineEdit(tab);
         lineEdit_age->setObjectName(QStringLiteral("lineEdit_age"));
-        lineEdit_age->setGeometry(QRect(560, 190, 113, 51));
+        lineEdit_age->setGeometry(QRect(570, 190, 113, 51));
         lineEdit_age->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";\n"
 "border-image: whit"));
         pushButton = new QPushButton(tab);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(310, 350, 161, 41));
+        pushButton->setGeometry(QRect(310, 330, 161, 41));
         pushButton->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";\n"
 "border-image: url(:/new/prefix3/orange.png);"));
@@ -231,7 +231,7 @@ public:
         tab_5->setObjectName(QStringLiteral("tab_5"));
         pushButton_confirm_tri = new QPushButton(tab_5);
         pushButton_confirm_tri->setObjectName(QStringLiteral("pushButton_confirm_tri"));
-        pushButton_confirm_tri->setGeometry(QRect(30, 40, 131, 51));
+        pushButton_confirm_tri->setGeometry(QRect(90, 40, 131, 41));
         pushButton_confirm_tri->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";\n"
 "border-image: url(:/new/prefix3/orange.png);"));
@@ -241,14 +241,14 @@ public:
         tableView_trie_client->setStyleSheet(QStringLiteral("border-image: whit"));
         comboBox_tri_client_nom = new QComboBox(tab_5);
         comboBox_tri_client_nom->setObjectName(QStringLiteral("comboBox_tri_client_nom"));
-        comboBox_tri_client_nom->setGeometry(QRect(220, 40, 351, 51));
+        comboBox_tri_client_nom->setGeometry(QRect(220, 40, 351, 41));
         comboBox_tri_client_nom->setStyleSheet(QStringLiteral("border-image: whit"));
         tabWidget->addTab(tab_5, QString());
         tab_6 = new QWidget();
         tab_6->setObjectName(QStringLiteral("tab_6"));
         pushButton_search = new QPushButton(tab_6);
         pushButton_search->setObjectName(QStringLiteral("pushButton_search"));
-        pushButton_search->setGeometry(QRect(600, 60, 131, 51));
+        pushButton_search->setGeometry(QRect(560, 60, 131, 51));
         pushButton_search->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";\n"
 "border-image: url(:/new/prefix3/orange.png);"));
@@ -268,7 +268,7 @@ public:
 "border-image: whit"));
         tableView_search = new QTableView(tab_6);
         tableView_search->setObjectName(QStringLiteral("tableView_search"));
-        tableView_search->setGeometry(QRect(30, 190, 781, 201));
+        tableView_search->setGeometry(QRect(30, 180, 781, 211));
         tableView_search->setStyleSheet(QStringLiteral("border-image: whit"));
         label_2 = new QLabel(tab_6);
         label_2->setObjectName(QStringLiteral("label_2"));
@@ -284,7 +284,7 @@ public:
 
         retranslateUi(client_page);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(5);
 
 
         QMetaObject::connectSlotsByName(client_page);
@@ -297,9 +297,9 @@ public:
         name->setText(QApplication::translate("client_page", "Prenom:", Q_NULLPTR));
         lastname->setText(QApplication::translate("client_page", "Nom :", Q_NULLPTR));
         id->setText(QApplication::translate("client_page", "ID :", Q_NULLPTR));
-        label_4->setText(QApplication::translate("client_page", "Nombre", Q_NULLPTR));
-        label_5->setText(QApplication::translate("client_page", "Age", Q_NULLPTR));
-        label_6->setText(QApplication::translate("client_page", "Email", Q_NULLPTR));
+        label_4->setText(QApplication::translate("client_page", "Numero du ticket :", Q_NULLPTR));
+        label_5->setText(QApplication::translate("client_page", "Age :", Q_NULLPTR));
+        label_6->setText(QApplication::translate("client_page", "Email :", Q_NULLPTR));
         pushButton->setText(QApplication::translate("client_page", "Confirmer", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("client_page", "Ajout", Q_NULLPTR));
         pushButton_2->setText(QApplication::translate("client_page", "Afficher", Q_NULLPTR));

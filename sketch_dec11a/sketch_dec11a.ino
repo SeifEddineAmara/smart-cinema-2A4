@@ -1,7 +1,7 @@
 #define PIN_LED 13
-int sensorThres = 680;
+int sensorThres = 300;
 int smokeA0 = A5;
-char data;
+char data=0;
 void setup()
 {
   // put your setup code here, to run once:
@@ -19,51 +19,25 @@ void loop()
  
 int analogSensor = analogRead(smokeA0);
 
-
- /*data='3';*/
-/* Serial.write(data);*/
-/*data=Serial.read()
- if(Serial.read()==)
- {
-  Serial.print(data);
- }*/
-
- /* if(Serial.available()) 
-  {
-  
-  data = Serial.read()  ; 
-  
-  }*/
-  
-
+int count=0;
  
-
-  /* Serial.print("data: ");
-  Serial.println(data);*/
- /*Serial.print("Pin A0: ");
+ /* Serial.print("Pin A0: ");
   Serial.println(analogSensor);*/
+ 
+  /*Serial.print("data: ");
+  Serial.println(data);*/
 
- /*Serial.write(data);*/
-  /*data='3';
-  Serial.write(data);*/
-  /*data='7';*/
-  data='3';
- Serial.println(data);
- /*  data='3';*/
-/*
-if(Serial.available()>0)
-{  
-   data='3';
-  Serial.write(data);
-}  */
- /*
+
+ if(data!='3')
+ {
 if (analogSensor > sensorThres)
 {
    data='3';
   Serial.write(data);
+  
    
-} */
-
+} 
+ }
   /*data='3';
   Serial.write(data);
 
@@ -79,20 +53,25 @@ if(Serial.available())
          
   if(data=='1')
   
-  {  int count=0;
-     while(count<3)
+  {  
+     while(count<=3)
      {
        digitalWrite(PIN_LED , HIGH);
        delay(1000);
        digitalWrite(PIN_LED , LOW);    
        delay(1000);
-              Serial.write('1');
+            /*  Serial.write('1');*/
 
        count++;
-     }   
+     } 
+
+       if(count==3)
+       {
+        count =0;
+       }
      
 
-      /* Serial.write('1');*/
+      Serial.write('1');
   }
   else if (data=='0')
   {

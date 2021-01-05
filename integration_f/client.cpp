@@ -56,10 +56,9 @@ QSqlQueryModel * client::afficher()
     model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID"));
     model->setHeaderData(1, Qt::Horizontal, QObject::tr("age "));
     model->setHeaderData(2, Qt::Horizontal, QObject::tr("last name"));
-    model->setHeaderData(3, Qt::Horizontal, QObject::tr("type"));
-    model->setHeaderData(4, Qt::Horizontal, QObject::tr("name"));
-    model->setHeaderData(5, Qt::Horizontal, QObject::tr("mail"));
-    model->setHeaderData(6, Qt::Horizontal, QObject::tr("numero"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("name"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("mail"));
+    model->setHeaderData(5, Qt::Horizontal, QObject::tr("numero"));
 
     return model;
 }
@@ -185,14 +184,17 @@ bool client::search_client_view(QString id ,QSqlQueryModel *model  , QString xna
 {
     QSqlQuery query ;
     bool test=false ;
-    query.prepare("SELECT * from client where ID = :id ");
+    query.prepare("SELECT * from client where ID = :id  ");
     query.bindValue(":id", id);
+
+
+
 
     if( query.exec() )
     {
         while(query.next() && test==false )
         {
-            if(query.value(0) == id && query.value(4).toString().compare(xname)==0 )
+            if(query.value(0) == id && query.value(3).toString().compare(xname)==0 )
             {
                 test = true ;
                 model->setQuery(query) ;

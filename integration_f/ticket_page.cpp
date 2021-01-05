@@ -3,20 +3,7 @@
 #include"ticket.h"
 #include"QMessageBox"
 #include "projection.h"
-/*
-ticket_page::ticket_page(QWidget *parent) :
-    QDialog(parent),
-    ui(new Ui::ticket_page)
-{
-    ui->setupUi(this);
-}
 
-ticket_page::~ticket_page()
-{
-    delete ui;
-}
-
-*/
 ticket_page::ticket_page(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::ticket_page)
@@ -34,6 +21,8 @@ ticket_page::ticket_page(QWidget *parent) :
     ui->comboBox_consommation->addItem("chocolate  : 4dt") ;
 
 */
+
+     ui->lineEdit_price->setValidator(new QIntValidator(0,99999999,this));
 
 
 }

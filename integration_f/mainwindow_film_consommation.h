@@ -7,6 +7,7 @@
 #include <QStandardItemModel>
 #include <QDialog>
 #include <QFileDialog>
+#include<QSound>
 
 /*#include "connexion.h"*/
 
@@ -64,9 +65,14 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_play_clicked();
+
+    void on_mute_clicked();
+
 private:
     Ui::MainWindow_film_consommation *ui;
     QStringList files;
+    QSound *son;
 
 
 

@@ -1,6 +1,7 @@
 #include "verification_administrateur.h"
 #include "ui_verification_administrateur.h"
 
+
 verification_administrateur::verification_administrateur(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::verification_administrateur)

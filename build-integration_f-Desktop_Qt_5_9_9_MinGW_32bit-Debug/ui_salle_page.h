@@ -315,7 +315,7 @@ public:
 
         retranslateUi(salle_page);
 
-        tabWidget_3->setCurrentIndex(2);
+        tabWidget_3->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(salle_page);

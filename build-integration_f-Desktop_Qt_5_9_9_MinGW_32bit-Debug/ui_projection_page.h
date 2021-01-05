@@ -43,7 +43,6 @@ public:
     QComboBox *comboBox_salle;
     QPushButton *pushButton_search_salle;
     QLabel *label_5;
-    QLineEdit *lineEdit__time;
     QPushButton *pushButton_conf;
     QTimeEdit *timeEdit_ajout;
     QWidget *tab_2;
@@ -52,10 +51,10 @@ public:
     QWidget *tab_3;
     QLineEdit *lineEdit_delete;
     QPushButton *pushButton_2;
+    QLabel *label_8;
     QWidget *tab_4;
     QLineEdit *lineEdit_edit_id;
     QPushButton *pushButton_confirm_edit;
-    QLineEdit *lineEdit_edit_horaire;
     QLabel *label_6;
     QLabel *label_7;
     QTimeEdit *timeEdit_update;
@@ -78,7 +77,7 @@ public:
         tab->setObjectName(QStringLiteral("tab"));
         label = new QLabel(tab);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(90, 50, 61, 41));
+        label->setGeometry(QRect(100, 50, 61, 41));
         label->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";"));
         lineEdit_id = new QLineEdit(tab);
@@ -90,7 +89,7 @@ public:
 "border-image: whit"));
         label_2 = new QLabel(tab);
         label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(70, 110, 91, 41));
+        label_2->setGeometry(QRect(80, 110, 91, 41));
         label_2->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";"));
         comboBox_film = new QComboBox(tab);
@@ -105,7 +104,7 @@ public:
 "font: 14pt \"MS Shell Dlg 2\";"));
         label_3 = new QLabel(tab);
         label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(50, 170, 91, 41));
+        label_3->setGeometry(QRect(60, 170, 91, 41));
         label_3->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";"));
         comboBox_cine = new QComboBox(tab);
@@ -120,7 +119,7 @@ public:
 "font: 14pt \"MS Shell Dlg 2\";"));
         label_4 = new QLabel(tab);
         label_4->setObjectName(QStringLiteral("label_4"));
-        label_4->setGeometry(QRect(70, 230, 91, 41));
+        label_4->setGeometry(QRect(80, 230, 91, 41));
         label_4->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";"));
         comboBox_salle = new QComboBox(tab);
@@ -135,16 +134,9 @@ public:
 "font: 14pt \"MS Shell Dlg 2\";"));
         label_5 = new QLabel(tab);
         label_5->setObjectName(QStringLiteral("label_5"));
-        label_5->setGeometry(QRect(50, 290, 91, 41));
+        label_5->setGeometry(QRect(60, 290, 91, 41));
         label_5->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";"));
-        lineEdit__time = new QLineEdit(tab);
-        lineEdit__time->setObjectName(QStringLiteral("lineEdit__time"));
-        lineEdit__time->setGeometry(QRect(190, 290, 161, 41));
-        lineEdit__time->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
-"color: rgb(0, 0, 127);\n"
-"font: 14pt \"MS Shell Dlg 2\";\n"
-"border-image: whit"));
         pushButton_conf = new QPushButton(tab);
         pushButton_conf->setObjectName(QStringLiteral("pushButton_conf"));
         pushButton_conf->setGeometry(QRect(380, 360, 191, 51));
@@ -153,7 +145,7 @@ public:
 "font: 14pt \"MS Shell Dlg 2\";"));
         timeEdit_ajout = new QTimeEdit(tab);
         timeEdit_ajout->setObjectName(QStringLiteral("timeEdit_ajout"));
-        timeEdit_ajout->setGeometry(QRect(400, 310, 118, 22));
+        timeEdit_ajout->setGeometry(QRect(190, 291, 161, 41));
         timeEdit_ajout->setStyleSheet(QStringLiteral("border-image: whit"));
         tabWidget->addTab(tab, QString());
         tab_2 = new QWidget();
@@ -169,20 +161,26 @@ public:
         font1.setPointSize(14);
         pushButton->setFont(font1);
         pushButton->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
+"border-radius:10px;\n"
 ""));
         tabWidget->addTab(tab_2, QString());
         tab_3 = new QWidget();
         tab_3->setObjectName(QStringLiteral("tab_3"));
         lineEdit_delete = new QLineEdit(tab_3);
         lineEdit_delete->setObjectName(QStringLiteral("lineEdit_delete"));
-        lineEdit_delete->setGeometry(QRect(100, 100, 311, 41));
+        lineEdit_delete->setGeometry(QRect(280, 90, 311, 41));
         lineEdit_delete->setStyleSheet(QStringLiteral("border-image: whit"));
         pushButton_2 = new QPushButton(tab_3);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-        pushButton_2->setGeometry(QRect(470, 90, 151, 61));
+        pushButton_2->setGeometry(QRect(360, 160, 151, 41));
         pushButton_2->setFont(font1);
         pushButton_2->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
-""));
+"border-radius:10px;"));
+        label_8 = new QLabel(tab_3);
+        label_8->setObjectName(QStringLiteral("label_8"));
+        label_8->setGeometry(QRect(200, 90, 61, 41));
+        label_8->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
+"font: 14pt \"MS Shell Dlg 2\";"));
         tabWidget->addTab(tab_3, QString());
         tab_4 = new QWidget();
         tab_4->setObjectName(QStringLiteral("tab_4"));
@@ -192,14 +190,11 @@ public:
         lineEdit_edit_id->setStyleSheet(QStringLiteral("border-image: whit"));
         pushButton_confirm_edit = new QPushButton(tab_4);
         pushButton_confirm_edit->setObjectName(QStringLiteral("pushButton_confirm_edit"));
-        pushButton_confirm_edit->setGeometry(QRect(290, 280, 151, 41));
+        pushButton_confirm_edit->setGeometry(QRect(360, 280, 151, 41));
         pushButton_confirm_edit->setFont(font1);
         pushButton_confirm_edit->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
+"border-radius:10px;\n"
 ""));
-        lineEdit_edit_horaire = new QLineEdit(tab_4);
-        lineEdit_edit_horaire->setObjectName(QStringLiteral("lineEdit_edit_horaire"));
-        lineEdit_edit_horaire->setGeometry(QRect(300, 190, 291, 41));
-        lineEdit_edit_horaire->setStyleSheet(QStringLiteral("border-image: whit"));
         label_6 = new QLabel(tab_4);
         label_6->setObjectName(QStringLiteral("label_6"));
         label_6->setGeometry(QRect(190, 90, 61, 41));
@@ -210,13 +205,13 @@ public:
         label_7->setFont(font1);
         timeEdit_update = new QTimeEdit(tab_4);
         timeEdit_update->setObjectName(QStringLiteral("timeEdit_update"));
-        timeEdit_update->setGeometry(QRect(600, 200, 118, 22));
+        timeEdit_update->setGeometry(QRect(307, 191, 281, 41));
         timeEdit_update->setStyleSheet(QStringLiteral("border-image: whit"));
         tabWidget->addTab(tab_4, QString());
 
         retranslateUi(projection_page);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(projection_page);
@@ -238,6 +233,7 @@ public:
         pushButton->setText(QApplication::translate("projection_page", "Confirmer", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("projection_page", "Affichage", Q_NULLPTR));
         pushButton_2->setText(QApplication::translate("projection_page", "Supprimer", Q_NULLPTR));
+        label_8->setText(QApplication::translate("projection_page", "ID :", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("projection_page", "Suppression", Q_NULLPTR));
         pushButton_confirm_edit->setText(QApplication::translate("projection_page", "Modifier", Q_NULLPTR));
         label_6->setText(QApplication::translate("projection_page", "ID :", Q_NULLPTR));

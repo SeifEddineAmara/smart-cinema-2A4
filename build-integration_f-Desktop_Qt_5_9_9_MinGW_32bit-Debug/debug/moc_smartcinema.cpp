@@ -114,7 +114,7 @@ void Smartcinema::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         Smartcinema *_t = static_cast<Smartcinema *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->update_label(); break;
+        /*case 0: _t->update_label(); break;*/
         case 1: _t->update_label1(); break;
         case 2: _t->on_pushButton_3_clicked(); break;
         case 3: _t->on_pushButton_4_clicked(); break;

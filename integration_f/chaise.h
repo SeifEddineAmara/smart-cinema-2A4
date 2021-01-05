@@ -9,13 +9,14 @@
 class CHAISE
 {
 private:
-    QString type , numero ;
+    QString type , numero,id_salle;
 
 public:
    CHAISE();
-   CHAISE(QString type , QString numero ){
+   CHAISE(QString type , QString numero,QString id_salle ){
         this->type=type;
         this->numero=numero;
+        this->id_salle=id_salle;
 
 
     }

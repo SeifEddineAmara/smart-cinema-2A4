@@ -36,7 +36,7 @@
      <enum>QTabWidget::Triangular</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -102,18 +102,24 @@
      <widget class="QPushButton" name="pushButton">
       <property name="geometry">
        <rect>
-        <x>400</x>
+        <x>380</x>
         <y>40</y>
-        <width>75</width>
+        <width>101</width>
         <height>23</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">
 border-image: url(:/new/prefix3/orange.png);</string>
       </property>
       <property name="text">
-       <string>export excel</string>
+       <string>Exporter en excel</string>
       </property>
      </widget>
     </widget>
@@ -175,7 +181,7 @@ border-image: url(:/new/prefix3/orange.png);</string>
     </widget>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
-      <string>mailing</string>
+      <string>Mailing</string>
      </attribute>
      <widget class="QLineEdit" name="subject">
       <property name="geometry">
@@ -190,7 +196,7 @@ border-image: url(:/new/prefix3/orange.png);</string>
        <string notr="true">border-image: white</string>
       </property>
       <property name="placeholderText">
-       <string>subject</string>
+       <string>Matière</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="rcpt">
@@ -206,7 +212,7 @@ border-image: url(:/new/prefix3/orange.png);</string>
        <string notr="true">border-image: white</string>
       </property>
       <property name="placeholderText">
-       <string>recipient</string>
+       <string>Bénéficiaire</string>
       </property>
      </widget>
      <widget class="QPushButton" name="browseBtn">
@@ -217,6 +223,12 @@ border-image: url(:/new/prefix3/orange.png);</string>
         <width>75</width>
         <height>24</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">border-image: url(:/new/prefix3/orange.png);</string>
@@ -238,7 +250,7 @@ border-image: url(:/new/prefix3/orange.png);</string>
        <string notr="true">border-image: white</string>
       </property>
       <property name="placeholderText">
-       <string>type your message here ...</string>
+       <string>Tapez votre message ici...</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="mail_pass">
@@ -257,7 +269,7 @@ border-image: url(:/new/prefix3/orange.png);</string>
        <enum>QLineEdit::Password</enum>
       </property>
       <property name="placeholderText">
-       <string>your mail password</string>
+       <string>Votre mot de passe mail</string>
       </property>
      </widget>
      <widget class="QPushButton" name="sendBtn">
@@ -269,11 +281,17 @@ border-image: url(:/new/prefix3/orange.png);</string>
         <height>23</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">border-image: url(:/new/prefix3/orange.png);</string>
       </property>
       <property name="text">
-       <string>Send</string>
+       <string>Envoyer</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="file">
@@ -289,10 +307,56 @@ border-image: url(:/new/prefix3/orange.png);</string>
        <string notr="true">border-image: white</string>
       </property>
       <property name="placeholderText">
-       <string>attachement here</string>
+       <string>Pièce jointe ici</string>
       </property>
      </widget>
     </widget>
+   </widget>
+   <widget class="QPushButton" name="play">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>510</y>
+      <width>121</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/new/prefix3/orange.png);
+border-radius:10px;</string>
+    </property>
+    <property name="text">
+     <string>Lancer</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="mute">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>510</y>
+      <width>111</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/new/prefix3/orange.png);
+border-radius:10px;</string>
+    </property>
+    <property name="text">
+     <string>Muter</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

@@ -14,19 +14,7 @@
 #include <QMessageBox>
 #include <QApplication>
 
-/*
-administrateur_assistant_page::administrateur_assistant_page(QWidget *parent) :
-    QDialog(parent),
-    ui(new Ui::administrateur_assistant_page)
-{
-    ui->setupUi(this);
-}
 
-administrateur_assistant_page::~administrateur_assistant_page()
-{
-    delete ui;
-}
-*/
 administrateur_assistant_page::administrateur_assistant_page(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::administrateur_assistant_page)
@@ -40,6 +28,16 @@ administrateur_assistant_page::administrateur_assistant_page(QWidget *parent)
             animation->start();
     ui->tableViewadmin->setModel(ad.afficher());
     ui->tableViewassis->setModel(ass.afficher());
+
+
+    ui->nomadmin->setValidator(new QRegExpValidator( QRegExp("[A-Za-z0_]{0,255}"), this ));
+    ui->prenomadmin->setValidator(new QRegExpValidator( QRegExp("[A-Za-z0_]{0,255}"), this ));
+
+    ui->nomassis->setValidator(new QRegExpValidator( QRegExp("[A-Za-z0_]{0,255}"), this ));
+    ui->prenomassis->setValidator(new QRegExpValidator( QRegExp("[A-Za-z0_]{0,255}"), this ));
+    ui->NOMBREHASSIS->setValidator(new QIntValidator(0,99999999,this));
+
+
 
 
 }
@@ -342,8 +340,4 @@ void administrateur_assistant_page::on_envoyer_clicked()
      sendMail();
 }
 
-/*
-void administrateur_assistant_page::on_rechercherassistant_clicked()
-{
 
-}*/

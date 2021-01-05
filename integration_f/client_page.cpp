@@ -17,6 +17,13 @@ client_page::client_page(QWidget *parent) :
     ui->comboBox_tri_client_nom->addItem("name");
     ui->comboBox_tri_client_nom->addItem("prenom");
 
+
+    ui->lineEdit_name->setValidator(new QRegExpValidator( QRegExp("[A-Za-z0_]{0,255}"), this ));
+    ui->lineEdit_last_name->setValidator(new QRegExpValidator( QRegExp("[A-Za-z0_]{0,255}"), this ));
+    ui->lineEdit_number->setValidator(new QIntValidator(0,99999999,this));
+    ui->lineEdit_age->setValidator(new QIntValidator(0,99999999,this));
+    ui->lineEdit_search_name->setValidator(new QRegExpValidator( QRegExp("[A-Za-z0_]{0,255}"), this ));
+
 }
 
 client_page::~client_page()

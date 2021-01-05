@@ -8,6 +8,20 @@ chaise_producteur_page::chaise_producteur_page(QWidget *parent) :
     ui->setupUi(this);
     ui->tableView->setModel(tmpproducteur.afficher());//refresh
     ui->tableView_4->setModel(tmpchaise.afficher());//refresh
+
+
+    ui->lineEdit->setValidator(new QRegExpValidator( QRegExp("[A-Za-z0_]{0,255}"), this ));
+    ui->lineEdit_2->setValidator(new QRegExpValidator( QRegExp("[A-Za-z0_]{0,255}"), this ));
+    ui->lineEdit_5->setValidator(new QIntValidator(0,99999999,this));
+
+    ui->lineEdit_8->setValidator(new QRegExpValidator( QRegExp("[A-Za-z0_]{0,255}"), this ));
+    ui->lineEdit_9->setValidator(new QRegExpValidator( QRegExp("[A-Za-z0_]{0,255}"), this ));
+    ui->lineEdit_14->setValidator(new QIntValidator(0,99999999,this));
+
+    ui->lineEdit_16->setValidator(new QIntValidator(0,99999999,this));
+    ui->lineEdit_18->setValidator(new QIntValidator(0,99999999,this));
+    ui->lineEdit_20->setValidator(new QIntValidator(0,99999999,this));
+
 }
 
 chaise_producteur_page::~chaise_producteur_page()
@@ -136,8 +150,10 @@ void chaise_producteur_page::on_pushButton_4_clicked()
                  type="vip";
              }
 
+             QString id_salle=ui->comboBox_id_salle->currentText();
 
-        CHAISE c( type ,numero );
+
+        CHAISE c( type ,numero,id_salle );
         bool test=c.ajouter();
 
         if (test)
@@ -193,9 +209,9 @@ void chaise_producteur_page::on_pushButton_5_clicked()
              else {
                  type="vip";
              }
+             QString id_salle=ui->comboBox_id_salle->currentText();
 
-
-        CHAISE c( type ,numero );
+        CHAISE c( type ,numero,id_salle );
         bool test=c.modifier(numero);
 
         if (test)
@@ -300,4 +316,14 @@ void chaise_producteur_page::on_lineEdit_20_textChanged(const QString &arg1)
 {
     ui->tableView_6->setModel(tmpchaise.recherche(ui->lineEdit_20->text()));
 
+}
+
+void chaise_producteur_page::on_pushButton_charger_id_salle_clicked()
+{
+
+    QSqlQueryModel * model= new QSqlQueryModel();
+
+ model->setQuery("select numero from sallee");
+
+    ui->comboBox_id_salle->setModel(model);
 }

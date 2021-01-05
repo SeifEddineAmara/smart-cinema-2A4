@@ -64,7 +64,7 @@ public:
         id_cons->setObjectName(QStringLiteral("id_cons"));
         id_cons->setGeometry(QRect(100, 90, 113, 20));
         id_cons->setStyleSheet(QStringLiteral("border-image: whit"));
-        id_cons->setMaxLength(4);
+        id_cons->setMaxLength(8);
         label_5 = new QLabel(add_consomation);
         label_5->setObjectName(QStringLiteral("label_5"));
         label_5->setGeometry(QRect(40, 130, 47, 13));
@@ -75,6 +75,7 @@ public:
         nom_cons->setObjectName(QStringLiteral("nom_cons"));
         nom_cons->setGeometry(QRect(100, 130, 113, 20));
         nom_cons->setStyleSheet(QStringLiteral("border-image: whit"));
+        nom_cons->setMaxLength(20);
         label_7 = new QLabel(add_consomation);
         label_7->setObjectName(QStringLiteral("label_7"));
         label_7->setGeometry(QRect(40, 90, 47, 13));

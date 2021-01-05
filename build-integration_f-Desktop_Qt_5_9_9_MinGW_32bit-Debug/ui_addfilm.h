@@ -53,6 +53,7 @@ public:
         id_film->setObjectName(QStringLiteral("id_film"));
         id_film->setGeometry(QRect(140, 100, 113, 20));
         id_film->setStyleSheet(QStringLiteral("border-image: whit"));
+        id_film->setMaxLength(8);
         label_3 = new QLabel(addfilm);
         label_3->setObjectName(QStringLiteral("label_3"));
         label_3->setGeometry(QRect(70, 180, 71, 16));
@@ -76,6 +77,7 @@ public:
         nom_film->setObjectName(QStringLiteral("nom_film"));
         nom_film->setGeometry(QRect(140, 140, 113, 20));
         nom_film->setStyleSheet(QStringLiteral("border-image: whit"));
+        nom_film->setMaxLength(20);
         type_film = new QComboBox(addfilm);
         type_film->setObjectName(QStringLiteral("type_film"));
         type_film->setGeometry(QRect(140, 180, 111, 22));

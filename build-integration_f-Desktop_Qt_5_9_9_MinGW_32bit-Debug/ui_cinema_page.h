@@ -359,7 +359,7 @@ public:
 
         retranslateUi(cinema_page);
 
-        tabWidget_2->setCurrentIndex(0);
+        tabWidget_2->setCurrentIndex(5);
 
 
         QMetaObject::connectSlotsByName(cinema_page);

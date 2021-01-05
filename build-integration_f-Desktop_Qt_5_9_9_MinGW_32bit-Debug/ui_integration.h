@@ -40,7 +40,6 @@ public:
     QLabel *label_login;
     QPushButton *pushButton_login;
     QComboBox *comboBox_typeagent;
-    QPushButton *pushButton_verifier;
     QGraphicsView *graphicsView;
     QMenuBar *menubar;
     QStatusBar *statusbar;
@@ -49,26 +48,26 @@ public:
     {
         if (Integration->objectName().isEmpty())
             Integration->setObjectName(QStringLiteral("Integration"));
-        Integration->resize(936, 521);
+        Integration->resize(936, 550);
         Integration->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix3/beige.jpg);"));
         centralwidget = new QWidget(Integration);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         frame = new QFrame(centralwidget);
         frame->setObjectName(QStringLiteral("frame"));
-        frame->setGeometry(QRect(110, 50, 701, 421));
+        frame->setGeometry(QRect(110, 60, 701, 451));
         frame->setMouseTracking(false);
         frame->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix2/marron.jpg);"));
         frame->setFrameShape(QFrame::StyledPanel);
         frame->setFrameShadow(QFrame::Raised);
         label_3 = new QLabel(frame);
         label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(270, 70, 111, 31));
+        label_3->setGeometry(QRect(290, 80, 111, 31));
         QFont font;
         font.setPointSize(12);
         label_3->setFont(font);
         lineEdit_username = new QLineEdit(frame);
         lineEdit_username->setObjectName(QStringLiteral("lineEdit_username"));
-        lineEdit_username->setGeometry(QRect(240, 190, 211, 31));
+        lineEdit_username->setGeometry(QRect(240, 200, 211, 31));
         QFont font1;
         font1.setPointSize(14);
         lineEdit_username->setFont(font1);
@@ -78,11 +77,11 @@ public:
         lineEdit_username->setEchoMode(QLineEdit::Normal);
         label = new QLabel(frame);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(20, 190, 161, 25));
+        label->setGeometry(QRect(60, 200, 161, 25));
         label->setFont(font1);
         lineEdit_password = new QLineEdit(frame);
         lineEdit_password->setObjectName(QStringLiteral("lineEdit_password"));
-        lineEdit_password->setGeometry(QRect(240, 250, 211, 31));
+        lineEdit_password->setGeometry(QRect(240, 260, 211, 31));
         lineEdit_password->setFont(font1);
         lineEdit_password->setStyleSheet(QStringLiteral("border-image: whit"));
         lineEdit_password->setEchoMode(QLineEdit::Password);
@@ -92,11 +91,11 @@ public:
         lineEdit_password->setClearButtonEnabled(false);
         label_2 = new QLabel(frame);
         label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(40, 250, 141, 25));
+        label_2->setGeometry(QRect(90, 260, 141, 25));
         label_2->setFont(font1);
         label_login = new QLabel(frame);
         label_login->setObjectName(QStringLiteral("label_login"));
-        label_login->setGeometry(QRect(40, 300, 351, 41));
+        label_login->setGeometry(QRect(40, 320, 601, 41));
         QFont font2;
         font2.setPointSize(11);
         font2.setBold(true);
@@ -105,7 +104,7 @@ public:
         label_login->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix2/marron.jpg);"));
         pushButton_login = new QPushButton(frame);
         pushButton_login->setObjectName(QStringLiteral("pushButton_login"));
-        pushButton_login->setGeometry(QRect(250, 350, 171, 51));
+        pushButton_login->setGeometry(QRect(260, 380, 171, 51));
         pushButton_login->setFont(font1);
         pushButton_login->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
 "border-radius:25px;\n"
@@ -119,13 +118,9 @@ public:
         comboBox_typeagent->setObjectName(QStringLiteral("comboBox_typeagent"));
         comboBox_typeagent->setGeometry(QRect(240, 130, 211, 31));
         comboBox_typeagent->setStyleSheet(QStringLiteral("border-image: whit"));
-        pushButton_verifier = new QPushButton(frame);
-        pushButton_verifier->setObjectName(QStringLiteral("pushButton_verifier"));
-        pushButton_verifier->setGeometry(QRect(80, 140, 75, 23));
-        pushButton_verifier->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix3/orange.png);"));
         graphicsView = new QGraphicsView(centralwidget);
         graphicsView->setObjectName(QStringLiteral("graphicsView"));
-        graphicsView->setGeometry(QRect(370, -20, 151, 141));
+        graphicsView->setGeometry(QRect(370, 0, 151, 141));
         graphicsView->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix4/users-18-512.png);"));
         Integration->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Integration);
@@ -152,7 +147,6 @@ public:
         label_2->setText(QApplication::translate("Integration", "Mot de passe :", Q_NULLPTR));
         label_login->setText(QApplication::translate("Integration", "TextLabel", Q_NULLPTR));
         pushButton_login->setText(QApplication::translate("Integration", "Login", Q_NULLPTR));
-        pushButton_verifier->setText(QApplication::translate("Integration", "verifier", Q_NULLPTR));
     } // retranslateUi
 
 };

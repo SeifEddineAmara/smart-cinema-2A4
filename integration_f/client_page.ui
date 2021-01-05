@@ -62,7 +62,7 @@
      <enum>QTabWidget::Triangular</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -109,7 +109,7 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>200</y>
+        <y>190</y>
         <width>121</width>
         <height>51</height>
        </rect>
@@ -157,7 +157,7 @@ border-image: whit</string>
       <property name="geometry">
        <rect>
         <x>200</x>
-        <y>200</y>
+        <y>190</y>
         <width>113</width>
         <height>51</height>
        </rect>
@@ -171,9 +171,9 @@ border-image: whit</string>
      <widget class="QLabel" name="label_4">
       <property name="geometry">
        <rect>
-        <x>390</x>
+        <x>370</x>
         <y>20</y>
-        <width>121</width>
+        <width>161</width>
         <height>51</height>
        </rect>
       </property>
@@ -183,14 +183,14 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
 </string>
       </property>
       <property name="text">
-       <string>Nombre</string>
+       <string>Numero du ticket :</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_5">
       <property name="geometry">
        <rect>
-        <x>390</x>
-        <y>200</y>
+        <x>400</x>
+        <y>190</y>
         <width>121</width>
         <height>51</height>
        </rect>
@@ -201,14 +201,14 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
 </string>
       </property>
       <property name="text">
-       <string>Age</string>
+       <string>Age :</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_6">
       <property name="geometry">
        <rect>
-        <x>390</x>
-        <y>110</y>
+        <x>400</x>
+        <y>100</y>
         <width>121</width>
         <height>51</height>
        </rect>
@@ -219,14 +219,14 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
 </string>
       </property>
       <property name="text">
-       <string>Email</string>
+       <string>Email :</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit_number">
       <property name="geometry">
        <rect>
-        <x>560</x>
-        <y>30</y>
+        <x>570</x>
+        <y>20</y>
         <width>113</width>
         <height>51</height>
        </rect>
@@ -240,8 +240,8 @@ border-image: whit</string>
      <widget class="QLineEdit" name="lineEdit_email">
       <property name="geometry">
        <rect>
-        <x>560</x>
-        <y>110</y>
+        <x>570</x>
+        <y>100</y>
         <width>113</width>
         <height>51</height>
        </rect>
@@ -255,7 +255,7 @@ border-image: whit</string>
      <widget class="QLineEdit" name="lineEdit_age">
       <property name="geometry">
        <rect>
-        <x>560</x>
+        <x>570</x>
         <y>190</y>
         <width>113</width>
         <height>51</height>
@@ -271,7 +271,7 @@ border-image: whit</string>
       <property name="geometry">
        <rect>
         <x>310</x>
-        <y>350</y>
+        <y>330</y>
         <width>161</width>
         <height>41</height>
        </rect>
@@ -444,10 +444,10 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
      <widget class="QPushButton" name="pushButton_confirm_tri">
       <property name="geometry">
        <rect>
-        <x>30</x>
+        <x>90</x>
         <y>40</y>
         <width>131</width>
-        <height>51</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -478,7 +478,7 @@ border-image: url(:/new/prefix3/orange.png);</string>
         <x>220</x>
         <y>40</y>
         <width>351</width>
-        <height>51</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -493,7 +493,7 @@ border-image: url(:/new/prefix3/orange.png);</string>
      <widget class="QPushButton" name="pushButton_search">
       <property name="geometry">
        <rect>
-        <x>600</x>
+        <x>560</x>
         <y>60</y>
         <width>131</width>
         <height>51</height>
@@ -550,9 +550,9 @@ border-image: whit</string>
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>190</y>
+        <y>180</y>
         <width>781</width>
-        <height>201</height>
+        <height>211</height>
        </rect>
       </property>
       <property name="styleSheet">

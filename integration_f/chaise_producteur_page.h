@@ -103,6 +103,8 @@ private slots:
 
 
 
+    void on_pushButton_charger_id_salle_clicked();
+
 private:
     Ui::chaise_producteur_page *ui;
     PRODUCTEUR tmpproducteur;/*definition du tableau de l affichage*/

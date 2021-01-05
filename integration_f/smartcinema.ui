@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>931</width>
+    <width>978</width>
     <height>530</height>
    </rect>
   </property>
@@ -21,7 +21,7 @@
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>911</width>
+     <width>961</width>
      <height>511</height>
     </rect>
    </property>
@@ -39,7 +39,7 @@
    <widget class="QLabel" name="label_timer">
     <property name="geometry">
      <rect>
-      <x>780</x>
+      <x>830</x>
       <y>10</y>
       <width>111</width>
       <height>21</height>
@@ -63,7 +63,7 @@ border-image: url(:/new/prefix3/beige.jpg);</string>
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>610</x>
+      <x>690</x>
       <y>10</y>
       <width>131</width>
       <height>21</height>
@@ -81,7 +81,7 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
    <widget class="QPushButton" name="pushButton_4">
     <property name="geometry">
      <rect>
-      <x>460</x>
+      <x>540</x>
       <y>10</y>
       <width>131</width>
       <height>21</height>
@@ -100,10 +100,10 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;
    <widget class="QPushButton" name="pushButton_gest_ticket">
     <property name="geometry">
      <rect>
-      <x>440</x>
+      <x>10</x>
       <y>130</y>
-      <width>151</width>
-      <height>111</height>
+      <width>141</width>
+      <height>101</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -116,9 +116,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;
    <widget class="QPushButton" name="pushButton_gest_cinema">
     <property name="geometry">
      <rect>
-      <x>610</x>
-      <y>130</y>
-      <width>131</width>
+      <x>10</x>
+      <y>310</y>
+      <width>141</width>
       <height>111</height>
      </rect>
     </property>
@@ -132,10 +132,10 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;
    <widget class="QPushButton" name="pushButton_gest_film">
     <property name="geometry">
      <rect>
-      <x>760</x>
-      <y>130</y>
-      <width>131</width>
-      <height>111</height>
+      <x>810</x>
+      <y>140</y>
+      <width>151</width>
+      <height>121</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -149,10 +149,10 @@ border-image: url(:/new/prefix6/filmconso.jpg.png);</string>
    <widget class="QPushButton" name="pushButton_gest_salle">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>260</y>
-      <width>211</width>
-      <height>141</height>
+      <x>130</x>
+      <y>300</y>
+      <width>201</width>
+      <height>131</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -165,8 +165,8 @@ border-image: url(:/new/prefix6/filmconso.jpg.png);</string>
    <widget class="QPushButton" name="pushButton_gest_chaise_producteur">
     <property name="geometry">
      <rect>
-      <x>610</x>
-      <y>270</y>
+      <x>660</x>
+      <y>140</y>
       <width>141</width>
       <height>121</height>
      </rect>
@@ -181,10 +181,10 @@ border-image: url(:/new/prefix6/filmconso.jpg.png);</string>
    <widget class="QPushButton" name="pushButton_gest_producteur">
     <property name="geometry">
      <rect>
-      <x>760</x>
-      <y>260</y>
-      <width>141</width>
-      <height>131</height>
+      <x>810</x>
+      <y>320</y>
+      <width>151</width>
+      <height>141</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -197,10 +197,10 @@ border-image: url(:/new/prefix6/filmconso.jpg.png);</string>
    <widget class="QLabel" name="label_26">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>40</y>
-      <width>391</width>
-      <height>451</height>
+      <x>320</x>
+      <y>120</y>
+      <width>331</width>
+      <height>361</height>
      </rect>
     </property>
     <property name="text">
@@ -210,7 +210,7 @@ border-image: url(:/new/prefix6/filmconso.jpg.png);</string>
    <widget class="QTextEdit" name="textEdit">
     <property name="geometry">
      <rect>
-      <x>550</x>
+      <x>340</x>
       <y>50</y>
       <width>291</width>
       <height>71</height>
@@ -231,27 +231,11 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:36pt; text-decoration: underline; color:#ff0000;&quot;&gt;Bienvenue&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>360</x>
-      <y>10</y>
-      <width>47</width>
-      <height>13</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border-image: url(:/new/prefix3/beige.jpg);</string>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton_gest_client">
     <property name="geometry">
      <rect>
-      <x>510</x>
-      <y>400</y>
+      <x>660</x>
+      <y>340</y>
       <width>151</width>
       <height>101</height>
      </rect>
@@ -266,10 +250,10 @@ p, li { white-space: pre-wrap; }
    <widget class="QPushButton" name="pushButton_projection">
     <property name="geometry">
      <rect>
-      <x>700</x>
-      <y>400</y>
-      <width>151</width>
-      <height>101</height>
+      <x>170</x>
+      <y>140</y>
+      <width>131</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -279,20 +263,17 @@ p, li { white-space: pre-wrap; }
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_gaz">
+   <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>280</x>
+      <x>470</x>
       <y>10</y>
       <width>47</width>
       <height>13</height>
      </rect>
     </property>
-    <property name="styleSheet">
-     <string notr="true">border-image: url(:/new/prefix3/beige.jpg);</string>
-    </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>temp</string>
     </property>
    </widget>
   </widget>

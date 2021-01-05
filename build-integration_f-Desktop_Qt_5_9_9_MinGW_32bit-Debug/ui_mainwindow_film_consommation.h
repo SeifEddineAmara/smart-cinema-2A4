@@ -54,6 +54,8 @@ public:
     QLineEdit *mail_pass;
     QPushButton *sendBtn;
     QLineEdit *file;
+    QPushButton *play;
+    QPushButton *mute;
     QMenuBar *menubar;
     QStatusBar *statusbar;
     QToolBar *toolBar;
@@ -100,7 +102,11 @@ public:
         label->setGeometry(QRect(20, 30, 201, 31));
         pushButton = new QPushButton(tab);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(400, 40, 75, 23));
+        pushButton->setGeometry(QRect(380, 40, 101, 23));
+        QFont font;
+        font.setBold(true);
+        font.setWeight(75);
+        pushButton->setFont(font);
         pushButton->setStyleSheet(QLatin1String("\n"
 "border-image: url(:/new/prefix3/orange.png);"));
         tabWidget->addTab(tab, QString());
@@ -134,6 +140,7 @@ public:
         browseBtn = new QPushButton(tab_3);
         browseBtn->setObjectName(QStringLiteral("browseBtn"));
         browseBtn->setGeometry(QRect(597, 79, 75, 24));
+        browseBtn->setFont(font);
         browseBtn->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix3/orange.png);"));
         msg = new QTextEdit(tab_3);
         msg->setObjectName(QStringLiteral("msg"));
@@ -147,12 +154,25 @@ public:
         sendBtn = new QPushButton(tab_3);
         sendBtn->setObjectName(QStringLiteral("sendBtn"));
         sendBtn->setGeometry(QRect(20, 410, 651, 23));
+        sendBtn->setFont(font);
         sendBtn->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix3/orange.png);"));
         file = new QLineEdit(tab_3);
         file->setObjectName(QStringLiteral("file"));
         file->setGeometry(QRect(20, 80, 571, 23));
         file->setStyleSheet(QStringLiteral("border-image: white"));
         tabWidget->addTab(tab_3, QString());
+        play = new QPushButton(centralwidget);
+        play->setObjectName(QStringLiteral("play"));
+        play->setGeometry(QRect(520, 510, 121, 23));
+        play->setFont(font);
+        play->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
+"border-radius:10px;"));
+        mute = new QPushButton(centralwidget);
+        mute->setObjectName(QStringLiteral("mute"));
+        mute->setGeometry(QRect(660, 510, 111, 23));
+        mute->setFont(font);
+        mute->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
+"border-radius:10px;"));
         MainWindow_film_consommation->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow_film_consommation);
         menubar->setObjectName(QStringLiteral("menubar"));
@@ -172,7 +192,7 @@ public:
 
         retranslateUi(MainWindow_film_consommation);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MainWindow_film_consommation);
@@ -187,19 +207,21 @@ public:
         actionremove_consomation->setText(QApplication::translate("MainWindow_film_consommation", "Supprimer Une Consommation", Q_NULLPTR));
         recherche_film->setPlaceholderText(QApplication::translate("MainWindow_film_consommation", "Recherche", Q_NULLPTR));
         label->setText(QApplication::translate("MainWindow_film_consommation", "<html><head/><body><p><span style=\" font-size:18pt; font-weight:600; color:#5500ff;\">Liste Des Films :</span></p></body></html>", Q_NULLPTR));
-        pushButton->setText(QApplication::translate("MainWindow_film_consommation", "export excel", Q_NULLPTR));
+        pushButton->setText(QApplication::translate("MainWindow_film_consommation", "Exporter en excel", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow_film_consommation", "Films", Q_NULLPTR));
         label_4->setText(QApplication::translate("MainWindow_film_consommation", "<html><head/><body><p><span style=\" font-size:18pt; font-weight:600; color:#5500ff;\">Liste Des Consommation :</span></p></body></html>", Q_NULLPTR));
         recherche_cons->setPlaceholderText(QApplication::translate("MainWindow_film_consommation", "Recherche", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("MainWindow_film_consommation", "Consommations", Q_NULLPTR));
-        subject->setPlaceholderText(QApplication::translate("MainWindow_film_consommation", "subject", Q_NULLPTR));
-        rcpt->setPlaceholderText(QApplication::translate("MainWindow_film_consommation", "recipient", Q_NULLPTR));
+        subject->setPlaceholderText(QApplication::translate("MainWindow_film_consommation", "Mati\303\250re", Q_NULLPTR));
+        rcpt->setPlaceholderText(QApplication::translate("MainWindow_film_consommation", "B\303\251n\303\251ficiaire", Q_NULLPTR));
         browseBtn->setText(QApplication::translate("MainWindow_film_consommation", "Browse ...", Q_NULLPTR));
-        msg->setPlaceholderText(QApplication::translate("MainWindow_film_consommation", "type your message here ...", Q_NULLPTR));
-        mail_pass->setPlaceholderText(QApplication::translate("MainWindow_film_consommation", "your mail password", Q_NULLPTR));
-        sendBtn->setText(QApplication::translate("MainWindow_film_consommation", "Send", Q_NULLPTR));
-        file->setPlaceholderText(QApplication::translate("MainWindow_film_consommation", "attachement here", Q_NULLPTR));
-        tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("MainWindow_film_consommation", "mailing", Q_NULLPTR));
+        msg->setPlaceholderText(QApplication::translate("MainWindow_film_consommation", "Tapez votre message ici...", Q_NULLPTR));
+        mail_pass->setPlaceholderText(QApplication::translate("MainWindow_film_consommation", "Votre mot de passe mail", Q_NULLPTR));
+        sendBtn->setText(QApplication::translate("MainWindow_film_consommation", "Envoyer", Q_NULLPTR));
+        file->setPlaceholderText(QApplication::translate("MainWindow_film_consommation", "Pi\303\250ce jointe ici", Q_NULLPTR));
+        tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("MainWindow_film_consommation", "Mailing", Q_NULLPTR));
+        play->setText(QApplication::translate("MainWindow_film_consommation", "Lancer", Q_NULLPTR));
+        mute->setText(QApplication::translate("MainWindow_film_consommation", "Muter", Q_NULLPTR));
         toolBar->setWindowTitle(QApplication::translate("MainWindow_film_consommation", "toolBar", Q_NULLPTR));
     } // retranslateUi
 

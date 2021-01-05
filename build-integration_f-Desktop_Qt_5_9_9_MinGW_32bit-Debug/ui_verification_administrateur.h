@@ -45,25 +45,23 @@ public:
         label->setFont(font);
         lineEdit_id = new QLineEdit(verification_administrateur);
         lineEdit_id->setObjectName(QStringLiteral("lineEdit_id"));
-        lineEdit_id->setGeometry(QRect(250, 70, 371, 31));
+        lineEdit_id->setGeometry(QRect(270, 70, 371, 31));
         lineEdit_id->setStyleSheet(QStringLiteral("border-image: whit"));
         pushButton = new QPushButton(verification_administrateur);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(340, 160, 171, 41));
-        QFont font1;
-        font1.setPointSize(14);
-        pushButton->setFont(font1);
+        pushButton->setGeometry(QRect(340, 150, 171, 41));
+        pushButton->setFont(font);
         pushButton->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
 "border-radius:15px;\n"
 ""));
         label_login = new QLabel(verification_administrateur);
         label_login->setObjectName(QStringLiteral("label_login"));
         label_login->setGeometry(QRect(20, 260, 331, 41));
-        QFont font2;
-        font2.setPointSize(11);
-        font2.setBold(true);
-        font2.setWeight(75);
-        label_login->setFont(font2);
+        QFont font1;
+        font1.setPointSize(11);
+        font1.setBold(true);
+        font1.setWeight(75);
+        label_login->setFont(font1);
         label_login->setStyleSheet(QStringLiteral(""));
 
         retranslateUi(verification_administrateur);

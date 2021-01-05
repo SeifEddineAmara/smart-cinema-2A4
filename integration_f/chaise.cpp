@@ -10,9 +10,12 @@ bool CHAISE::ajouter()
 {
   QSqlQuery query;
 
-        query.prepare("INSERT INTO CHAISE (NUMERO,TYPE) " "VALUES (:numero, :type)");
+        query.prepare("INSERT INTO CHAISE (NUMERO,TYPE,ID_SALLE) " "VALUES (:numero, :type, :id_salle)");
         query.bindValue(":numero", numero);
         query.bindValue(":type", type);
+        query.bindValue(":id_salle", id_salle);
+
+
 
         return query.exec();
 }
@@ -23,6 +26,7 @@ QSqlQueryModel * CHAISE::afficher()
         model->setQuery("select * from CHAISE ");
         model->setHeaderData(0, Qt::Horizontal, QObject::tr("NUMERO"));
         model->setHeaderData(1, Qt::Horizontal, QObject::tr("TYPE"));
+        model->setHeaderData(2, Qt::Horizontal, QObject::tr("ID_salle"));
 
          model->setQuery("SELECT * FROM CHAISE ORDER BY NUMERO  ");
         return model;

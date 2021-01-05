@@ -66,6 +66,7 @@ public:
     QPushButton *pushButton_confi_update;
     QLineEdit *lineEdit_2;
     QComboBox *comboBox_update_cons;
+    QLabel *label_8;
 
     void setupUi(QDialog *ticket_page)
     {
@@ -82,54 +83,58 @@ public:
         groupBox->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix3/orange.png);"));
         tabWidget = new QTabWidget(groupBox);
         tabWidget->setObjectName(QStringLiteral("tabWidget"));
-        tabWidget->setGeometry(QRect(40, 30, 771, 401));
+        tabWidget->setGeometry(QRect(40, 30, 821, 401));
+        QFont font1;
+        font1.setPointSize(11);
+        tabWidget->setFont(font1);
         tabWidget->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix2/marron.jpg);"));
+        tabWidget->setTabShape(QTabWidget::Triangular);
         tab = new QWidget();
         tab->setObjectName(QStringLiteral("tab"));
         label = new QLabel(tab);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(20, 20, 111, 31));
+        label->setGeometry(QRect(50, 30, 111, 31));
         label->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";"));
         label_2 = new QLabel(tab);
         label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(10, 160, 111, 41));
+        label_2->setGeometry(QRect(60, 170, 111, 41));
         label_2->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";"));
         label_3 = new QLabel(tab);
         label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(10, 90, 111, 21));
+        label_3->setGeometry(QRect(50, 100, 111, 21));
         label_3->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";"));
         label_4 = new QLabel(tab);
         label_4->setObjectName(QStringLiteral("label_4"));
-        label_4->setGeometry(QRect(10, 240, 131, 51));
+        label_4->setGeometry(QRect(10, 230, 141, 51));
         label_4->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";"));
         lineEdit_id = new QLineEdit(tab);
         lineEdit_id->setObjectName(QStringLiteral("lineEdit_id"));
-        lineEdit_id->setGeometry(QRect(110, 20, 121, 31));
+        lineEdit_id->setGeometry(QRect(170, 20, 111, 51));
         lineEdit_id->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "color: rgb(0, 0, 127);\n"
 "font: 14pt \"MS Shell Dlg 2\";\n"
 "border-image: whit"));
         comboBox_type = new QComboBox(tab);
         comboBox_type->setObjectName(QStringLiteral("comboBox_type"));
-        comboBox_type->setGeometry(QRect(140, 90, 91, 31));
+        comboBox_type->setGeometry(QRect(170, 90, 101, 51));
         comboBox_type->setStyleSheet(QStringLiteral("border-image: whit"));
         comboBox_consommation = new QComboBox(tab);
         comboBox_consommation->setObjectName(QStringLiteral("comboBox_consommation"));
-        comboBox_consommation->setGeometry(QRect(150, 240, 111, 41));
+        comboBox_consommation->setGeometry(QRect(170, 240, 101, 51));
         comboBox_consommation->setStyleSheet(QStringLiteral("border-image: whit"));
         pushButton_confirm_type = new QPushButton(tab);
         pushButton_confirm_type->setObjectName(QStringLiteral("pushButton_confirm_type"));
-        pushButton_confirm_type->setGeometry(QRect(250, 80, 101, 51));
+        pushButton_confirm_type->setGeometry(QRect(290, 90, 101, 51));
         pushButton_confirm_type->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";\n"
 "border-image: url(:/new/prefix3/orange.png);"));
         lineEdit_price = new QLineEdit(tab);
         lineEdit_price->setObjectName(QStringLiteral("lineEdit_price"));
-        lineEdit_price->setGeometry(QRect(160, 170, 111, 31));
+        lineEdit_price->setGeometry(QRect(170, 170, 101, 51));
         lineEdit_price->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "color: rgb(0, 0, 127);\n"
 "font: 14pt \"MS Shell Dlg 2\";\n"
@@ -137,58 +142,63 @@ public:
         lineEdit_price->setReadOnly(true);
         pushButton_confirm_ajout = new QPushButton(tab);
         pushButton_confirm_ajout->setObjectName(QStringLiteral("pushButton_confirm_ajout"));
-        pushButton_confirm_ajout->setGeometry(QRect(330, 310, 171, 51));
+        pushButton_confirm_ajout->setGeometry(QRect(330, 320, 171, 51));
+        QFont font2;
+        font2.setPointSize(12);
+        font2.setBold(true);
+        font2.setWeight(75);
+        pushButton_confirm_ajout->setFont(font2);
         pushButton_confirm_ajout->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "border-image: url(:/new/prefix3/orange.png);"));
         pushButton_update_chaise_id = new QPushButton(tab);
         pushButton_update_chaise_id->setObjectName(QStringLiteral("pushButton_update_chaise_id"));
-        pushButton_update_chaise_id->setGeometry(QRect(670, 140, 81, 51));
+        pushButton_update_chaise_id->setGeometry(QRect(710, 100, 81, 51));
         pushButton_update_chaise_id->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
 "border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";"));
         label_5 = new QLabel(tab);
         label_5->setObjectName(QStringLiteral("label_5"));
-        label_5->setGeometry(QRect(380, 40, 111, 51));
+        label_5->setGeometry(QRect(430, 20, 111, 51));
         label_5->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";"));
         label_7 = new QLabel(tab);
         label_7->setObjectName(QStringLiteral("label_7"));
-        label_7->setGeometry(QRect(380, 220, 81, 51));
+        label_7->setGeometry(QRect(450, 180, 81, 51));
         label_7->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";"));
         comboBox_projection = new QComboBox(tab);
         comboBox_projection->setObjectName(QStringLiteral("comboBox_projection"));
-        comboBox_projection->setGeometry(QRect(500, 40, 151, 51));
+        comboBox_projection->setGeometry(QRect(550, 20, 151, 51));
         comboBox_projection->setStyleSheet(QStringLiteral("border-image: whit"));
         comboBox_client = new QComboBox(tab);
         comboBox_client->setObjectName(QStringLiteral("comboBox_client"));
-        comboBox_client->setGeometry(QRect(500, 220, 151, 51));
+        comboBox_client->setGeometry(QRect(550, 180, 151, 51));
         comboBox_client->setStyleSheet(QStringLiteral("border-image: whit"));
         label_6 = new QLabel(tab);
         label_6->setObjectName(QStringLiteral("label_6"));
-        label_6->setGeometry(QRect(380, 140, 91, 51));
+        label_6->setGeometry(QRect(440, 100, 91, 51));
         label_6->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";"));
         pushButton_update_client = new QPushButton(tab);
         pushButton_update_client->setObjectName(QStringLiteral("pushButton_update_client"));
-        pushButton_update_client->setGeometry(QRect(670, 220, 81, 51));
+        pushButton_update_client->setGeometry(QRect(710, 180, 81, 51));
         pushButton_update_client->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
 "border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";"));
         comboBox_chaise = new QComboBox(tab);
         comboBox_chaise->setObjectName(QStringLiteral("comboBox_chaise"));
-        comboBox_chaise->setGeometry(QRect(500, 140, 151, 51));
+        comboBox_chaise->setGeometry(QRect(550, 100, 151, 51));
         comboBox_chaise->setStyleSheet(QStringLiteral("border-image: whit"));
         pushButton_update_projection = new QPushButton(tab);
         pushButton_update_projection->setObjectName(QStringLiteral("pushButton_update_projection"));
-        pushButton_update_projection->setGeometry(QRect(670, 40, 80, 51));
+        pushButton_update_projection->setGeometry(QRect(710, 20, 80, 51));
         pushButton_update_projection->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
 "border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";\n"
 ""));
         pushButton_confirm_consomm = new QPushButton(tab);
         pushButton_confirm_consomm->setObjectName(QStringLiteral("pushButton_confirm_consomm"));
-        pushButton_confirm_consomm->setGeometry(QRect(270, 240, 101, 41));
+        pushButton_confirm_consomm->setGeometry(QRect(290, 240, 101, 51));
         pushButton_confirm_consomm->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";\n"
 "border-image: url(:/new/prefix3/orange.png);"));
@@ -216,7 +226,7 @@ public:
 "border-image: whit"));
         pushButton_confirm = new QPushButton(tab_3);
         pushButton_confirm->setObjectName(QStringLiteral("pushButton_confirm"));
-        pushButton_confirm->setGeometry(QRect(300, 160, 121, 41));
+        pushButton_confirm->setGeometry(QRect(310, 150, 151, 51));
         pushButton_confirm->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";\n"
 "border-image: url(:/new/prefix3/orange.png);"));
@@ -225,13 +235,13 @@ public:
         tab_4->setObjectName(QStringLiteral("tab_4"));
         lineEdit_id_update_tickett = new QLineEdit(tab_4);
         lineEdit_id_update_tickett->setObjectName(QStringLiteral("lineEdit_id_update_tickett"));
-        lineEdit_id_update_tickett->setGeometry(QRect(70, 50, 291, 41));
+        lineEdit_id_update_tickett->setGeometry(QRect(180, 50, 291, 41));
         lineEdit_id_update_tickett->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";\n"
 "border-image: whit"));
         pushButton_verif_id_update = new QPushButton(tab_4);
         pushButton_verif_id_update->setObjectName(QStringLiteral("pushButton_verif_id_update"));
-        pushButton_verif_id_update->setGeometry(QRect(460, 50, 111, 41));
+        pushButton_verif_id_update->setGeometry(QRect(500, 50, 111, 41));
         pushButton_verif_id_update->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
 "font: 14pt \"MS Shell Dlg 2\";\n"
 "border-image: url(:/new/prefix3/orange.png);"));
@@ -259,6 +269,11 @@ public:
         comboBox_update_cons->setObjectName(QStringLiteral("comboBox_update_cons"));
         comboBox_update_cons->setGeometry(QRect(240, 240, 131, 41));
         comboBox_update_cons->setStyleSheet(QStringLiteral("border-image: whit"));
+        label_8 = new QLabel(tab_4);
+        label_8->setObjectName(QStringLiteral("label_8"));
+        label_8->setGeometry(QRect(100, 50, 71, 31));
+        label_8->setStyleSheet(QLatin1String("border-radius : 10px ;\n"
+"font: 14pt \"MS Shell Dlg 2\";"));
         tabWidget->addTab(tab_4, QString());
 
         retranslateUi(ticket_page);
@@ -273,23 +288,23 @@ public:
     {
         ticket_page->setWindowTitle(QApplication::translate("ticket_page", "Smart cinema", Q_NULLPTR));
         groupBox->setTitle(QApplication::translate("ticket_page", "Gestion ticket", Q_NULLPTR));
-        label->setText(QApplication::translate("ticket_page", "ID", Q_NULLPTR));
-        label_2->setText(QApplication::translate("ticket_page", "Prix", Q_NULLPTR));
-        label_3->setText(QApplication::translate("ticket_page", "Type", Q_NULLPTR));
-        label_4->setText(QApplication::translate("ticket_page", "Consommation", Q_NULLPTR));
+        label->setText(QApplication::translate("ticket_page", "ID :", Q_NULLPTR));
+        label_2->setText(QApplication::translate("ticket_page", "Prix :", Q_NULLPTR));
+        label_3->setText(QApplication::translate("ticket_page", "Type :", Q_NULLPTR));
+        label_4->setText(QApplication::translate("ticket_page", "Consommation :", Q_NULLPTR));
         pushButton_confirm_type->setText(QApplication::translate("ticket_page", "Confirmer", Q_NULLPTR));
-        pushButton_confirm_ajout->setText(QApplication::translate("ticket_page", "Confirm", Q_NULLPTR));
+        pushButton_confirm_ajout->setText(QApplication::translate("ticket_page", "Confirmer", Q_NULLPTR));
         pushButton_update_chaise_id->setText(QApplication::translate("ticket_page", "Search", Q_NULLPTR));
-        label_5->setText(QApplication::translate("ticket_page", "Projection", Q_NULLPTR));
-        label_7->setText(QApplication::translate("ticket_page", "Client", Q_NULLPTR));
-        label_6->setText(QApplication::translate("ticket_page", "Chaise", Q_NULLPTR));
+        label_5->setText(QApplication::translate("ticket_page", "Projection :", Q_NULLPTR));
+        label_7->setText(QApplication::translate("ticket_page", "Client :", Q_NULLPTR));
+        label_6->setText(QApplication::translate("ticket_page", "Chaise :", Q_NULLPTR));
         pushButton_update_client->setText(QApplication::translate("ticket_page", "Search", Q_NULLPTR));
         pushButton_update_projection->setText(QApplication::translate("ticket_page", "Search", Q_NULLPTR));
         pushButton_confirm_consomm->setText(QApplication::translate("ticket_page", "Confirmer", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("ticket_page", "Ajout", Q_NULLPTR));
         pushButton_confirm_aff_ticket->setText(QApplication::translate("ticket_page", "Afficher", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("ticket_page", "Affichage", Q_NULLPTR));
-        lineEdit_id_delete->setText(QApplication::translate("ticket_page", "Enter ID", Q_NULLPTR));
+        lineEdit_id_delete->setText(QString());
         pushButton_confirm->setText(QApplication::translate("ticket_page", "Confirmer", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("ticket_page", "Suppression", Q_NULLPTR));
         lineEdit_id_update_tickett->setText(QString());
@@ -297,6 +312,7 @@ public:
         lineEdit->setText(QApplication::translate("ticket_page", "Type :", Q_NULLPTR));
         pushButton_confi_update->setText(QApplication::translate("ticket_page", "Confirmer modification", Q_NULLPTR));
         lineEdit_2->setText(QApplication::translate("ticket_page", "Consommation : ", Q_NULLPTR));
+        label_8->setText(QApplication::translate("ticket_page", "ID :", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_4), QApplication::translate("ticket_page", "Modificaton", Q_NULLPTR));
     } // retranslateUi
 

@@ -49,6 +49,9 @@ MainWindow_film_consommation::MainWindow_film_consommation(QWidget *parent)
 {
     ui->setupUi(this);
 
+    son=new QSound("C:/Users/EXTRA/Desktop/Integration f/integration_f/seif.wav");
+
+
    //connect too database
   /*  Connexion c;
     c.createconnect();*/
@@ -331,3 +334,13 @@ void MainWindow_film_consommation::on_pushButton_clicked()
     }
 }
 
+
+void MainWindow_film_consommation::on_play_clicked()
+{
+    son->play();
+}
+
+void MainWindow_film_consommation::on_mute_clicked()
+{
+    son->stop();
+}

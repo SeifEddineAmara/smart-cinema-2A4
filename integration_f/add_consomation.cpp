@@ -6,6 +6,10 @@ add_consomation::add_consomation(QWidget *parent) :
     ui(new Ui::add_consomation)
 {
     ui->setupUi(this);
+
+    ui->nom_cons->setValidator(new QRegExpValidator( QRegExp("[A-Za-z0_]{0,255}"), this ));
+
+
 }
 
 add_consomation::~add_consomation()
