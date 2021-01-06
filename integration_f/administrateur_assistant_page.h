@@ -45,7 +45,6 @@ private slots:
 
     void on_afficherassis_clicked();
 
-    void on_rechercherassistant_clicked();
 
     void on_idrecherche_cursorPositionChanged(int arg1, int arg2);
 
@@ -56,11 +55,9 @@ private slots:
     void sendMail();
 
 
-    void on_email_clicked();
 
     void on_envoyer_clicked();
 
-    void on_pushButton_clicked();
 
 private:
     Ui::administrateur_assistant_page *ui;

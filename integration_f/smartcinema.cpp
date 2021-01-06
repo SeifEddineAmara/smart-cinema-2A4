@@ -28,8 +28,8 @@ Smartcinema::Smartcinema(QWidget *parent) :
 
    int ret=A.connect_arduino();
 
-   alert=0;
-   messageboxactive=0;
+   /*alert=0;
+   messageboxactive=0;*/
 
    switch(ret)
    {
@@ -47,7 +47,6 @@ Smartcinema::Smartcinema(QWidget *parent) :
 
    }
 
-   /* QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label()));*/
     QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label1()));
 
 
@@ -57,7 +56,7 @@ Smartcinema::Smartcinema(QWidget *parent) :
 }
 
 /*
-void Smartcinema::update_label()
+void Smartcinema::update_label_t()
 {
 
     data_temperature=A.read_from_arduino();
@@ -109,8 +108,8 @@ void Smartcinema::update_label()
 
 
 }
-*/
 
+*/
 
 void Smartcinema::update_label1()
 {

@@ -19,6 +19,7 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpinBox>
 
 QT_BEGIN_NAMESPACE
@@ -36,6 +37,7 @@ public:
     QDialogButtonBox *buttonBox;
     QLineEdit *nom_film;
     QComboBox *type_film;
+    QPushButton *pushButton;
 
     void setupUi(QDialog *addfilm)
     {
@@ -82,6 +84,10 @@ public:
         type_film->setObjectName(QStringLiteral("type_film"));
         type_film->setGeometry(QRect(140, 180, 111, 22));
         type_film->setStyleSheet(QStringLiteral("border-image: whit"));
+        pushButton = new QPushButton(addfilm);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+        pushButton->setGeometry(QRect(60, 270, 121, 23));
+        pushButton->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix3/orange.png);"));
 
         retranslateUi(addfilm);
 
@@ -104,6 +110,7 @@ public:
          << QApplication::translate("addfilm", "Comedy", Q_NULLPTR)
          << QApplication::translate("addfilm", "History", Q_NULLPTR)
         );
+        pushButton->setText(QApplication::translate("addfilm", "Traduction En Anglais", Q_NULLPTR));
     } // retranslateUi
 
 };

@@ -695,7 +695,7 @@ border-radius:10px;</string>
       <enum>QTabWidget::Triangular</enum>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>3</number>
      </property>
      <widget class="QWidget" name="tab_7">
       <attribute name="title">

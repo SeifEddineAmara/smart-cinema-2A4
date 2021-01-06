@@ -293,7 +293,7 @@ public:
         comboBox_tri->setStyleSheet(QStringLiteral("border-image: white"));
         pushButton_trier = new QPushButton(tab_10);
         pushButton_trier->setObjectName(QStringLiteral("pushButton_trier"));
-        pushButton_trier->setGeometry(QRect(30, 200, 151, 51));
+        pushButton_trier->setGeometry(QRect(100, 190, 151, 51));
         pushButton_trier->setFont(font2);
         pushButton_trier->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
 "border-radius:25px;\n"
@@ -346,11 +346,11 @@ public:
 ""));
         tableView_rechercher_cinema = new QTableView(tab_11);
         tableView_rechercher_cinema->setObjectName(QStringLiteral("tableView_rechercher_cinema"));
-        tableView_rechercher_cinema->setGeometry(QRect(400, 20, 421, 351));
+        tableView_rechercher_cinema->setGeometry(QRect(400, 30, 421, 351));
         tableView_rechercher_cinema->setStyleSheet(QStringLiteral("border-image: white"));
         pushButton_refresh = new QPushButton(tab_11);
         pushButton_refresh->setObjectName(QStringLiteral("pushButton_refresh"));
-        pushButton_refresh->setGeometry(QRect(240, 310, 151, 51));
+        pushButton_refresh->setGeometry(QRect(740, 10, 81, 21));
         pushButton_refresh->setFont(font2);
         pushButton_refresh->setStyleSheet(QLatin1String("border-image: url(:/new/prefix3/orange.png);\n"
 "border-radius:25px;\n"
@@ -359,7 +359,7 @@ public:
 
         retranslateUi(cinema_page);
 
-        tabWidget_2->setCurrentIndex(5);
+        tabWidget_2->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(cinema_page);
@@ -399,7 +399,7 @@ public:
         label_14->setText(QApplication::translate("cinema_page", "Destination :", Q_NULLPTR));
         lineEdit_destination_rechercher->setPlaceholderText(QApplication::translate("cinema_page", "Chercher", Q_NULLPTR));
         pushButton_rechercher_cinema->setText(QApplication::translate("cinema_page", "Rechercher", Q_NULLPTR));
-        pushButton_refresh->setText(QApplication::translate("cinema_page", "Refrech", Q_NULLPTR));
+        pushButton_refresh->setText(QApplication::translate("cinema_page", "Charger", Q_NULLPTR));
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_11), QApplication::translate("cinema_page", "Rechercher", Q_NULLPTR));
     } // retranslateUi
 

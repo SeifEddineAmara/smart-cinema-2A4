@@ -8,6 +8,7 @@
 #include <QDialog>
 #include <QFileDialog>
 #include<QSound>
+#include "arduino1.h"
 
 /*#include "connexion.h"*/
 
@@ -35,9 +36,13 @@ public:
     QString sel_cons="consomation", sel_film="film";
      film tmp_film;
 consomation tmp_cons;
+ int led,alert,messageboxactive;
 
 
 private slots:
+
+void update_label_t();
+
 
     void on_actionadd_film_triggered();
 
@@ -73,7 +78,8 @@ private:
     Ui::MainWindow_film_consommation *ui;
     QStringList files;
     QSound *son;
-
+    arduino1 A;
+    QByteArray data_temperature;
 
 
 };

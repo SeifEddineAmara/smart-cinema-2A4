@@ -27,6 +27,8 @@ private slots:
     void on_buttonBox_accepted();
     void on_buttonBox_rejected();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::add_consomation *ui;
 };

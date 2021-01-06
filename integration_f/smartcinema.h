@@ -39,14 +39,13 @@ public:
     ~Smartcinema();
 
 
-    int led,alert,messageboxactive;
+   /* int led,alert,messageboxactive;*/
 
 
 
 private slots:
 
 
-    void update_label();
     void update_label1();
 
     void on_pushButton_3_clicked();
@@ -87,7 +86,7 @@ private:
     QTimer *timer;
     QSound *son;
     arduino1 A;
-    QByteArray data_temperature;
+   /* QByteArray data_temperature;*/
     QByteArray data;
 ;
 

@@ -57,7 +57,7 @@
      <enum>QTabWidget::Triangular</enum>
     </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab_7">
      <attribute name="title">
@@ -672,8 +672,8 @@ border-radius:25px;
      <widget class="QPushButton" name="pushButton_trier">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>200</y>
+        <x>100</x>
+        <y>190</y>
         <width>151</width>
         <height>51</height>
        </rect>
@@ -867,7 +867,7 @@ border-radius:25px;
       <property name="geometry">
        <rect>
         <x>400</x>
-        <y>20</y>
+        <y>30</y>
         <width>421</width>
         <height>351</height>
        </rect>
@@ -879,10 +879,10 @@ border-radius:25px;
      <widget class="QPushButton" name="pushButton_refresh">
       <property name="geometry">
        <rect>
-        <x>240</x>
-        <y>310</y>
-        <width>151</width>
-        <height>51</height>
+        <x>740</x>
+        <y>10</y>
+        <width>81</width>
+        <height>21</height>
        </rect>
       </property>
       <property name="font">
@@ -898,7 +898,7 @@ border-radius:25px;
 </string>
       </property>
       <property name="text">
-       <string>Refrech</string>
+       <string>Charger</string>
       </property>
      </widget>
     </widget>

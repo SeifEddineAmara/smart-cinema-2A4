@@ -162,6 +162,22 @@
     <string notr="true">border-image: whit</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>260</y>
+     <width>111</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/new/prefix3/orange.png);</string>
+   </property>
+   <property name="text">
+    <string>Traduction En Anglais</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

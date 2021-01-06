@@ -90,7 +90,6 @@ public:
     QLineEdit *suppassisid;
     QPushButton *supprimerassis;
     QGroupBox *groupBox_7;
-    QPushButton *rechercherassistant;
     QLineEdit *idrecherche;
     QTableView *tableViewrechercher;
     QLabel *label_11;
@@ -356,10 +355,6 @@ public:
         groupBox_7 = new QGroupBox(tab_2);
         groupBox_7->setObjectName(QStringLiteral("groupBox_7"));
         groupBox_7->setGeometry(QRect(250, 280, 271, 151));
-        rechercherassistant = new QPushButton(groupBox_7);
-        rechercherassistant->setObjectName(QStringLiteral("rechercherassistant"));
-        rechercherassistant->setGeometry(QRect(150, 30, 80, 22));
-        rechercherassistant->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix3/orange.png);"));
         idrecherche = new QLineEdit(groupBox_7);
         idrecherche->setObjectName(QStringLiteral("idrecherche"));
         idrecherche->setGeometry(QRect(40, 30, 113, 21));
@@ -375,7 +370,7 @@ public:
 
         retranslateUi(administrateur_assistant_page);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(administrateur_assistant_page);
@@ -422,7 +417,6 @@ public:
         label_10->setText(QApplication::translate("administrateur_assistant_page", "ID :", Q_NULLPTR));
         supprimerassis->setText(QApplication::translate("administrateur_assistant_page", "Supprimer", Q_NULLPTR));
         groupBox_7->setTitle(QApplication::translate("administrateur_assistant_page", "Recherche", Q_NULLPTR));
-        rechercherassistant->setText(QApplication::translate("administrateur_assistant_page", "Rechercher", Q_NULLPTR));
         label_11->setText(QApplication::translate("administrateur_assistant_page", "ID :", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("administrateur_assistant_page", "Assistant", Q_NULLPTR));
     } // retranslateUi

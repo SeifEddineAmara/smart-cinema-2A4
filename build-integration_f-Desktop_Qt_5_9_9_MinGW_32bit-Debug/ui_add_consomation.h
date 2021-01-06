@@ -19,6 +19,7 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpinBox>
 
 QT_BEGIN_NAMESPACE
@@ -36,6 +37,7 @@ public:
     QLineEdit *nom_cons;
     QLabel *label_7;
     QDoubleSpinBox *prix_cons;
+    QPushButton *pushButton;
 
     void setupUi(QDialog *add_consomation)
     {
@@ -83,6 +85,10 @@ public:
         prix_cons->setObjectName(QStringLiteral("prix_cons"));
         prix_cons->setGeometry(QRect(100, 170, 111, 22));
         prix_cons->setStyleSheet(QStringLiteral("border-image: whit"));
+        pushButton = new QPushButton(add_consomation);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+        pushButton->setGeometry(QRect(50, 260, 111, 23));
+        pushButton->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix3/orange.png);"));
 
         retranslateUi(add_consomation);
 
@@ -98,6 +104,7 @@ public:
         label_5->setText(QApplication::translate("add_consomation", "Nom :", Q_NULLPTR));
         label_4->setText(QApplication::translate("add_consomation", "<html><head/><body><p align=\"center\"><span style=\" font-size:22pt; font-weight:600; color:#00007f;\">Consommation</span></p></body></html>", Q_NULLPTR));
         label_7->setText(QApplication::translate("add_consomation", "ID :", Q_NULLPTR));
+        pushButton->setText(QApplication::translate("add_consomation", "Traduction En Anglais", Q_NULLPTR));
     } // retranslateUi
 
 };

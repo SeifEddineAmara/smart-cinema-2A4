@@ -183,6 +183,22 @@
     </property>
    </item>
   </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>270</y>
+     <width>121</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/new/prefix3/orange.png);</string>
+   </property>
+   <property name="text">
+    <string>Traduction En Anglais</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

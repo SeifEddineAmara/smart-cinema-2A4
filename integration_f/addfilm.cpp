@@ -58,3 +58,13 @@ void addfilm::show_film( QString sel_film) {
     }
 
 }
+
+void addfilm::on_pushButton_clicked()
+{
+    ui->label_5->setText("Name :");
+    ui->label_6->setText("Duration(min) :");
+    ui->label_4->setText("Movie :");
+
+
+
+}

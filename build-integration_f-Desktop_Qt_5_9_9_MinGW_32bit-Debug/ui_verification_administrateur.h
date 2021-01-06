@@ -47,6 +47,7 @@ public:
         lineEdit_id->setObjectName(QStringLiteral("lineEdit_id"));
         lineEdit_id->setGeometry(QRect(270, 70, 371, 31));
         lineEdit_id->setStyleSheet(QStringLiteral("border-image: whit"));
+        lineEdit_id->setEchoMode(QLineEdit::Password);
         pushButton = new QPushButton(verification_administrateur);
         pushButton->setObjectName(QStringLiteral("pushButton"));
         pushButton->setGeometry(QRect(340, 150, 171, 41));

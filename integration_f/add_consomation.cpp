@@ -62,3 +62,12 @@ void add_consomation::show_consomation( QString sel_cons) {
     }
 
 }
+
+void add_consomation::on_pushButton_clicked()
+{
+    ui->label_5->setText("Name :");
+    ui->label_3->setText("Price :");
+
+    ui->label_6->setText("Quantity :");
+
+}

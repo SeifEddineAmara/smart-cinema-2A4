@@ -54,7 +54,7 @@ if(Serial.available())
   if(data=='1')
   
   {  
-     while(count<=3)
+     while(count<3)
      {
        digitalWrite(PIN_LED , HIGH);
        delay(1000);

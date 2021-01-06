@@ -39,7 +39,6 @@ public:
     QTextEdit *textEdit;
     QPushButton *pushButton_gest_client;
     QPushButton *pushButton_projection;
-    QLabel *label_2;
 
     void setupUi(QDialog *Smartcinema)
     {
@@ -121,9 +120,6 @@ public:
         pushButton_projection->setObjectName(QStringLiteral("pushButton_projection"));
         pushButton_projection->setGeometry(QRect(170, 140, 131, 91));
         pushButton_projection->setStyleSheet(QStringLiteral("border-image: url(:/new/prefix7/proj.png);"));
-        label_2 = new QLabel(groupBox);
-        label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(470, 10, 47, 13));
 
         retranslateUi(Smartcinema);
 
@@ -151,7 +147,6 @@ public:
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:36pt; text-decoration: underline; color:#ff0000;\">Bienvenue</span></p></body></html>", Q_NULLPTR));
         pushButton_gest_client->setText(QString());
         pushButton_projection->setText(QString());
-        label_2->setText(QApplication::translate("Smartcinema", "temp", Q_NULLPTR));
     } // retranslateUi
 
 };

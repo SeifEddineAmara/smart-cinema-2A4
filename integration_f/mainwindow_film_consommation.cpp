@@ -51,6 +51,8 @@ MainWindow_film_consommation::MainWindow_film_consommation(QWidget *parent)
 
     son=new QSound("C:/Users/EXTRA/Desktop/Integration f/integration_f/seif.wav");
 
+    alert=0;
+       messageboxactive=0;
 
    //connect too database
   /*  Connexion c;
@@ -62,6 +64,63 @@ MainWindow_film_consommation::MainWindow_film_consommation(QWidget *parent)
   //for email tab
       connect(ui->sendBtn, SIGNAL(clicked()),this, SLOT(sendMail()));
       connect(ui->browseBtn, SIGNAL(clicked()), this, SLOT(browse()));
+
+
+      QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label_t()));
+
+
+}
+
+void MainWindow_film_consommation::update_label_t()
+{
+
+    data_temperature=A.read_from_arduino();
+    QString DataAsString = QString(data_temperature);
+    qDebug()<< data_temperature;
+
+     /*ui->label_2->setText("temp : "+data_temperature);*/
+
+    if (data_temperature=="21"||data_temperature=="22"||data_temperature=="23"||data_temperature=="24"||data_temperature=="25"||data_temperature=="26"||data_temperature=="27"){
+        if (messageboxactive==0){
+            alert=1;
+        }
+
+
+    }
+    if (alert==1)
+    {
+         alert=0;
+         messageboxactive=1;
+        int reponse = QMessageBox::question(this, "led", "allumer led", QMessageBox::Yes |  QMessageBox::No);
+                                   if (reponse == QMessageBox::Yes)
+                                   {
+                                     led=1;
+                                   }
+                                   if (reponse == QMessageBox::No)
+                                   {
+                                      led=0;
+                                   }
+
+    }
+    if (led==1){
+        A.write_to_arduino("1");
+    }
+    if (data_temperature=="20"||data_temperature=="19"||data_temperature=="18"||data_temperature=="17"||data_temperature=="16"||data_temperature=="15"||data_temperature=="14"){
+        A.write_to_arduino("0");
+        led=0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 

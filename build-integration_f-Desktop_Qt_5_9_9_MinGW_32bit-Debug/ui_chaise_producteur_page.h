@@ -425,7 +425,7 @@ public:
 
         tabWidget->setCurrentIndex(1);
         tabWidget_2->setCurrentIndex(3);
-        tabWidget_3->setCurrentIndex(0);
+        tabWidget_3->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(chaise_producteur_page);
